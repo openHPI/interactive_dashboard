@@ -2,8 +2,9 @@
 
 ## First setup
 [Node.js](https://nodejs.org/en/download/) and npm (included with node) are needed to run this project.
-1. Run `npm install`
-2. Run `npm serve`
+1. `cd jenz`
+2. Run `npm install`
+3. Run `npm start`
 
 <br><br><br><br>
 
