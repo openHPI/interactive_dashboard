@@ -1,6 +1,11 @@
 # Jenz
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.4.
+## First setup
+[Node.js](https://nodejs.org/en/download/) and npm (included with node) are needed to run this project.
+1. Run `npm install`
+2. Run `npm serve`
+
+<br><br><br><br>
 
 ## Development server
 
