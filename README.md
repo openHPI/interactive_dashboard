@@ -4,7 +4,9 @@
 [Node.js](https://nodejs.org/en/download/) and npm (included with node) are needed to run this project.
 1. `cd jenz`
 2. Run `npm install`
-3. Run `npm start`
+2.1 (optionally) if you get an error using windows, run: npm set registry https://registry.npmjs.org/
+3. Run npm install -g @angular/cli
+4. Run `npm start`
 
 <br><br><br><br>
 
