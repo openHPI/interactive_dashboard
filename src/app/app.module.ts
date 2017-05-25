@@ -8,13 +8,15 @@ import { MapComponent } from './map/map.component';
 import { AgmCoreModule } from 'angular2-google-maps/core';
 import { KeyFeaturesComponent } from './key-features/key-features.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
+import { FeatureCardComponent } from './feature-card/feature-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MapComponent,
     KeyFeaturesComponent,
-    TestimonialsComponent
+    TestimonialsComponent,
+    FeatureCardComponent
   ],
   imports: [
     BrowserModule,
