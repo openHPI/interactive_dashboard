@@ -1,0 +1,21 @@
+section {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+button.controls {
+  position: absolute;
+  top: 50%;
+  margin: 5px;
+  background-color: white;
+  border: none;
+  color: black;
+  font-size: 3em;
+}
+button#next {
+  right: 0;
+  margin-right: 0;
+}
+button#previous {
+  margin-left: 0;
+}

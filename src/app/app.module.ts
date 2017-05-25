@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { MapComponent } from './map/map.component';
 import { AgmCoreModule } from 'angular2-google-maps/core';
 import { KeyFeaturesComponent } from './key-features/key-features.component';
+import { TestimonialsComponent } from './testimonials/testimonials.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MapComponent,
-    KeyFeaturesComponent
+    KeyFeaturesComponent,
+    TestimonialsComponent
   ],
   imports: [
     BrowserModule,
