@@ -6,11 +6,13 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { MapComponent } from './map/map.component';
 import { AgmCoreModule } from 'angular2-google-maps/core';
+import { KeyFeaturesComponent } from './key-features/key-features.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MapComponent
+    MapComponent,
+    KeyFeaturesComponent
   ],
   imports: [
     BrowserModule,

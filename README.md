@@ -5,10 +5,13 @@
 1. `cd jenz`
 2. Run `npm install`
 2.1 (optionally) if you get an error using windows, run: npm set registry https://registry.npmjs.org/
-3. Run npm install -g @angular/cli
+3. Run `npm install -g @angular/cli`
 4. Run `npm start`
 
-<br><br><br><br>
+## Create a component
+Using the Angular CLI you can simply do:
+1. `ng generate component my-new-component`
+2. Thats it.
 
 ## Development server
 
