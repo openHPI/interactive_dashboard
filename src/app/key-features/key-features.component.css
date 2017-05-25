@@ -1,13 +1,7 @@
 h2 {
 	text-align: center;
 }
-
-tr, td {
-	padding: 10px;
-}
-table{
-	margin: auto;
-}
-h3 {
-	margin: 0;
+div {
+	width: 100%;
+	margin-left: 15%;
 }
