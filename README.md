@@ -12,6 +12,7 @@
 Using the Angular CLI you can simply do:
 1. `ng generate component my-new-component`
 2. Thats it.
+More information can be found [here](https://github.com/angular/angular-cli#generating-components-directives-pipes-and-services).
 
 ## Development server
 
