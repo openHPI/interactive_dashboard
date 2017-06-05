@@ -21,6 +21,4 @@ export class PromoNumbersComponent {
 	{ count: 34.322, title: 'Zertifikate', description: 'bereits vergeben' }
   ]
 
-  constructor() { }
-
 }
