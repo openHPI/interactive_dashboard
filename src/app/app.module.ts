@@ -10,6 +10,7 @@ import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { FeatureCardComponent } from './feature-card/feature-card.component';
 import { PromoNumbersComponent } from './promo-numbers/promo-numbers.component';
 import { ReviewsComponent } from './reviews/reviews.component';
+import { CoursesComponent } from './courses/courses.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ReviewsComponent } from './reviews/reviews.component';
     TestimonialsComponent,
     FeatureCardComponent,
     PromoNumbersComponent,
-    ReviewsComponent
+    ReviewsComponent,
+    CoursesComponent
   ],
   imports: [
     BrowserModule,
