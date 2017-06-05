@@ -3,28 +3,28 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { MaterializeModule } from 'angular2-materialize';
 import { AppComponent } from './app.component';
-import { MapComponent } from './map/map.component';
-import { AgmCoreModule } from 'angular2-google-maps/core';
 import { KeyFeaturesComponent } from './key-features/key-features.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { FeatureCardComponent } from './feature-card/feature-card.component';
+import { PromoNumbersComponent } from './promo-numbers/promo-numbers.component';
+import { ReviewsComponent } from './reviews/reviews.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MapComponent,
     KeyFeaturesComponent,
     TestimonialsComponent,
-    FeatureCardComponent
+    FeatureCardComponent,
+    PromoNumbersComponent,
+    ReviewsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-	AgmCoreModule.forRoot({
-		apiKey: 'AIzaSyCQLhnDxhB2Gb7CRWLlZvWcYdEqK0GqseI'
-	})
+	MaterializeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
