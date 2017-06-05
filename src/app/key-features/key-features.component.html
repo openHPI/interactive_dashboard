@@ -1,8 +1,19 @@
 <h2>What our MOOCs offer</h2>
 
-<div>
-	<app-feature-card title="Massive" imageUrl="/assets/many-people.svg" description="Learn with thousands of other interested people"></app-feature-card>
-	<app-feature-card title="Open" imageUrl="/assets/open-door.svg" description="Everyone can participate"></app-feature-card>
-	<app-feature-card title="Online" imageUrl="/assets/online.svg" description="Learn everywhere"></app-feature-card>
-	<app-feature-card title="Courses" imageUrl="/assets/online-course.svg" description="Lots of diverse interesting topics"></app-feature-card>
+<div class="row">
+	<div *ngFor="let featureCard of featureCards" class="col s3">
+		<div class="card-panel grey lighten-4 z-depth-1">
+    	<div class="row valign-wrapper">
+      	<div class="col s3">
+        	<img src={{featureCard.imageUrl}} height="60">
+        </div>
+        <div class="col s9">
+	  			<h5>{{featureCard.title}}</h5>
+          <span class="black-text">
+          {{featureCard.text}}
+          </span>
+        </div>
+      </div>
+		</div>
+	</div>
 </div>
