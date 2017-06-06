@@ -17,13 +17,13 @@ export class StatisticsComponent implements OnInit {
     ];
 
     public area_ChartOptions = {
-        //hAxis: { title: '', titleTextStyle: { color: '#333' }, gridlines: {color: 'transparent'} },
+        hAxis: { title: '', titleTextStyle: { color: '#333' }, gridlines: {color: 'transparent'} },
         vAxis: { minValue: 0, gridlines: {color: 'transparent'} },
         chartArea:{width:'60%', height:'70%'},
-        legend: {position: 'bottom' },
+        legend: {position: 'top'},
         areaOpacity: 1,
         colors:[ '#f57c00', '#0d47a1', '#1e88e5', '#388e3c' ],
-        animation: {duration: 3000, startup: true},
+        animation: {duration: 300, startup: true},
         fontName: 'Roboto'
 
     };

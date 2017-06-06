@@ -10,7 +10,6 @@ import { MaterializeModule } from 'angular2-materialize';
 import { AppComponent } from './app.component';
 import { KeyFeaturesComponent } from './key-features/key-features.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
-import { FeatureCardComponent } from './feature-card/feature-card.component';
 import { PromoNumbersComponent } from './promo-numbers/promo-numbers.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { WorldMapComponent } from './world-map/world-map.component';
@@ -22,7 +21,6 @@ import { StatisticsComponent } from './statistics/statistics.component';
     GoogleChart,
     KeyFeaturesComponent,
     TestimonialsComponent,
-    FeatureCardComponent,
     PromoNumbersComponent,
     ReviewsComponent,
     WorldMapComponent,
