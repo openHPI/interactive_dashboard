@@ -2,10 +2,10 @@
 
 <div class="row">
 	<div *ngFor="let featureCard of featureCards" class="col s3">
-		<div class="card-panel grey lighten-4 z-depth-1">
+		<div class="card-panel grey lighten-5 z-depth-1">
     	<div class="row valign-wrapper">
       	<div class="col s3">
-        	<img src={{featureCard.imageUrl}} height="60">
+        	<img src={{featureCard.imageUrl}} class="responsive-img" height="60">
         </div>
         <div class="col s9">
 	  			<h5>{{featureCard.title}}</h5>

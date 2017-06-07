@@ -14,10 +14,10 @@ export class FeatureCard {
 export class KeyFeaturesComponent implements OnInit {
 
   featureCards: FeatureCard[] = [
-	{ imageUrl: '../assets/many-people.svg', title: 'Massive', text: 'Learn with thousands of interested people.' },
+	{ imageUrl: '../assets/many-people.svg', title: 'Massive', text: 'Learn with thousands of interested students.' },
 	{ imageUrl: '../assets/open-door.svg', title: 'Open', text: 'Everyone can participate. Sign-Up is free.' },
 	{ imageUrl: '../assets/online.svg', title: 'Online', text: 'Learn anywhere, at any time. Set your own plans.' },
-	{ imageUrl: '../assets/online-course.svg', title: 'Courses', text: 'A huge variety of topics. New courses coming all the time.' }
+	{ imageUrl: '../assets/online-course.svg', title: 'Courses', text: 'A huge variety of topics, waiting to be explored.' }
   ]
 
 
