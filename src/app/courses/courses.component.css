@@ -1,0 +1,37 @@
+.carousel {
+	overflow: visible;
+	margin-bottom: 280px;
+}
+.carousel-item {
+	width: 680px;
+}
+.carousel-item p {
+    font-size: 24px;
+}
+.card {
+	margin: 0;
+}
+.card .card-image {
+	height: 380px;
+}
+.card .card-content .card-title {
+	margin-bottom: 20px;
+	font-size: 40px;
+	line-height: 40px;
+}
+.card .card-content .card-title .btn {
+	line-height: 32px;
+}
+.card .card-content .card-title .btn .material-icons{
+	line-height: 40px;
+	font-size: 36px;
+}
+.card .card-content p {
+	margin-top: 6px;
+}
+.card .card-reveal span {
+	font-weight: bold;
+}
+.authors {
+	font-size: 24px;
+}

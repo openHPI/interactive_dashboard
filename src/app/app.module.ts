@@ -14,6 +14,7 @@ import { PromoNumbersComponent } from './promo-numbers/promo-numbers.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { WorldMapComponent } from './world-map/world-map.component';
 import { StatisticsComponent } from './statistics/statistics.component';
+import { CoursesComponent } from './courses/courses.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { StatisticsComponent } from './statistics/statistics.component';
     PromoNumbersComponent,
     ReviewsComponent,
     WorldMapComponent,
-    StatisticsComponent
+    StatisticsComponent,
+    CoursesComponent
   ],
   imports: [
     BrowserModule,

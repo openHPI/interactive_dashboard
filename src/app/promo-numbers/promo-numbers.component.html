@@ -1,32 +1,10 @@
-<div id="allrecords" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="53235" data-tilda-page-id="1002936"  data-tilda-formskey="3f015a2056a0004dc31820a296a220bd" >
-
-<div id="rec21865274" class="r" style="padding-top:105px;padding-bottom:105px; "  data-record-type="220"   >
-
-<!-- T192 -->
-<div class="t192">
-    <div class="t-container">
-        <div class="t-row">
-            <div class="t192__col t-col t-col_3">
-                <div class="t192__title t-title t-title_md" field="title">10 000</div>
-                <hr >
-                <div class="t192__text t-text t-text_sm" field="text">Training course price</div>
-            </div>
-                        <div class="t192__col t-col t-col_3">
-                <div class="t192__title t-title t-title_md" field="title2">7</div>
-                <hr >
-                <div class="t192__text t-text t-text_sm" field="text2">Conducts lectures and workshops during the course</div>
-            </div>
-                                    <div class="t192__col t-col t-col_3">
-                <div class="t192__title t-title t-title_md" field="title3">30</div>
-                <hr >
-                <div class="t192__text t-text t-text_sm" field="text3">The average number of students</div>
-            </div>
-                                    <div class="t192__col t-col t-col_3">
-                <div class="t192__title t-title t-title_md" field="title4">434</div>
-                <hr >
-                <div class="t192__text t-text t-text_sm" field="text4">The average number of students</div>
-            </div>
-                    </div>
-    </div>
-</div>
-</div>
+<div class="row">
+	<div *ngFor="let promo of promoNumbers" class="col s3">
+		<div class="center promo">
+			<h1>{{promo.count}}</h1>
+			<hr />
+			<h4>{{promo.title}}</h4>
+			<span>{{promo.description}}</span>
+		</div>
+	</div>
+</div>	
