@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpModule, JsonpModule } from '@angular/http';
 import {GoogleChart} from 'angular2-google-chart/directives/angular2-google-chart.directive';
 
 import { MaterializeModule } from 'angular2-materialize';
@@ -16,6 +16,9 @@ import { WorldMapComponent } from './world-map/world-map.component';
 import { StatisticsComponent } from './statistics/statistics.component';
 import { CoursesComponent } from './courses/courses.component';
 
+import { CourseService } from './courses/course.service';
+import { ReviewCardComponent } from './review-card/review-card.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,16 +29,17 @@ import { CoursesComponent } from './courses/courses.component';
     ReviewsComponent,
     WorldMapComponent,
     StatisticsComponent,
-    CoursesComponent
+    CoursesComponent,
+    ReviewCardComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-	  MaterializeModule,
+	MaterializeModule,
     NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyCQLhnDxhB2Gb7CRWLlZvWcYdEqK0GqseI'})
   ],
-  providers: [],
+  providers: [CourseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
