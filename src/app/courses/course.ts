@@ -1,15 +1,43 @@
-export class Course {
-	id: string;
+export class CertificateRate {
+	available: boolean;
+	threshold?: number;
+}
+
+export class Certificate {
+	confirmation_of_participation: CertificateRate;
+	record_of_achievement: CertificateRate;
+	qualified_certificate: CertificateRate;
+}
+
+export class Link {
+	self: string;
+}
+
+export class Attributes {
 	title: string;
-	url: string;
-	start_date: string;
-	end_date: string;
-	teacher: string;
-	code: string;
+	slug: string;
+	start_at: string;
+	end_at: string;
 	abstract: string;
-	image: string;
-	next_events: any[];
+	image_url: string;
 	language: string;
-	categories: any[];
 	status: string;
+	classifiers: any;
+	teachers: string;
+	accessible: boolean;
+	enrollable: boolean;
+	hidden: boolean;
+	external: boolean;
+	external_url: string;
+	policy_url: string;
+	certificates: Certificate;
+	on_demand: boolean;
+}
+
+export class Course {
+	type: string;
+	id: string;
+	links: Link;
+	attributes: Attributes;
+	relationships: any;
 }

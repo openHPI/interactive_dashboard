@@ -1,7 +1,5 @@
-<ngui-map center="Potsdam, Germany"
-  zoom="10"
-  (click)="log($event)"
-  [scrollwheel]="false">
+<ngui-map center="Potsdam, Germany"[options]="mapOptions" (click)="log($event)">
+  
   <marker position="will-fall-back-to-brampton-canada"
     [geoFallbackPosition]="[52.393978, 13.133011]"
     (dragstart)="log($event, 'dragstart')"
