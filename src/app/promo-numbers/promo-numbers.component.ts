@@ -15,8 +15,8 @@ export class PromoNumber {
 export class PromoNumbersComponent {
 
   promoNumbers: PromoNumber[] = [
-	{ count: 25.524, title: 'Teilnehmer', description: 'sdfsdfsdfsdf aktuell OpenHPI' },
-	{ count: 368, title: 'Kurse', description: 'biete OpenHPI aktuell an' },
+	{ count: 25.524, title: 'Teilnehmer', description: 'sdfsdfsdfsdf  OpenHPI' },
+	{ count: 368, title: 'Kurse', description: 'biete OpenHPI  an' },
 	{ count: 213, title: 'Lehrer', description: 'aldjflkasdjf' },
 	{ count: 34.322, title: 'Zertifikate', description: 'bereits vergeben' }
   ]

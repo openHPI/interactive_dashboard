@@ -11,11 +11,12 @@ export class WorldMapComponent implements OnInit {
 
   mapOptions = {
 	"center": "Potsdam, Germany",
-	"zoom": 10,
+	"zoom": 3,
 	"scrollwheel": false,
 	"mapTypeControl": false,
 	"streetViewControl": false,
-	"fullscreenControl": true,
+	"scaleControl": false,
+	"zoomControl": false,
 	"styles": [
 		{
 			"featureType": "all",

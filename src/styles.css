@@ -1,4 +1,57 @@
 /* You can add global styles to this file, and also import other style files */
-body {
-	background-color: #EEEEEE;
+
+body, .carousel.carousel-slider .carousel-item {
+	background-color: #24282B !important;
 }
+
+h1 {
+	color:#67DE91;
+}
+
+
+h2 {
+	color:white;
+}
+
+
+h3 {
+	color:white;
+}
+
+h4 {
+	color:white;
+}
+
+h5 {
+	color:white;
+	font-size: 2.64rem;
+}
+
+span {
+	color:white;
+}
+
+
+.gmnoprint, gmnoscreen {display:none;}
+
+.black-text {color:white !important}
+
+
+.grey.lighten-5 {background:#e76d3b !important;}
+
+.key_text {font-size:1.3em;}
+
+.btn-floating {display:none;}
+
+
+.card[_ngcontent-c4]   .card-content[_ngcontent-c4]   .card-title[_ngcontent-c4] {
+margin-bottom: 0px !important;
+    font-size: 36px !important;
+    line-height: 45px !important;
+    color:black !important;
+  }
+
+
+.carousel-item[_ngcontent-c4]   p[_ngcontent-c4] {
+  font-size:18px !important;
+  }
