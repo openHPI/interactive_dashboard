@@ -32,26 +32,14 @@ span {
 }
 
 
-.gmnoprint, gmnoscreen {display:none;}
-
 .black-text {color:white !important}
-
 
 .grey.lighten-5 {background:#e76d3b !important;}
 
 .key_text {font-size:1.3em;}
 
-.btn-floating {display:none;}
-
-
-.card[_ngcontent-c4]   .card-content[_ngcontent-c4]   .card-title[_ngcontent-c4] {
-margin-bottom: 0px !important;
-    font-size: 36px !important;
-    line-height: 45px !important;
-    color:black !important;
-  }
-
-
-.carousel-item[_ngcontent-c4]   p[_ngcontent-c4] {
-  font-size:18px !important;
-  }
+.carousel .indicators .indicator-item {
+  width: 20px;
+  height: 20px;
+}
+.gmnoprint, gmnoscreen {display:none;}

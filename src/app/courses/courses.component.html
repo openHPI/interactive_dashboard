@@ -1,11 +1,11 @@
-<div materialize="carousel" [materializeParams]="[{noWrap: false}]" class="carousel">
+<div *ngIf="courses" materialize="carousel" class="carousel">
 	<div *ngFor="let course of courses" class="carousel-item">
 		<div class="card white">
 			<div class="card-image waves-effect waves-block waves-light">
 				<img class="activator" src="{{course.attributes.image_url}}">
 			</div>
 			<div class="card-content">
-				<span class="card-title amber-text activator truncate">{{course.attributes.title}}<a class="btn btn-floating amber pulse right"><i class="material-icons">info_outline</i></a></span>
+				<span class="card-title amber-text activator truncate">{{course.attributes.title}}</span>
 				<span class="authors amber-text text-darken-3">{{course.attributes.teachers}}</span>
 				<p class="truncate">{{course.attributes.abstract}}</p>
 			</div>

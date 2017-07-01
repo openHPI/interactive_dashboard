@@ -6,7 +6,7 @@
 	width: 680px;
 }
 .carousel-item p {
-    font-size: 24px;
+    font-size: 18px;
 }
 .card {
 	margin: 0;
@@ -15,9 +15,10 @@
 	height: 380px;
 }
 .card .card-content .card-title {
-	margin-bottom: 20px;
-	font-size: 40px;
-	line-height: 40px;
+	margin-bottom: 0px;
+    font-size: 36px;
+    line-height: 45px;
+    color:black;
 }
 .card .card-content .card-title .btn {
 	line-height: 32px;

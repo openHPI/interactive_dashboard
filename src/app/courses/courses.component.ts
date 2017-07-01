@@ -19,7 +19,7 @@ export class CoursesComponent implements OnInit{
   
   ngOnInit(): void {
 	this.courseService.getAllCourses()
-	  .then(courses => this.courses = courses);
+	  .subscribe(courses => this.courses = courses);
   }
   
 }

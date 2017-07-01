@@ -1,4 +1,4 @@
-<div materialize="carousel" [materializeParams]="[{fullWidth: true, noWrap: true}]" class="carousel carousel-slider" data-indicators="true">
+<div class="carousel carousel-slider" *ngIf="reviews" materialize="carousel" [materializeParams]="[{fullWidth: true, noWrap: true}]" data-indicators="true" [materializeActions]="navigatorActions">
 	<div *ngFor="let review of reviews; let iReview = index">
 		<div class="carousel-item grey lighten-3" *ngIf="iReview % 4 === 0">
 			<div class="row">
@@ -19,4 +19,8 @@
 			</div>
 		</div>
 	</div>
+	<div class="carousel-fixed-item center">
+      <a class="btn waves-effect white grey-text darken-text-2 left" (click)="previousCourse()">Previous</a>
+	  <a class="btn waves-effect white grey-text darken-text-2 right" (click)="nextCourse()">Next</a>
+    </div>
 </div>

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter } from '@angular/core';
 import { Review } from '../review';
+import { MaterializeAction } from 'angular2-materialize';
 
 @Component({
   selector: 'app-reviews',
@@ -19,4 +20,14 @@ export class ReviewsComponent{
 
   constructor() { }
   
+  
+  navigatorActions = new EventEmitter<string|MaterializeAction>();
+
+  previousCourse() {
+    this.navigatorActions.emit({action:"carousel", params:['prev']});
+  }
+  nextCourse() {
+    this.navigatorActions.emit({action:"carousel", params:['next']});
+  }
 }
+
