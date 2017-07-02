@@ -18,6 +18,7 @@ import { CoursesComponent } from './courses/courses.component';
 
 import { CourseService } from './courses/course.service';
 import { ReviewCardComponent } from './review-card/review-card.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ReviewCardComponent } from './review-card/review-card.component';
     WorldMapComponent,
     StatisticsComponent,
     CoursesComponent,
-    ReviewCardComponent
+    ReviewCardComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
