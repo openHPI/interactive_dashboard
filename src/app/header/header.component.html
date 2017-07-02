@@ -1,6 +1,18 @@
 <div class="section center-align">
-  <img src="../assets/logos/OpenHPI-logo.png" />
-  <img src="../assets/logos/OpenSAP-logo.png" />
-  <img src="../assets/logos/mooc-house-logo.png" />
-  <img src="../assets/logos/OpenWHO-logo.png" />
+  <!-- DISCLAIMER -->
+  <!-- This code is super hacky and ugly,
+       and I really wish that we find something
+       prettier and more sophisticated. -->
+  <img [class.selected]="openhpi"
+       (click)="openhpi = !openhpi"
+       src="../assets/logos/OpenHPI-logo.png" />
+  <img [class.selected]="opensap"
+       (click)="opensap = !opensap"
+       src="../assets/logos/OpenSAP-logo.png" />
+  <img [class.selected]="moochouse"
+       (click)="moochouse = !moochouse"
+       src="../assets/logos/mooc-house-logo.png" />
+  <img [class.selected]="openwho"
+       (click)="openwho = !openwho"
+       src="../assets/logos/OpenWHO-logo.png" />
 </div>
