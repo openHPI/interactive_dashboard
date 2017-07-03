@@ -2,10 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
-import {GoogleChart} from 'angular2-google-chart/directives/angular2-google-chart.directive';
+import { GoogleChart } from 'angular2-google-chart/directives/angular2-google-chart.directive';
 
 import { MaterializeModule } from 'angular2-materialize';
- import { NguiMapModule} from '@ngui/map';
+import { NguiMapModule} from '@ngui/map';
 
 import { AppComponent } from './app.component';
 import { KeyFeaturesComponent } from './key-features/key-features.component';
@@ -16,7 +16,7 @@ import { WorldMapComponent } from './world-map/world-map.component';
 import { StatisticsComponent } from './statistics/statistics.component';
 import { CoursesComponent } from './courses/courses.component';
 
-import { CourseService } from './courses/course.service';
+import { DataService } from './services/data-service.service';
 import { ReviewCardComponent } from './review-card/review-card.component';
 import { HeaderComponent } from './header/header.component';
 
@@ -32,16 +32,18 @@ import { HeaderComponent } from './header/header.component';
     StatisticsComponent,
     CoursesComponent,
     ReviewCardComponent,
-    HeaderComponent
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-	MaterializeModule,
+	  MaterializeModule,
     NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyCQLhnDxhB2Gb7CRWLlZvWcYdEqK0GqseI'})
   ],
-  providers: [CourseService],
+  providers: [
+    DataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
