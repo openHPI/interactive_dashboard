@@ -1,8 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Course } from './course';
-import { CourseService } from './course.service';
-import { OnInit } from '@angular/core';
-
+import { DataService } from '../services/data-service.service';
 
 @Component({
   selector: 'app-courses',
@@ -10,16 +8,13 @@ import { OnInit } from '@angular/core';
   styleUrls: ['./courses.component.css']
 })
 
-
 export class CoursesComponent implements OnInit{
-
   courses: Course [];
 
-  constructor(private courseService: CourseService) {}
-  
+  constructor(private courseService: DataService) {}
+
   ngOnInit(): void {
-	this.courseService.getAllCourses()
-	  .subscribe(courses => this.courses = courses);
+  	this.courseService.getAll('https://open.hpi.de/api/v2/courses')
+  	                  .subscribe(courses => this.courses = courses as Course[]);
   }
-  
 }
