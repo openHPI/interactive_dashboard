@@ -10,19 +10,19 @@
 
 ## Use the custom DataService
 To use the DataService, do the following in your component:
-1. Import the DataService:
+1. **Import the DataService**:
 
  `import { DataService } from '../services/data-service.service';`
 
-2. *(optional)* Import your custom type:
+2. *(optional)* **Import your custom type**:
 
  e.g. `import { Course } from './course';`
 
-3. Declare your custom DataService (e.g. in constructor):
+3. **Declare your custom DataService (e.g. in constructor)**:
 
  `constructor(private myService: DataService) {}`
 
-4. Use the DataService.
+4. **Use the DataService**.
 
  e.g.
  ```
