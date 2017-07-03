@@ -8,19 +8,37 @@
 3. Run `npm install -g @angular/cli`
 4. Run `npm start`
 
-## Create a component
-Using the Angular CLI you can simply do:
-1. `ng generate component my-new-component`
-2. Thats it.
-More information can be found [here](https://github.com/angular/angular-cli#generating-components-directives-pipes-and-services).
+## Use the custom DataService
+To use the DataService, do the following in your component:
+1. Import the DataService:
 
-## Development server
+ `import { DataService } from '../services/data-service.service';`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+2. *(optional)* Import your custom type:
+
+ e.g. `import { Course } from './course';`
+
+3. Declare your custom DataService (e.g. in constructor):
+
+ `constructor(private myService: DataService) {}`
+
+4. Use the DataService.
+
+ e.g.
+ ```
+ this.myService.getAll('https://funny-url.com/api/getCourses')
+                 .subscribe(courses => this.courses = courses as Course[]);
+ ```
+
+---
 
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+
+## Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Build
 
