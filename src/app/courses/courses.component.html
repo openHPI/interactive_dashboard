@@ -1,4 +1,4 @@
-<div *ngIf="courses" materialize="carousel" class="carousel">
+<div *ngIf="courses" materialize="carousel" class="carousel" [materializeActions]="navigatorActions">
 	<div *ngFor="let course of courses" class="carousel-item">
 		<div class="card white">
 			<div class="card-image waves-effect waves-block waves-light">

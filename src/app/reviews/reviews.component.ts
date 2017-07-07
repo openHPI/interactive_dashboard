@@ -22,15 +22,14 @@ export class ReviewsComponent {
 	{statement: 'Hello. I\'m a random guy. This is a very long text. Bla bli blub di blub. This is a very long text. Bla bli blub di blub.', imageUrl: 'https://static.tildacdn.com/tild6231-3138-4531-b132-313863343037/28m.jpg', author: 'I\'m PROud being at the HPI :)'},
   ];
   
-  
   navigatorActions = new EventEmitter<string|MaterializeAction>();
 
-  previousCourse() {
+  previousReview(): void {
 	if (this.getActiveItem() != this.items.first){
 		this.navigatorActions.emit({action:"carousel", params:['prev']});
 	}
   }
-  nextCourse() {
+  nextReview(): void {
     this.navigatorActions.emit({action:"carousel", params:['next']});
   }
   
@@ -42,11 +41,11 @@ export class ReviewsComponent {
 	return item.nativeElement.classList.contains('active');
   }  
   
-  isFirst(){
+  isFirst(): Boolean {
 	return this.items ? this.getActiveItem() == this.items.first : false;
   }
   
-  isLast(){
+  isLast(): Boolean {
 	return this.items ? this.getActiveItem() == this.items.last : false;
   }
 }
