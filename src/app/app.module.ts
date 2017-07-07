@@ -19,6 +19,7 @@ import { CoursesComponent } from './courses/courses.component';
 import { DataService } from './services/data-service.service';
 import { ReviewCardComponent } from './review-card/review-card.component';
 import { HeaderComponent } from './header/header.component';
+import { CourseCardComponent } from './course-card/course-card.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { HeaderComponent } from './header/header.component';
     CoursesComponent,
     ReviewCardComponent,
     HeaderComponent,
+    CourseCardComponent,
   ],
   imports: [
     BrowserModule,

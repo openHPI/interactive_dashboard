@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit } from '@angular/core';
-import { Course } from './course';
+import { Course } from '../course';
 import { DataService } from '../services/data-service.service';
 import { MaterializeAction } from 'angular2-materialize';
 import { Observable, Subscription } from 'rxjs/Rx';
