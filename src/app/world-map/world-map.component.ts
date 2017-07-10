@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../services/data-service.service';
+import { Geo } from '../geodata';
 
 @Component({
   selector: 'world-map',
@@ -8,6 +10,8 @@ import { Component, OnInit } from '@angular/core';
 
 
 export class WorldMapComponent implements OnInit {
+  userPositions = [];
+  actualHour = new Date().getHours();
 
   mapOptions = {
 	"center": "Potsdam, Germany",
@@ -384,15 +388,50 @@ export class WorldMapComponent implements OnInit {
 	]
   }
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
+  	this.userPositions.push([52.393978, 13.133011]);
+  	this.mapRangeChanged(this.actualHour);
+  }
+
+  callApis(timeintervall){
+  	this.dataService.getAll('https://open.hpi.de/api/v2/stats/geo.json' + timeintervall)
+  												.subscribe(result => this.pushPositions(result));
+  	this.dataService.getAll('https://open.sap.com/api/v2/stats/geo.json' + timeintervall)
+  								.subscribe(result => this.pushPositions(result));
+  	this.dataService.getAll('https://mooc.house/api/v2/stats/geo.json' + timeintervall)
+  								.subscribe(result => this.pushPositions(result));
+  	this.dataService.getAll('https://openwho.org/api/v2/stats/geo.json' + timeintervall)
+  								.subscribe(result => this.pushPositions(result));
+  }
+
+  pushPositions(jsonArray): void{
+  	for (var i = jsonArray.length - 1; i >= 0; i--) {
+  		this.userPositions.push([jsonArray[i].lat, jsonArray[i].lon]);
+  	}
+  }
+
+  mapRangeChanged(rangeValue){
+  		this.userPositions = [];
+  		let newDate = new Date();
+  		newDate.setMilliseconds(0);
+  		newDate.setMinutes(0);
+  		newDate.setSeconds(0);
+  		let startDate = new Date(newDate);
+  		let endDate = new Date(newDate);
+  		startDate.setHours(rangeValue-1);
+  		startDate.setMinutes(40);
+  		endDate.setHours(rangeValue);
+  		console.log("start: "+ startDate +" end: "+ endDate);
+  		this.callApis('?end_date='+endDate.toISOString()+'&start_date='+startDate.toISOString());
   }
   
   public log(event, str) {
     if (event instanceof MouseEvent) {
-        return false;
+    	return false;
     }
+
     console.log('event .... >', event, str);
   }
 

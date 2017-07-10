@@ -2,3 +2,7 @@ ngui-map {
   display: block;
   height: 600px;
 }
+
+input{
+	border: none;
+}

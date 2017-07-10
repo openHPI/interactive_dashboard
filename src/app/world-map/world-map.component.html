@@ -1,8 +1,16 @@
 <ngui-map center="Potsdam, Germany"[options]="mapOptions" (click)="log($event)">
   
-  <marker position="will-fall-back-to-brampton-canada"
+  <!--<marker position="will-fall-back-to-brampton-canada"
     [geoFallbackPosition]="[52.393978, 13.133011]"
     (dragstart)="log($event, 'dragstart')"
     (dragend)="log($event, 'dragend')"
     draggable="true"></marker>
+  <marker *ngFor="let pos of positions"
+        [position]="pos"></marker>-->
+   <marker *ngFor="let pos of userPositions"
+   			[position]="pos"></marker>
 </ngui-map>
+
+<p class="range-field">
+    <input #ref type="range" min="0" max="23" defaultValue="{{actualHour}}" (input)="mapRangeChanged(ref.value)"/>
+</p>

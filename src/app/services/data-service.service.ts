@@ -14,6 +14,11 @@ export class DataService {
 
   private extractData(response: Response) {
     let json = response.json();
-    return json.data || { };
+
+   	if(json) {
+   		if(json.data) return json.data
+   		else return json
+	}
+	else return {}
   }
 }
