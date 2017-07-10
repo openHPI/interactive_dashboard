@@ -2,6 +2,7 @@ img {
   margin-right: 3rem;
   height:80px;
   cursor: pointer;
+border-bottom: 1rem solid gray;
 }
 
 
