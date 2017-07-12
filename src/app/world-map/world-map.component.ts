@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../services/data-service.service';
-import { Geo } from '../geodata';
 
 @Component({
   selector: 'world-map',
@@ -16,7 +15,6 @@ export class WorldMapComponent implements OnInit {
   mapOptions = {
 	"center": "Potsdam, Germany",
 	"zoom": 3,
-	"scrollwheel": false,
 	"mapTypeControl": false,
 	"streetViewControl": false,
 	"scaleControl": false,
