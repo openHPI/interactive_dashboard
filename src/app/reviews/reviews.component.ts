@@ -21,17 +21,18 @@ export class ReviewsComponent {
   
   private reviews: Review[];
   
+  //workaround
+  private subscription: Subscription;
+  
   public constructor(private reviewService: DataService) {
 	this.reviewService.addUpdateListener(this);
   }
   
-  private subscription: any;
   //Service-methods
   public update(): void {
 	this.reviews = this.reviewService.getReviews();
 	let timer = Observable.timer(0, 2000);
     this.subscription = timer.subscribe(() => this.reloadSlider()); //ugly but works
-	
   }
   
   //Component-methods

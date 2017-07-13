@@ -3,6 +3,9 @@
 }
 .card .card-image {
 	height: 380px;
+	display: block;
+	vertical-align: middle;
+	overflow: hidden;
 }
 .card .card-content .card-title {
 	margin-bottom: 0px;
@@ -25,4 +28,8 @@
 }
 .authors {
 	font-size: 24px;
+}
+
+.activator {
+	cursor: pointer;
 }
