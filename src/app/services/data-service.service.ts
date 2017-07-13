@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
-import { Course } from '../api';
+import { Course, GlobalStatistics } from '../api';
 import { Config, Platform, Review } from '../dashboard';
 import 'rxjs/add/operator/map';
 
@@ -58,8 +58,8 @@ export class DataService {
 	return this.http.get(url).map(this.extractJsonData);
   }
   
-  private getJsonArray(url: string): Observable<Object>{
-	return this.http.get(url).map(this.extractJsonArray);
+  private getJson(url: string): Observable<Object>{
+	return this.http.get(url).map(this.extractJson);
   }
 
   private extractJsonData(response: Response) {
@@ -67,7 +67,7 @@ export class DataService {
 	return (json) ? json.data : {};
   }
   
-  private extractJsonArray(response: Response) {
+  private extractJson(response: Response) {
 	let json = response.json();
 	return (json) ? json : {};
   }
@@ -100,11 +100,19 @@ export class DataService {
   
   // ===== WORLD MAP COMPONENT =====
   public getWorldPositions(startDate: Date, endDate: Date): Observable<Object[][]> {
-    let observables: Observable<Object[]>[] = []
+    let observables: Observable<Object[]>[] = [];
 	let subUrl = this.config.geoSubUrl + '?' + this.config.geoStartParam + '=' + startDate.toISOString() + '&' + this.config.geoEndParam + '=' + endDate.toISOString();
 	this.getSelectedPlatforms().
-		forEach(platform => observables.push(this.getJsonArray(platform.rootUrl + subUrl) as Observable<Object[]>));
+		forEach(platform => observables.push(this.getJson(platform.rootUrl + subUrl) as Observable<Object[]>));
 	return Observable.forkJoin(observables);		
+  }
+  
+  // ===== PROMO NUMBER COMPONENT =====
+  public getGlobalNumbers(): Observable<GlobalStatistics[]> {
+	let observables: Observable<GlobalStatistics>[] = [];
+	this.getSelectedPlatforms()
+		.forEach(platform => observables.push(this.getJson(platform.rootUrl + this.config.globalsSubUrl) as Observable<GlobalStatistics>));
+	return Observable.forkJoin(observables);
   }
   
  

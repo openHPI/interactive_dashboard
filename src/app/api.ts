@@ -1,3 +1,26 @@
+export class GlobalStatistic {
+	confirmed_users: number;
+    confirmed_users_last_day: number;
+    confirmed_users_last_7days: number;
+    unconfirmed_users: number;
+    unconfirmed_users_last_day: number;
+    unique_enrollments_last_day: number;
+    deleted_users: number;
+    total_enrollments: number;
+    platform_enrollments: number;
+    unenrollments: number;
+    external_enrollments: number;
+    total_enrollments_last_day: number;
+    total_enrollments_last_7days: number;
+    courses_per_learner: number;
+    global_enrollment_delta: number;
+    platform_custom_completed: number;
+}
+
+export class GlobalStatistics {
+	global_statistic: GlobalStatistic;
+}
+
 export class CertificateRate {
 	available: boolean;
 	threshold?: number;

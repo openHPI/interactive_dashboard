@@ -17,4 +17,5 @@ export class Config {
 	geoSubUrl: string;
 	geoStartParam: string;
 	geoEndParam: string;
+	globalsSubUrl: string;
 }

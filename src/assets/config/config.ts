@@ -34,5 +34,6 @@ export const CONFIG: Config = {
 	courseSubUrl: '/api/v2/courses',
 	geoSubUrl: '/api/v2/stats/geo.json',
 	geoStartParam: 'start_date',
-	geoEndParam: 'end_date'
+	geoEndParam: 'end_date',
+	globalsSubUrl: '/api/v2/stats/global.json'
 };
