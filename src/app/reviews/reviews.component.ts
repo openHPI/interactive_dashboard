@@ -23,7 +23,6 @@ export class ReviewsComponent {
   
   public constructor(private reviewService: DataService) {
 	this.reviewService.addUpdateListener(this);
-	this.update();
   }
   
   private subscription: any;

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
+import { Course } from '../api';
 import { Config, Platform, Review } from '../dashboard';
 import 'rxjs/add/operator/map';
 
@@ -29,6 +30,7 @@ export class DataService {
   //"Listener" - Functions
   addUpdateListener(listener: UpdateListener): void {
 	this.updateListener.push(listener);
+	listener.update();
   }
   addAnimationListener(listener: AnimationListener): void {
 	this.animationListener.push(listener);
@@ -52,6 +54,24 @@ export class DataService {
 	return this.config.platforms.filter(platform => !platform.isFilterSelected);
   }
   
+  private getJsonObservable(url: string): Observable<Object[]> {
+	return this.http.get(url).map(this.extractJsonData);
+  }
+  
+  private getJsonArray(url: string): Observable<Object>{
+	return this.http.get(url).map(this.extractJsonArray);
+  }
+
+  private extractJsonData(response: Response) {
+    let json = response.json();
+	return (json) ? json.data : {};
+  }
+  
+  private extractJsonArray(response: Response) {
+	let json = response.json();
+	return (json) ? json : {};
+  }
+  
   // ===== FILTER COMPONENT =====
   
   public togglePlatformState(platform: Platform): void {
@@ -70,23 +90,21 @@ export class DataService {
 	return reviews;
   }
   
-  
-  // ===== DEPRECATED =====
-  
-  //load data
-  getAll(url: string): Observable<Object[]> {
-    return this.http.get(url)
-      .map(this.extractData);
+  // ===== COURSE COMPONENT =====
+  public getCourses(): Observable<Course[][]> {
+    let observables: Observable<Course[]>[] = []
+	this.getSelectedPlatforms().
+		forEach(platform => observables.push(this.getJsonObservable(platform.rootUrl + this.config.courseSubUrl) as Observable<Course[]>));
+	return Observable.forkJoin(observables);							
   }
-
-  private extractData(response: Response) {
-    let json = response.json();
-
-   	if(json) {
-   		if(json.data) return json.data
-   		else return json
-	}
-	else return {}
+  
+  // ===== WORLD MAP COMPONENT =====
+  public getWorldPositions(startDate: Date, endDate: Date): Observable<Object[][]> {
+    let observables: Observable<Object[]>[] = []
+	let subUrl = this.config.geoSubUrl + '?' + this.config.geoStartParam + '=' + startDate.toISOString() + '&' + this.config.geoEndParam + '=' + endDate.toISOString();
+	this.getSelectedPlatforms().
+		forEach(platform => observables.push(this.getJsonArray(platform.rootUrl + subUrl) as Observable<Object[]>));
+	return Observable.forkJoin(observables);		
   }
   
  

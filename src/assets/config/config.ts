@@ -31,5 +31,8 @@ const OPEN_WHO: Platform = {
 
 export const CONFIG: Config = {
 	platforms: [OPEN_HPI, OPEN_SAP, MOOC_HOUSE, OPEN_WHO],
-	courseSubUrl: '/api/v2/courses'
+	courseSubUrl: '/api/v2/courses',
+	geoSubUrl: '/api/v2/stats/geo.json',
+	geoStartParam: 'start_date',
+	geoEndParam: 'end_date'
 };

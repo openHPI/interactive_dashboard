@@ -14,4 +14,7 @@ export class Platform {
 export class Config {
 	platforms: Platform[];
 	courseSubUrl: string;
+	geoSubUrl: string;
+	geoStartParam: string;
+	geoEndParam: string;
 }

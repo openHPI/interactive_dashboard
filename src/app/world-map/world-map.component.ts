@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { DataService } from '../services/data-service.service';
 
 @Component({
@@ -8,9 +8,9 @@ import { DataService } from '../services/data-service.service';
 })
 
 
-export class WorldMapComponent implements OnInit {
+export class WorldMapComponent {
   userPositions = [];
-  actualHour = new Date().getHours();
+  currentHour = new Date().getHours();
 
   mapOptions = {
 	"center": "Potsdam, Germany",
@@ -386,46 +386,44 @@ export class WorldMapComponent implements OnInit {
 	]
   }
 
-  constructor(private dataService: DataService) { }
-
-  ngOnInit() {
-  	this.userPositions.push([52.393978, 13.133011]);
-  	this.mapRangeChanged(this.actualHour);
+  constructor(private dataService: DataService) { 
+	this.dataService.addUpdateListener(this);
   }
 
-  callApis(timeintervall){
-  	this.dataService.getAll('https://open.hpi.de/api/v2/stats/geo.json' + timeintervall)
-  												.subscribe(result => this.pushPositions(result));
-  	this.dataService.getAll('https://open.sap.com/api/v2/stats/geo.json' + timeintervall)
-  								.subscribe(result => this.pushPositions(result));
-  	this.dataService.getAll('https://mooc.house/api/v2/stats/geo.json' + timeintervall)
-  								.subscribe(result => this.pushPositions(result));
-  	this.dataService.getAll('https://openwho.org/api/v2/stats/geo.json' + timeintervall)
-  								.subscribe(result => this.pushPositions(result));
+  callApis(startDate: Date, endDate: Date){
+    this.dataService.getWorldPositions(startDate, endDate).subscribe(geoArrays =>
+		this.pushPositions(geoArrays.reduce(function(prev, next) {
+			return prev.concat(next);
+		})));
   }
 
-  pushPositions(jsonArray): void{
+  private pushPositions(jsonArray): void{
   	for (var i = jsonArray.length - 1; i >= 0; i--) {
   		this.userPositions.push([jsonArray[i].lat, jsonArray[i].lon]);
   	}
   }
+  
+  public update(): void {
+	this.userPositions = [];
+	let newDate = new Date();
+	newDate.setMilliseconds(0);
+	newDate.setMinutes(0);
+	newDate.setSeconds(0);
+	let startDate = new Date(newDate);
+	let endDate = new Date(newDate);
+	startDate.setHours(this.currentHour - 1);
+	startDate.setMinutes(40);
+	endDate.setHours(this.currentHour);
+	console.log("start: "+ startDate +" end: "+ endDate);
+	this.callApis(startDate, endDate);
+  }
 
-  mapRangeChanged(rangeValue){
-  		this.userPositions = [];
-  		let newDate = new Date();
-  		newDate.setMilliseconds(0);
-  		newDate.setMinutes(0);
-  		newDate.setSeconds(0);
-  		let startDate = new Date(newDate);
-  		let endDate = new Date(newDate);
-  		startDate.setHours(rangeValue-1);
-  		startDate.setMinutes(40);
-  		endDate.setHours(rangeValue);
-  		console.log("start: "+ startDate +" end: "+ endDate);
-  		this.callApis('?end_date='+endDate.toISOString()+'&start_date='+startDate.toISOString());
+  private mapRangeChanged(rangeValue){
+  	this.currentHour = rangeValue;	
+	this.update();
   }
   
-  public log(event, str) {
+  private log(event, str) {
     if (event instanceof MouseEvent) {
     	return false;
     }
