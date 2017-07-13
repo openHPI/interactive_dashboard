@@ -12,10 +12,4 @@ export class FilterLogoComponent {
   @Input() platform: Platform;
 
   constructor(private filterService: DataService) { }
-  
-  private toggleFilter(): void {
-	this.platform.isFilterSelected = !this.platform.isFilterSelected;
-	this.filterService.update();
-  }
-
 }

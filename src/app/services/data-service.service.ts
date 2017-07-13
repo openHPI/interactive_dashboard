@@ -46,7 +46,22 @@ export class DataService {
   //Private functions
   private getSelectedPlatforms(): Platform[] {
     return this.config.platforms.filter(platform => platform.isFilterSelected);
-  } 
+  }
+  
+  private getUnselectedPlatforms(): Platform[] {
+	return this.config.platforms.filter(platform => !platform.isFilterSelected);
+  }
+  
+  // ===== FILTER COMPONENT =====
+  
+  public togglePlatformState(platform: Platform): void {
+	if (platform.isFilterSelected && this.getSelectedPlatforms().length == 1) {
+		this.getUnselectedPlatforms().forEach(platform => platform.isFilterSelected = true);
+	} else {
+		platform.isFilterSelected = !platform.isFilterSelected;
+	}
+	this.update();
+  }
   
   // ===== REVIEW COMPONENT =====
   public getReviews(): Review[] {

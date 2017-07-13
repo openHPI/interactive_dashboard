@@ -1,1 +1,1 @@
-<img [ngClass]="{'selected': platform.isFilterSelected}" (click)="toggleFilter()" [src]="platform.logoUrl" />
+<img [ngClass]="{'selected': platform.isFilterSelected}" (click)="filterService.togglePlatformState(platform)" [src]="platform.logoUrl" />
