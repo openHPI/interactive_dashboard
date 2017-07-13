@@ -2,10 +2,9 @@ img {
   margin-right: 3rem;
   height:80px;
   cursor: pointer;
-border-bottom: 1rem solid gray;
+  border-bottom: 1rem solid gray;
 }
 
-
 .selected {
- border-bottom: 1rem solid #67DE91;
+  border-bottom: 1rem solid #67DE91;
 }

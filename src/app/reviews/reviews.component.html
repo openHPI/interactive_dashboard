@@ -1,4 +1,4 @@
-<div class="carousel carousel-slider" *ngIf="reviews" materialize="carousel" [materializeParams]="[{fullWidth: true, noWrap: true}]" data-indicators="true" [materializeActions]="navigatorActions">
+<div #slider class="carousel carousel-slider" *ngIf="reviews" materialize="carousel" [materializeParams]="[{fullWidth: true, noWrap: true}]" data-indicators="true" [materializeActions]="navigatorActions">
 	<div *ngFor="let review of reviews; let iReview = index">
 		<div #item class="carousel-item grey lighten-3" *ngIf="iReview % 4 === 0">
 			<div class="row">

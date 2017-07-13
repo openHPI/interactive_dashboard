@@ -9,7 +9,6 @@ import { NguiMapModule} from '@ngui/map';
 
 import { AppComponent } from './app.component';
 import { KeyFeaturesComponent } from './key-features/key-features.component';
-import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { PromoNumbersComponent } from './promo-numbers/promo-numbers.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { WorldMapComponent } from './world-map/world-map.component';
@@ -18,23 +17,24 @@ import { CoursesComponent } from './courses/courses.component';
 
 import { DataService } from './services/data-service.service';
 import { ReviewCardComponent } from './review-card/review-card.component';
-import { HeaderComponent } from './header/header.component';
 import { CourseCardComponent } from './course-card/course-card.component';
+import { FilterComponent } from './filter/filter.component';
+import { FilterLogoComponent } from './filter-logo/filter-logo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GoogleChart,
     KeyFeaturesComponent,
-    TestimonialsComponent,
     PromoNumbersComponent,
     ReviewsComponent,
     WorldMapComponent,
     StatisticsComponent,
     CoursesComponent,
     ReviewCardComponent,
-    HeaderComponent,
     CourseCardComponent,
+    FilterComponent,
+    FilterLogoComponent,
   ],
   imports: [
     BrowserModule,
