@@ -6,3 +6,9 @@ ngui-map {
 input{
 	border: none;
 }
+
+.range-field {
+    width: 1400px;
+    margin: 0 auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;}
