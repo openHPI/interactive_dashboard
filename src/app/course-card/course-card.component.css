@@ -22,14 +22,24 @@
 }
 .card .card-content p {
 	margin-top: 6px;
+	color: #696969;
 }
 .card .card-reveal span {
 	font-weight: bold;
 }
 .authors {
-	font-size: 24px;
+	font-size: 20px;
 }
 
 .activator {
 	cursor: pointer;
+}
+.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+
 }

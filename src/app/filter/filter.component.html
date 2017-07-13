@@ -1,4 +1,4 @@
-<div class="section center-align" style="display: inline-flex">
+<div class="section center-align" style="display: flex; justify-content: center; padding-top: 2rem;  padding-bottom: 2rem;">
   <div *ngFor="let platform of filterService.getPlatforms()">
     <app-filter-logo [platform]="platform"></app-filter-logo>
   </div>
