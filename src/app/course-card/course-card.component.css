@@ -18,11 +18,23 @@
 	font-size: 36px;
 }
 .card .card-content p {
-	margin-top: 6px;
+	margin-top: 15px;
+	color: #696969;
 }
 .card .card-reveal span {
 	font-weight: bold;
 }
 .authors {
-	font-size: 24px;
+	font-size: 20px;
+}
+
+
+.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+
 }
