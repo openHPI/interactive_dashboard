@@ -1,12 +1,64 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
+import { Config, Platform, Review } from '../dashboard';
 import 'rxjs/add/operator/map';
+
+//import constants
+import { CONFIG } from 'assets/config/config';
+
+interface UpdateListener {
+  update(): void;
+}
+interface AnimationListener {
+  startAnimation(): void;
+  stopAnimation();
+}
 
 @Injectable()
 export class DataService {
-  constructor(private http: Http) { }
-
+  
+  config: Config = CONFIG;
+  
+  updateListener: UpdateListener[] = [];
+  animationListener: AnimationListener[] = [];
+  
+  
+  constructor(private http: Http) {}
+  
+  //"Listener" - Functions
+  addUpdateListener(listener: UpdateListener): void {
+	this.updateListener.push(listener);
+  }
+  addAnimationListener(listener: AnimationListener): void {
+	this.animationListener.push(listener);
+  }
+  
+  //General
+  public getPlatforms(): Platform[] {
+	return this.config.platforms;
+  }
+  
+  public update(){
+    this.updateListener.forEach(listener => listener.update());
+  }
+  
+  //Private functions
+  private getSelectedPlatforms(): Platform[] {
+    return this.config.platforms.filter(platform => platform.isFilterSelected);
+  } 
+  
+  // ===== REVIEW COMPONENT =====
+  public getReviews(): Review[] {
+	let reviews: Review[] = [];
+	this.getSelectedPlatforms().forEach(platform => reviews = reviews.concat(platform.reviews));
+	return reviews;
+  }
+  
+  
+  // ===== DEPRECATED =====
+  
+  //load data
   getAll(url: string): Observable<Object[]> {
     return this.http.get(url)
       .map(this.extractData);
@@ -21,4 +73,9 @@ export class DataService {
 	}
 	else return {}
   }
+  
+ 
+  
+  
+  
 }
