@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DataService } from '../services/data-service.service';
+import { Platform } from '../dashboard';
 
 @Component({
   selector: 'world-map',
@@ -11,6 +12,7 @@ import { DataService } from '../services/data-service.service';
 export class WorldMapComponent {
   userPositions = [];
   currentHour = new Date().getHours();
+  rangeSlider;
 
   mapOptions = {
 	"center": "Potsdam, Germany",
@@ -388,18 +390,48 @@ export class WorldMapComponent {
 
   constructor(private dataService: DataService) { 
 	this.dataService.addUpdateListener(this);
+	this.rangeSlider = document.getElementsByName("range-slider");
+	/*noUiSlider.create(this.rangeSlider, {
+	start: [ 1450, 2050, 2350, 3000 ], // 4 handles, starting at...
+	margin: 300, // Handles must be at least 300 apart
+	limit: 600, // ... but no more than 600
+	connect: true, // Display a colored bar between the handles
+	direction: 'rtl', // Put '0' at the bottom of the slider
+	orientation: 'vertical', // Orient the slider vertically
+	behaviour: 'tap-drag', // Move handle on tap, bar is draggable
+	step: 150,
+	tooltips: true,
+	format: wNumb({
+		decimals: 0
+	}),
+	range: {
+		'min': 1300,
+		'max': 3250
+	},
+	pips: { // Show a scale with the slider
+		mode: 'steps',
+		stepped: true,
+		density: 4
+	}
+});*/
   }
 
   callApis(startDate: Date, endDate: Date){
-    this.dataService.getWorldPositions(startDate, endDate).subscribe(geoArrays =>
-		this.pushPositions(geoArrays.reduce(function(prev, next) {
-			return prev.concat(next);
-		})));
+    this.dataService.getWorldPositions(startDate, endDate).subscribe(geoArrays => 
+						    		{let platforms = geoArrays.shift() as Config[]; 
+						    		for (var i = platforms.length - 1; i >= 0; i--) {
+						    			console.log(platforms[0].rootUrl);
+						    			this.pushPositions(geoArrays.reduce(function(prev, next) 
+						    								{return prev.concat(next);}),
+						    								platforms[i].mapMarkerUrl);
+						    		}
+						    		});
+		
   }
 
-  private pushPositions(jsonArray): void{
+  private pushPositions(jsonArray, mapMarkerUrl): void{
   	for (var i = jsonArray.length - 1; i >= 0; i--) {
-  		this.userPositions.push([jsonArray[i].lat, jsonArray[i].lon]);
+  		this.userPositions.push([jsonArray[i].lat, jsonArray[i].lon, mapMarkerUrl]);
   	}
   }
   
@@ -414,6 +446,7 @@ export class WorldMapComponent {
 	startDate.setHours(this.currentHour - 1);
 	startDate.setMinutes(40);
 	endDate.setHours(this.currentHour);
+
 	console.log("start: "+ startDate +" end: "+ endDate);
 	this.callApis(startDate, endDate);
   }
