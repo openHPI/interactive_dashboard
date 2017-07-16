@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DataService } from '../services/data-service.service';
+import { Platform } from '../dashboard';
 
 @Component({
   selector: 'world-map',
@@ -391,11 +392,14 @@ export class WorldMapComponent {
   }
 
   callApis(startDate: Date, endDate: Date){
-    this.dataService.getWorldPositions(startDate, endDate).subscribe(geoArrays =>
+    this.dataService.getWorldPositions(startDate, endDate).subscribe(plattformAndPositions => {
+		let platforms: Platform[] = plattformAndPositions[0] as Platform[];
+		console.log(platforms); //do whatever you like and remove this line please
+		let geoArrays = plattformAndPositions.slice(1, plattformAndPositions.length);
 		this.pushPositions(geoArrays.reduce(function(prev, next) {
 			return prev.concat(next);
 		}))
-	);
+	});
   }
 
   private pushPositions(jsonArray): void{

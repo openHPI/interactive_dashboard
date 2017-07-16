@@ -102,6 +102,7 @@ export class DataService {
   public getWorldPositions(startDate: Date, endDate: Date): Observable<Object[][]> {
     let observables: Observable<Object[]>[] = [];
 	let subUrl = this.config.geoSubUrl + '?' + this.config.geoStartParam + '=' + startDate.toISOString() + '&' + this.config.geoEndParam + '=' + endDate.toISOString();
+	observables.push(Observable.of(this.getSelectedPlatforms()));
 	this.getSelectedPlatforms().
 		forEach(platform => observables.push(this.getJson(platform.rootUrl + subUrl) as Observable<Object[]>));
 	return Observable.forkJoin(observables);		
