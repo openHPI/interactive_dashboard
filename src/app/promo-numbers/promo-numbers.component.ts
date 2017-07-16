@@ -1,13 +1,8 @@
 import { Component } from '@angular/core';
 import { DataService } from '../services/data-service.service';
 import { GlobalStatistic } from '../api';
+import { PromoNumber } from '../dashboard';
 import { Observable, Subscription } from 'rxjs/Rx';
-
-export class PromoNumber {
-	count: number;
-	title: string;
-	description: string;
-}
 
 @Component({
   selector: 'app-promo-numbers',
@@ -39,11 +34,22 @@ export class PromoNumbersComponent {
   }
 
   private updatePromoNumbers(enrollments: number, users: number, courses: number, certificates: number): void{
+	let enrollmentsOld = 0;
+	let usersOld = 0;
+	let coursesOld = 0;
+	let certificatesOld = 0;
+	
+	if (this.promoNumbers) {
+	  enrollmentsOld = this.promoNumbers[0].count;
+	  usersOld = this.promoNumbers[1].count;
+	  coursesOld = this.promoNumbers[2].count;
+	  certificatesOld = this.promoNumbers[3].count;	  
+	}
 	this.promoNumbers = [
-	  { count: enrollments, title: 'Enrollments', description: 'Total enrollments' },
-	  { count: users, title: 'Users', description: 'Unique users' },
-	  { count: courses, title: 'Courses', description: 'Available courses' },
-	  { count: certificates, title: 'Certificates', description: 'Handed certificates' }
+	  { count: enrollments, countOld: enrollmentsOld, title: 'Enrollments', description: 'Total enrollments' },
+	  { count: users, countOld: usersOld, title: 'Users', description: 'Unique users' },
+	  { count: courses, countOld: coursesOld, title: 'Courses', description: 'Available courses' },
+	  { count: certificates, countOld: certificatesOld, title: 'Certificates', description: 'Handed certificates' }
     ]
   }
   

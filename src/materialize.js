@@ -8093,12 +8093,6 @@ Picker.extend( 'pickadate', DatePicker )
           }
           cycleTo(n);
         });
-		
-		$(this).on('carouselReset', function (e, n) {
-			view.removeClass('initialized');
-			init();
-		});
-
       });
 
 
@@ -8112,11 +8106,7 @@ Picker.extend( 'pickadate', DatePicker )
     },
     set : function(n) {
       $(this).trigger('carouselSet', [n]);
-    },
-	reset : function(n) {
-	  $(this).trigger('carouselReset', [n]);
-	  //init needs to get called manually
-	}
+    }
   };
 
 

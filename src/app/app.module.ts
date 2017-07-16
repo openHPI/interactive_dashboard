@@ -6,6 +6,7 @@ import { GoogleChart } from 'angular2-google-chart/directives/angular2-google-ch
 
 import { MaterializeModule } from 'angular2-materialize';
 import { NguiMapModule} from '@ngui/map';
+import { CountoModule }  from 'angular2-counto';
 
 import { AppComponent } from './app.component';
 import { KeyFeaturesComponent } from './key-features/key-features.component';
@@ -20,6 +21,7 @@ import { ReviewCardComponent } from './review-card/review-card.component';
 import { CourseCardComponent } from './course-card/course-card.component';
 import { FilterComponent } from './filter/filter.component';
 import { FilterLogoComponent } from './filter-logo/filter-logo.component';
+import { PromoNumbersComponentComponent } from './promo-numbers-component/promo-numbers-component.component';
 
 @NgModule({
   declarations: [
@@ -35,9 +37,11 @@ import { FilterLogoComponent } from './filter-logo/filter-logo.component';
     CourseCardComponent,
     FilterComponent,
     FilterLogoComponent,
+    PromoNumbersComponentComponent
   ],
   imports: [
     BrowserModule,
+	CountoModule,
     FormsModule,
     HttpModule,
 	  MaterializeModule,

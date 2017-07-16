@@ -1,3 +1,10 @@
+export class PromoNumber {
+	count: number;
+	countOld: number;
+	title: string;
+	description: string;
+}
+
 export class Review {
 	statement: string;
 	imageUrl: string;
