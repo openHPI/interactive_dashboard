@@ -30,14 +30,21 @@ export class CoursesComponent {
 	this.courseService.addUpdateListener(this);
   }
   
-  public update(): void{
+  public update(): void {
 	this.courseService.getCourses().subscribe(courses => {
-		if (!this.courses) {
 		this.courses = courses.reduce(function(prev, next) {
 			return prev.concat(next);
-		});}
-		this.navigatorActions.emit({action:'carousel', params:['reset']});
+		});
+		let timer = Observable.timer(0, 2000);
+		this.subscription = timer.subscribe(() => this.reloadCarousel()); //ugly but works
 	});
+  }
+  
+  private reloadCarousel(): void {
+	if (!this.carousel) return;
+	$(this.carousel.nativeElement).removeClass('initialized');
+	this.navigatorActions.emit({action: 'carousel', params:[{}]});
+	this.subscription.unsubscribe();
   }
   
   public startAutoSlideTimer(): void {
