@@ -417,16 +417,14 @@ export class WorldMapComponent {
   }
 
   callApis(startDate: Date, endDate: Date){
-    this.dataService.getWorldPositions(startDate, endDate).subscribe(geoArrays => 
-						    		{let platforms = geoArrays.shift() as Config[]; 
-						    		for (var i = platforms.length - 1; i >= 0; i--) {
-						    			console.log(platforms[0].rootUrl);
-						    			this.pushPositions(geoArrays.reduce(function(prev, next) 
-						    								{return prev.concat(next);}),
-						    								platforms[i].mapMarkerUrl);
-						    		}
-						    		});
-		
+	this.dataService.getWorldPositions(startDate, endDate).subscribe(plattformAndPositions => {
+		let platforms: Platform[] = plattformAndPositions[0] as Platform[];
+		console.log(platforms); //do whatever you like and remove this line please
+		let geoArrays = plattformAndPositions.slice(1, plattformAndPositions.length);
+		for (var i = platforms.length - 1; i >= 0; i--) {
+			this.pushPositions(geoArrays[i], platforms[i].mapMarkerUrl);
+		}
+	});
   }
 
   private pushPositions(jsonArray, mapMarkerUrl): void{

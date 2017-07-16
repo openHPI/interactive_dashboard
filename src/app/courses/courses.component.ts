@@ -32,22 +32,12 @@ export class CoursesComponent {
   
   public update(): void{
 	this.courseService.getCourses().subscribe(courses => {
+		if (!this.courses) {
 		this.courses = courses.reduce(function(prev, next) {
 			return prev.concat(next);
-		});
-		let timer = Observable.timer(0, 2000);
-		this.subscription = timer.subscribe(() => this.reloadCarousel()); //ugly but works
+		});}
+		this.navigatorActions.emit({action:'carousel', params:['reset']});
 	});
-  }
-  
-  private reloadCarousel(): void {
-	if(!this.carousel) return;
-    //workaround proposed by Rubyboy (a Materialize guy)
-	let jCarousel = $(this.carousel.nativeElement);
-	jCarousel.removeClass("initialized");
-	//we need to unregister the event handlers, but we cant - jquery off() doesnt work
-	this.navigatorActions.emit({action:'carousel', params:['']});
-	this.subscription.unsubscribe();
   }
   
   public startAutoSlideTimer(): void {
@@ -62,7 +52,7 @@ export class CoursesComponent {
   }
   
   private showNextCourse(): void {
-    this.navigatorActions.emit({action:"carousel", params:['next']});
+    this.navigatorActions.emit({action:'carousel', params:['next']});
   }
   
 }
