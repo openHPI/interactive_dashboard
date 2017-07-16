@@ -394,7 +394,8 @@ export class WorldMapComponent {
     this.dataService.getWorldPositions(startDate, endDate).subscribe(geoArrays =>
 		this.pushPositions(geoArrays.reduce(function(prev, next) {
 			return prev.concat(next);
-		})));
+		}))
+	);
   }
 
   private pushPositions(jsonArray): void{
