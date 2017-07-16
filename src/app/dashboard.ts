@@ -7,6 +7,7 @@ export class Review {
 export class Platform {
 	rootUrl: string;
 	logoUrl: string;
+	mapMarkerUrl: string;
 	reviews: Review[];
 	isFilterSelected: boolean;
 }

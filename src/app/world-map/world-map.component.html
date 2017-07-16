@@ -8,9 +8,13 @@
   <marker *ngFor="let pos of positions"
         [position]="pos"></marker>-->
    <marker *ngFor="let pos of userPositions"
-   			[position]="pos"></marker>
+   			[position]= "[pos[0], pos[1]]"
+   			[icon]="{
+		       url: pos[2],
+		       scaleSize: [1,1]
+     		}"></marker>
 </ngui-map>
-
+<div name="range-slider"></div>
 <p class="range-field">
-    <input #ref type="range" min="0" max="23" defaultValue="{{currentHour}}" (input)="mapRangeChanged(ref.value)"/>
+    <input #ref name="range-slider" type="range" min="0" max="23" defaultValue="{{currentHour}}" (input)="mapRangeChanged(ref.value)"/>
 </p>
