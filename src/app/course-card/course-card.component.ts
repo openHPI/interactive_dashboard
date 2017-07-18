@@ -11,9 +11,9 @@ import { CONFIG } from 'assets/config/config';
 })
 export class CourseCardComponent {
 
-  private _course: Course;
-  private config: Config = CONFIG;
-  private qrCodeUrl: string;
+  public _course: Course;
+  public config: Config = CONFIG;
+  public qrCodeUrl: string;
 	
   @Input()
   set course(course: Course) {
