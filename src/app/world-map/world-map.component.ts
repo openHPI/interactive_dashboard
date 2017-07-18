@@ -21,6 +21,8 @@ export class WorldMapComponent {
 	"streetViewControl": false,
 	"scaleControl": false,
 	"zoomControl": false,
+	"minZoom": 3,
+	"maxZoom": 14,
 	"styles": [
 		{
 			"featureType": "all",
