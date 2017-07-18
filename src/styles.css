@@ -43,3 +43,8 @@ span {
   height: 20px;
 }
 .gmnoprint, gmnoscreen {display:none;}
+
+qr-code img {
+	display: block;
+	margin: 0 auto;
+}

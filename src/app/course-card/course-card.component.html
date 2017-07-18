@@ -1,18 +1,17 @@
 <div class="card white">
 	<div class="card-image waves-effect waves-block waves-light">
-		<img class="activator" src="{{course.attributes.image_url}}">
+		<img class="activator" src="{{_course.attributes.image_url}}">
 	</div>
 	<div class="card-content">
-		<span class="card-title activator truncate">{{course.attributes.title}}</span>
-		<span class="authors amber-text text-darken-3">{{course.attributes.teachers}}</span>
-		<p class="truncate">{{course.attributes.abstract}}</p>
+		<span class="card-title activator truncate">{{_course.attributes.title}}</span>
+		<span class="authors amber-text text-darken-3">{{_course.attributes.teachers}}</span>
+		<p class="truncate">{{_course.attributes.abstract}}</p>
 	</div>
 	<div class="card-reveal">
-		<span class="card-title grey-text text-darken-4" style="font-size: 36px; line-height: 45px;">{{course.attributes.title}}<i class="material-icons right">close</i></span>
-		<span class="authors amber-text text-darken-3">{{course.attributes.teachers}}</span>
+		<span class="card-title grey-text text-darken-4" style="font-size: 36px; line-height: 45px;">{{_course.attributes.title}}<i class="material-icons right">close</i></span>
+		<span class="authors amber-text text-darken-3">{{_course.attributes.teachers}}</span>
 		<br />
-
-		<img src="../assets/QR.png" style="width: 390px; display: block; margin: 0 auto;" />
+		<qr-code [value]="qrCodeUrl" [size]="390" [padding]="40"></qr-code>
 		<a class="waves-effect waves-light btn-large" style="display: block; font-size: 20px; margin: 0 auto; background-color: #e76d3b;">Scan and try!</a>
 
 	</div>

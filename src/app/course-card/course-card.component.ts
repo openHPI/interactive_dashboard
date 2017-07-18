@@ -1,22 +1,31 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Course, CourseStatistics } from '../api';
-import { DataService } from '../services/data-service.service';
+import { Component, Input } from '@angular/core';
+import { Course } from '../api';
+import { Config } from '../dashboard';
+
+import { CONFIG } from 'assets/config/config';
 
 @Component({
   selector: 'app-course-card',
   templateUrl: './course-card.component.html',
   styleUrls: ['./course-card.component.css']
 })
-export class CourseCardComponent implements OnInit {
+export class CourseCardComponent {
 
-  @Input() course: Course;
-
-  courseStatistics: CourseStatistics;
-  
-  constructor(private courseStatisticService: DataService) { }
-
-  ngOnInit() {
-	//load courseStatistics from DataService
+  private _course: Course;
+  private config: Config = CONFIG;
+  private qrCodeUrl: string;
+	
+  @Input()
+  set course(course: Course) {
+	this._course = course;
+	//hacky way to build up the qrCodeUrl
+	this.qrCodeUrl = this.getHost(this._course.attributes.image_url) + this.config.directCourseUrl + this._course.attributes.slug;
   }
-
+  
+  private getHost(url: string): string {
+	let location = document.createElement('a');
+    location.href = url;
+    return location.hostname;
+  }
+  
 }

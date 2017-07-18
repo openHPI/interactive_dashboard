@@ -7,6 +7,7 @@ import { GoogleChart } from 'angular2-google-chart/directives/angular2-google-ch
 import { MaterializeModule } from 'angular2-materialize';
 import { NguiMapModule} from '@ngui/map';
 import { CountoModule }  from 'angular2-counto';
+import { QRCodeModule } from 'angular2-qrcode';
 
 import { AppComponent } from './app.component';
 import { KeyFeaturesComponent } from './key-features/key-features.component';
@@ -45,7 +46,8 @@ import { PromoNumbersComponentComponent } from './promo-numbers-component/promo-
     FormsModule,
     HttpModule,
 	  MaterializeModule,
-    NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyCQLhnDxhB2Gb7CRWLlZvWcYdEqK0GqseI'})
+    NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyCQLhnDxhB2Gb7CRWLlZvWcYdEqK0GqseI'}),
+	QRCodeModule
   ],
   providers: [
     DataService
