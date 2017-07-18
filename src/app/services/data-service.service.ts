@@ -75,10 +75,19 @@ export class DataService {
   // ===== FILTER COMPONENT =====
   
   public togglePlatformState(platform: Platform): void {
-	if (platform.isFilterSelected && this.getSelectedPlatforms().length == 1) {
-		this.getUnselectedPlatforms().forEach(platform => platform.isFilterSelected = true);
-	} else {
-		platform.isFilterSelected = !platform.isFilterSelected;
+	if (platform.isFilterSelected) {
+		if (this.getSelectedPlatforms().length == 1) { //last one gets disabled => enable all
+			this.getUnselectedPlatforms().forEach(p => p.isFilterSelected = true);
+		} else { //currently all are selected -> show only given platform
+			this.getSelectedPlatforms().forEach(p => {
+				if (p != platform) {
+					p.isFilterSelected = false;
+				}
+			});
+		}
+	} else { //switch to this platform
+		this.getSelectedPlatforms().forEach(p => p.isFilterSelected = false);
+		platform.isFilterSelected = true;
 	}
 	this.update();
   }
