@@ -8,6 +8,6 @@ import { DataService } from '../services/data-service.service';
 })
 export class FilterComponent {
 
-  constructor(private filterService: DataService) { }
+  constructor(public filterService: DataService) { }
 
 }

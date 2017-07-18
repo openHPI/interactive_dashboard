@@ -19,7 +19,7 @@ export class ReviewsComponent {
   @ViewChild('next') next: any;
   @ViewChild('slider') slider; 
   
-  private reviews: Review[];
+  public reviews: Review[];
   
   //workaround
   private subscription: Subscription;

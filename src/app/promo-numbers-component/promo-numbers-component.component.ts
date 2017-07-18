@@ -7,7 +7,7 @@ import { PromoNumber } from '../dashboard';
   styleUrls: ['./promo-numbers-component.component.css']
 })
 export class PromoNumbersComponentComponent {
-
+  public intermediate;
   @Input() promo: PromoNumber;
   constructor() { }
 

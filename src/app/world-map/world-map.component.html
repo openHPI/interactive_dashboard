@@ -1,12 +1,4 @@
-<ngui-map center="Potsdam, Germany"[options]="mapOptions" (click)="log($event)">
-  
-  <!--<marker position="will-fall-back-to-brampton-canada"
-    [geoFallbackPosition]="[52.393978, 13.133011]"
-    (dragstart)="log($event, 'dragstart')"
-    (dragend)="log($event, 'dragend')"
-    draggable="true"></marker>
-  <marker *ngFor="let pos of positions"
-        [position]="pos"></marker>-->
+<ngui-map center="Potsdam, Germany"[options]="mapOptions" (click)="log($event, 'map clicked')">
    <marker *ngFor="let pos of userPositions"
    			[position]= "[pos[0], pos[1]]"
    			[icon]="{

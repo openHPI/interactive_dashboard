@@ -449,12 +449,12 @@ export class WorldMapComponent {
 	this.callApis(startDate, endDate);
   }
 
-  private mapRangeChanged(rangeValue){
+  public mapRangeChanged(rangeValue){
   	this.currentHour = rangeValue;	
 	this.update();
   }
   
-  private log(event, str) {
+  public log(event, str) {
     if (event instanceof MouseEvent) {
     	return false;
     }
