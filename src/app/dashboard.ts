@@ -27,3 +27,9 @@ export class Config {
 	geoEndParam: string;
 	globalsSubUrl: string;
 }
+
+export class FeatureCard {
+    imageUrl: string;
+    title: string;
+    text: string;
+}
