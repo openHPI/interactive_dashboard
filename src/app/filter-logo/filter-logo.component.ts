@@ -10,6 +10,5 @@ import { Platform } from '../../app/dashboard';
 export class FilterLogoComponent {
 
   @Input() platform: Platform;
-
-  constructor(private filterService: DataService) { }
+  constructor(public filterService: DataService) { }
 }
