@@ -1,6 +1,5 @@
 import { Config, Platform, FeatureCard } from '../../app/dashboard';
 import { OPEN_HPI_REVIEWS, OPEN_SAP_REVIEWS, MOOC_HOUSE_REVIEWS, OPEN_WHO_REVIEWS } from 'assets/reviews/reviews';
-import * as status from './status';
 
 // Check for production status, see #15
 declare var process: any;
