@@ -9,7 +9,7 @@
     "test": "true",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "cross-env NODE_ENV=production ng build --prod --base-href 'https://openhpi.github.io/jenz/'; ngh"
+    "build-deploy": "cross-env NODE_ENV=production ng build --prod --base-href 'https://openhpi.github.io/jenz/'"
   },
   "private": true,
   "dependencies": {

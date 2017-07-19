@@ -1,0 +1,10 @@
+language: node_js
+before_deploy:
+  - npm run build-deploy
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: gh_pages
+  local_dir: dist
