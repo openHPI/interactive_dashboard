@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
-import { Observable } from 'rxjs/Observable';
+import { Observable, Subscription } from 'rxjs/Rx';
 import { Course, GlobalStatistics } from '../api';
 import { Config, Platform, Review } from '../dashboard';
 import 'rxjs/add/operator/map';
@@ -12,25 +12,26 @@ interface UpdateListener {
   update(): void;
 }
 interface AnimationListener {
-  startAnimation(): void;
-  stopAnimation();
+  nextAnimationStep(): void;
 }
 
 @Injectable()
 export class DataService {
   
-  config: Config = CONFIG;
+  private config: Config = CONFIG;
   
-  updateListener: UpdateListener[] = [];
-  animationListener: AnimationListener[] = [];
-  updatingUnits: number = 0;
-  
+  private updateListener: UpdateListener[] = [];
+  private animationListener: AnimationListener[] = [];
+  private updatingUnits: number = 0;
+  private subscription: Subscription;
+  private timer: any = Observable.timer(60000, 10000);
   
   constructor(private http: Http) {}
   
   //"Listener" - Functions
   addUpdateListener(listener: UpdateListener): void {
 	this.updateListener.push(listener);
+	this.updatingUnits++;
 	listener.update();
   }
   addAnimationListener(listener: AnimationListener): void {
@@ -51,8 +52,20 @@ export class DataService {
 	this.updatingUnits = Math.max(this.updatingUnits - 1, 0);
   }
   
+  public recognizedUserInteraction(): void {
+	if (this.subscription) {
+		this.subscription.unsubscribe();
+	}
+	this.subscription = this.timer.subscribe(() => this.doNextAnimationStep());
+  }
+  
   public isUpdating(): boolean {
 	return this.updatingUnits > 0;
+  }
+  
+  public doNextAnimationStep(): void {
+    console.log('next');
+	this.animationListener.forEach(listener => listener.nextAnimationStep());
   }
   
   //Private functions

@@ -19,15 +19,12 @@ export class CoursesComponent {
   courses: Course [];
   navigatorActions = new EventEmitter<string|MaterializeAction>();
   
-  //animation stuff
-  autoSlideSubscription: Subscription;
-  autoSlideIntervalInSeconds: number = 5;
-  
   //workaround
   subscription: Subscription;
   
   constructor(private courseService: DataService) {
 	this.courseService.addUpdateListener(this);
+	this.courseService.addAnimationListener(this);
   }
   
   public update(): void {
@@ -40,6 +37,10 @@ export class CoursesComponent {
 	});
   }
   
+  public nextAnimationStep(): void {
+    this.navigatorActions.emit({action:'carousel', params:['next']});
+  }
+  
   private reloadCarousel(): void {
 	if (!this.carousel) return;
 	$(this.carousel.nativeElement).removeClass('initialized');
@@ -48,19 +49,6 @@ export class CoursesComponent {
 	this.courseService.updateCompleted();
   }
   
-  public startAutoSlideTimer(): void {
-    let timer = Observable.timer(0, this.autoSlideIntervalInSeconds * 1000);
-	//wait arg1, then repeat all arg2 times
-    this.autoSlideSubscription = timer.subscribe(() => this.showNextCourse());
-  }
   
-  public stopAutoSlideTimer(): void {
-	if (this.autoSlideSubscription) 
-		this.autoSlideSubscription.unsubscribe();
-  }
-  
-  private showNextCourse(): void {
-    this.navigatorActions.emit({action:'carousel', params:['next']});
-  }
   
 }
