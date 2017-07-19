@@ -1,5 +1,4 @@
-# Jenz
-
+# Jenz [![Build Status](https://travis-ci.org/openHPI/jenz.svg?branch=master)](https://travis-ci.org/openHPI/jenz)
 ## First setup
 [Node.js](https://nodejs.org/en/download/) and npm (included with node) are needed to run this project.
 1. `cd jenz`
