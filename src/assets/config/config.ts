@@ -3,7 +3,8 @@ import { OPEN_HPI_REVIEWS, OPEN_SAP_REVIEWS, MOOC_HOUSE_REVIEWS, OPEN_WHO_REVIEW
 import * as status from './status';
 
 // Check for production status, see #15
-const PREFIX = status.production ? '/jenz' : '';
+declare var process: any;
+const PREFIX = process.env.NODE_ENV === 'production' ? '/jenz' : '';
 
 const OPEN_HPI: Platform = {
     rootUrl: 'https://open.hpi.de',

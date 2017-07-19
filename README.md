@@ -31,15 +31,7 @@ To use the DataService, do the following in your component:
  ```
 
 ## How to deploy to production
-We use `angular-cli-ghpages` to deploy our builds to GitHub Pages.
-You need to install the npm package as such: `npm i -g angular-cli-ghpages`.
-### Deploying
-After installing the `angular-cli-ghpages` package as described above, do the following to deploy:
-1. Set the `const production` in `/assets/config/status.ts` to `true`
-2. `ng build --prod --base-href "https://openhpi.github.io/jenz/"`
-3. `ngh`
-4. Done!
-5. (Optional) To continue development, change `const production` back to `false`
+Do `npm run deploy` and hope that all works well. :-)
 ---
 
 ## Code scaffolding

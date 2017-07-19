@@ -2,7 +2,8 @@
 import * as status from '../config/status';
 
 // Check for production status, see #15
-const PREFIX = status.production ? '/jenz' : '';
+declare var process: any;
+const PREFIX = process.env.NODE_ENV === 'production' ? '/jenz' : '';
  
 export const OPEN_HPI_REVIEWS: Review[] = [
   {statement: '120 Schüler waren beim openHPI-Programmierkurs auch in ihrer Freizeit mit viel Engagement und großem Interesse bei der Sache.', imageUrl: PREFIX + '/assets/reviews/square_dominik.jpg', author: 'Dominik Hausner, Informatik-Lehrer'},
