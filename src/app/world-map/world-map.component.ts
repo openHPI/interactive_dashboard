@@ -426,6 +426,7 @@ export class WorldMapComponent {
 		for (var i = platforms.length - 1; i >= 0; i--) {
 			this.pushPositions(geoArrays[i], platforms[i].mapMarkerUrl);
 		}
+		this.dataService.updateCompleted();
 	});
   }
 

@@ -23,6 +23,7 @@ export class DataService {
   
   updateListener: UpdateListener[] = [];
   animationListener: AnimationListener[] = [];
+  updatingUnits: number = 0;
   
   
   constructor(private http: Http) {}
@@ -41,8 +42,17 @@ export class DataService {
 	return this.config.platforms;
   }
   
-  public update(){
+  private update(): void {
+    this.updatingUnits += this.updateListener.length;
     this.updateListener.forEach(listener => listener.update());
+  }
+  
+  public updateCompleted(): void {
+	this.updatingUnits = Math.max(this.updatingUnits - 1, 0);
+  }
+  
+  public isUpdating(): boolean {
+	return this.updatingUnits > 0;
   }
   
   //Private functions

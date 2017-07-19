@@ -30,6 +30,7 @@ export class PromoNumbersComponent {
 		  users += statistic.confirmed_users;
 		});
 		this.updatePromoNumbers(enrollments, users, courses, certificates);
+		this.numberService.updateCompleted();
 	});
   }
 

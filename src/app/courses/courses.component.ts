@@ -45,6 +45,7 @@ export class CoursesComponent {
 	$(this.carousel.nativeElement).removeClass('initialized');
 	this.navigatorActions.emit({action: 'carousel', params:[{}]});
 	this.subscription.unsubscribe();
+	this.courseService.updateCompleted();
   }
   
   public startAutoSlideTimer(): void {

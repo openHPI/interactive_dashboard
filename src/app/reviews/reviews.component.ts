@@ -57,6 +57,7 @@ export class ReviewsComponent {
 	jSlider.removeClass("initialized");
 	this.navigatorActions.emit({action:'carousel', params:[{fullWidth: true, noWrap: true}]});
 	this.subscription.unsubscribe();
+	this.reviewService.updateCompleted();
   }
   
   private getActiveItem(){
