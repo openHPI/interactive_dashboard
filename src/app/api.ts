@@ -15,6 +15,8 @@ export class GlobalStatistic {
     courses_per_learner: number;
     global_enrollment_delta: number;
     platform_custom_completed: number;
+	certificates_count: number;
+	courses_count: number;
 }
 
 export class GlobalStatistics {

@@ -28,6 +28,8 @@ export class PromoNumbersComponent {
 		  let statistic: GlobalStatistic = element.global_statistic as GlobalStatistic;
 		  enrollments += statistic.total_enrollments;
 		  users += statistic.confirmed_users;
+		  courses += statistic.courses_count;
+		  certificates += statistic.certificates_count;
 		});
 		this.updatePromoNumbers(enrollments, users, courses, certificates);
 		this.numberService.updateCompleted();
