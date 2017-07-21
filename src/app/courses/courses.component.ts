@@ -32,6 +32,7 @@ export class CoursesComponent {
 		this.courses = courses.reduce(function(prev, next) {
 			return prev.concat(next);
 		});
+		this.courses = this.courses.filter(course => (course.attributes.status === 'announced' || course.attributes.status === 'active'));
 		let timer = Observable.timer(0, 2000);
 		this.subscription = timer.subscribe(() => this.reloadCarousel()); //ugly but works
 	});
