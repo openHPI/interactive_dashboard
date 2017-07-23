@@ -1,3 +1,6 @@
+   <a #prev [ngClass]="{'disabled': isFirst()}" class="arrow_prev" (click)="previousReview()">Previous</a>
+	  <a #next [ngClass]="{'disabled': isLast()}" class="arrow_next" (click)="nextReview()">Next</a>
+
 <div #slider class="carousel carousel-slider" *ngIf="reviews" materialize="carousel" [materializeParams]="[{fullWidth: true, noWrap: true}]" data-indicators="true" [materializeActions]="navigatorActions">
 	<div *ngFor="let review of reviews; let iReview = index">
 		<div #item class="carousel-item grey lighten-3" *ngIf="iReview % 4 === 0">
@@ -19,8 +22,6 @@
 			</div>
 		</div>
 	</div>
-	<div class="carousel-fixed-item center">
-      <a #prev [ngClass]="{'disabled': isFirst()}" class="btn waves-effect white grey-text darken-text-2 left" (click)="previousReview()">Previous</a>
-	  <a #next [ngClass]="{'disabled': isLast()}" class="btn waves-effect white grey-text darken-text-2 right" (click)="nextReview()">Next</a>
-    </div>
+
 </div>
+
