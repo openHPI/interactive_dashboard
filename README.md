@@ -3,9 +3,12 @@
 [Node.js](https://nodejs.org/en/download/) and npm (included with node) are needed to run this project.
 1. `cd jenz`
 2. Run `npm install`
-2.1 (optionally) if you get an error using windows, run: npm set registry https://registry.npmjs.org/
-3. Run `npm install -g @angular/cli`
-4. Run `npm start`
+3. (optionally) if you get an error using windows, run: npm set registry https://registry.npmjs.org/
+4. Run `npm install -g @angular/cli`
+5. Run `npm start`
+
+## Development
+Once you have installed the dependencies, you can start a development server by running `npm start`.
 
 ## Use the custom DataService
 To use the DataService, do the following in your component:
@@ -29,30 +32,20 @@ To use the DataService, do the following in your component:
                  .subscribe(courses => this.courses = courses as Course[]);
  ```
 
-## How to deploy to production
-Do `npm run deploy` and hope that all works well. :-)
----
+## Deploy to production
+Deployment is done in two phases: You need to build locally first, as building on Travis currently fails (see #18). Once building is done and succeeded you simply need to push it to the master branch ob Github.
+Deployment will then be triggered by Travis automatically.
+
+### Build locally
+Simply run `npm run build-deploy`. This will set an environment variable and will trigger the Angular CLI build.
+
+##### Troubleshooting the build
+It might be possible that the build fails. This can either be due to an error with the cross-platform environemnt variable setting or because the code contains error.
+In the prior case, set the environment variable manually (`NODE_ENV=production`) and build by hand: `ng build --prod --base-href 'https://openhpi.github.io/jenz/'`.
 
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
 
 ## Further help
 
