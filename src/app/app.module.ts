@@ -5,6 +5,7 @@ import { HttpModule, JsonpModule } from '@angular/http';
 
 import { MaterializeModule } from 'angular2-materialize';
 import { NguiMapModule} from '@ngui/map';
++import { NouisliderModule } from 'ng2-nouislider';
 import { CountoModule }  from 'angular2-counto';
 import { QRCodeModule } from 'angular2-qrcode';
 
@@ -38,12 +39,13 @@ import { PromoNumbersComponentComponent } from './promo-numbers-component/promo-
   ],
   imports: [
     BrowserModule,
-	CountoModule,
+	  CountoModule,
     FormsModule,
     HttpModule,
 	  MaterializeModule,
+    NouisliderModule,
     NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyCQLhnDxhB2Gb7CRWLlZvWcYdEqK0GqseI'}),
-	QRCodeModule
+	  QRCodeModule
   ],
   providers: [
     DataService
