@@ -1,12 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
+import { PolymerElement } from '@vaadin/angular2-polymer';
 
 import { MaterializeModule } from 'angular2-materialize';
 import { NguiMapModule} from '@ngui/map';
 import { NouisliderModule } from 'ng2-nouislider';
-import { CountoModule }  from 'angular2-counto';
+import { CountoModule } from 'angular2-counto';
 import { QRCodeModule } from 'angular2-qrcode';
 
 import { AppComponent } from './app.component';
@@ -35,21 +36,23 @@ import { PromoNumbersComponentComponent } from './promo-numbers-component/promo-
     CourseCardComponent,
     FilterComponent,
     FilterLogoComponent,
-    PromoNumbersComponentComponent
+    PromoNumbersComponentComponent,
+    PolymerElement('barchart-basic')
   ],
   imports: [
     BrowserModule,
-	  CountoModule,
+    CountoModule,
     FormsModule,
     HttpModule,
-	  MaterializeModule,
+    MaterializeModule,
     NouisliderModule,
     NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyCQLhnDxhB2Gb7CRWLlZvWcYdEqK0GqseI'}),
-	  QRCodeModule
+    QRCodeModule
   ],
   providers: [
     DataService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

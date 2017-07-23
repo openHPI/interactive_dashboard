@@ -1,0 +1,7 @@
+{
+  "name": "jenz",
+  "dependencies": {
+    "m.e.i.n.e.l": "openHPI/m.e.i.n.e.l",
+    "iron-component-page": "^3.0.1"
+  }
+}

@@ -23,6 +23,7 @@
     "@angular/router": "^4.0.0",
     "@ngui/map": "^0.18.1",
     "@types/googlemaps": "^3.26.13",
+    "@vaadin/angular2-polymer": "^1.0.0",
     "angular-cli-ghpages": "^0.5.1",
     "angular2-counto": "^1.2.3",
     "angular2-materialize": "^15.0.4",
@@ -37,10 +38,9 @@
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
-    "@angular/cli": "1.0.4",
+    "@angular/cli": "1.2.1",
     "@angular/compiler-cli": "^4.0.0",
     "@types/jasmine": "2.5.38",
-    "@types/node": "^6.0.84",
     "codelyzer": "~2.0.0",
     "cross-env": "^5.0.1",
     "jasmine-core": "~2.5.2",
