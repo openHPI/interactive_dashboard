@@ -12,7 +12,26 @@ import { Platform } from '../dashboard';
 export class WorldMapComponent {
   userPositions = [];
   currentHour = new Date().getHours();
-  rangeSlider;
+  rangeValues = [this.currentHour-2, this.currentHour];
+  rangeConfig: any = {
+  behaviour: 'drag',
+  animate: true,
+  connect: true,
+  step: 0.5,
+  limit: this.currentHour,
+  margin: 0.5, //min space between sliders
+  start: [this.currentHour-2, this.currentHour],
+  range: {
+    min: 0,
+    max: 24
+  	},
+  pips: {
+    mode: 'count',
+    values: 25,
+    density: 2, 
+    stepped: true
+  	}
+  };
 
   mapOptions = {
 	"center": "Potsdam, Germany",
@@ -391,38 +410,17 @@ export class WorldMapComponent {
   }
 
   constructor(private dataService: DataService) { 
-	this.dataService.addUpdateListener(this);
-	this.rangeSlider = document.getElementsByName("range-slider");
-	/*noUiSlider.create(this.rangeSlider, {
-	start: [ 1450, 2050, 2350, 3000 ], // 4 handles, starting at...
-	margin: 300, // Handles must be at least 300 apart
-	limit: 600, // ... but no more than 600
-	connect: true, // Display a colored bar between the handles
-	direction: 'rtl', // Put '0' at the bottom of the slider
-	orientation: 'vertical', // Orient the slider vertically
-	behaviour: 'tap-drag', // Move handle on tap, bar is draggable
-	step: 150,
-	tooltips: true,
-	format: wNumb({
-		decimals: 0
-	}),
-	range: {
-		'min': 1300,
-		'max': 3250
-	},
-	pips: { // Show a scale with the slider
-		mode: 'steps',
-		stepped: true,
-		density: 4
-	}
-});*/
+	this.dataService.addUpdateListener(this); 	
+	//set initial Map Markers
+	this.handleChangedRange();
   }
 
-  callApis(startDate: Date, endDate: Date){
+  callApisAndSetMarkers(startDate: Date, endDate: Date){
 	this.dataService.getWorldPositions(startDate, endDate).subscribe(plattformAndPositions => {
 		let platforms: Platform[] = plattformAndPositions[0] as Platform[];
 		console.log(platforms); //do whatever you like and remove this line please
 		let geoArrays = plattformAndPositions.slice(1, plattformAndPositions.length);
+		this.userPositions = [];
 		for (var i = platforms.length - 1; i >= 0; i--) {
 			this.pushPositions(geoArrays[i], platforms[i].mapMarkerUrl);
 		}
@@ -437,24 +435,7 @@ export class WorldMapComponent {
   }
   
   public update(): void {
-	this.userPositions = [];
-	let newDate = new Date();
-	newDate.setMilliseconds(0);
-	newDate.setMinutes(0);
-	newDate.setSeconds(0);
-	let startDate = new Date(newDate);
-	let endDate = new Date(newDate);
-	startDate.setHours(this.currentHour - 1);
-	startDate.setMinutes(40);
-	endDate.setHours(this.currentHour);
-
-	console.log("start: "+ startDate +" end: "+ endDate);
-	this.callApis(startDate, endDate);
-  }
-
-  public mapRangeChanged(rangeValue){
-  	this.currentHour = rangeValue;	
-	this.update();
+  	this.handleChangedRange();
   }
   
   public log(event, str) {
@@ -465,5 +446,26 @@ export class WorldMapComponent {
     console.log('event .... >', event, str);
   }
 
-  
+  private onChange(event){
+  	console.log("RangeVals",this.rangeValues);
+  	this.update();
+  }
+
+  private handleChangedRange(){
+  	let startDate = new Date();
+	let endDate = new Date();
+	startDate.setUTCHours(this.rangeValues[0], this.getMinutes(this.rangeValues[0]), 0, 0);
+	endDate.setUTCHours(this.rangeValues[1], this.getMinutes(this.rangeValues[1]), 0, 0);
+	this.callApisAndSetMarkers(startDate, endDate);
+  }
+
+  private getMinutes(decimalNumber){
+  	let afterDecimalPoint = decimalNumber.toString().split(".")[1];
+	if(afterDecimalPoint){
+		return afterDecimalPoint * 0.1 * 60;
+	}
+	else{
+		return 0;
+	}
+  }
 }
