@@ -8,3 +8,5 @@ deploy:
   on:
     branch: gh_pages
   local_dir: dist
+notifications:
+  email: false
