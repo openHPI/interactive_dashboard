@@ -18,7 +18,6 @@ export class WorldMapComponent {
   animate: true,
   connect: true,
   step: 0.5,
-  limit: this.currentHour,
   margin: 0.5, // min space between sliders
   start: [this.currentHour-2, this.currentHour],
   range: {
@@ -410,12 +409,13 @@ export class WorldMapComponent {
   }
 
   constructor(private dataService: DataService) { 
-    this.dataService.addUpdateListener(this); 	
+    this.dataService.addUpdateListener(this); 
+    this.dataService.addAnimationListener(this);	
     //set initial Map Markers
     this.handleChangedRange();
   }
 
-  callApisAndSetMarkers(startDate: Date, endDate: Date){
+  private callApisAndSetMarkers(startDate: Date, endDate: Date){
     this.dataService.getWorldPositions(startDate, endDate).subscribe(plattformAndPositions => {
         let platforms: Platform[] = plattformAndPositions[0] as Platform[];
         console.log(platforms); //do whatever you like and remove this line please
@@ -435,7 +435,15 @@ export class WorldMapComponent {
   }
   
   public update(): void {
-      this.handleChangedRange();
+  }
+
+  public nextAnimationStep(): void {
+      if(this.rangeValues[1] < new Date().getHours()){
+          this.rangeValues = [this.rangeValues[0]+1, this.rangeValues[1]+1]; //hop one hour forward
+      }
+      else{
+          this.rangeValues = [0,2];
+      }
   }
   
   public log(event, str) {
@@ -448,7 +456,7 @@ export class WorldMapComponent {
 
   public onChange(event) {
       console.log("RangeVals",this.rangeValues);
-      this.update();
+      this.handleChangedRange();
   }
 
   private handleChangedRange() {
