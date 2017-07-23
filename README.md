@@ -28,8 +28,11 @@ To use the DataService, do the following in your component:
 
  e.g.
  ```
- this.myService.getAll('https://funny-url.com/api/getCourses')
-                 .subscribe(courses => this.courses = courses as Course[]);
+ this.courseService.getCourses().subscribe(courses => {
+		this.courses = courses.reduce(function(prev, next) {
+			return prev.concat(next);
+		});
+ });
  ```
 
 ## Deploy to production
