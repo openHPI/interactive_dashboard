@@ -8,3 +8,5 @@ deploy:
   on:
     branch: master
   local_dir: dist
+notifications:
+  email: false
