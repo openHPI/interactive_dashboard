@@ -2,10 +2,12 @@ img {
   margin-right: 3rem;
   height:80px;
   cursor: pointer;
-  border-bottom: 1rem solid gray;
+  opacity: 0.4;
+  filter: grayscale(1);
   padding-bottom: 10px;
 }
 
 .selected {
-  border-bottom: 1rem solid #67DE91;
+  opacity: 1;
+  filter: grayscale(0);
 }
