@@ -1,19 +1,20 @@
-<h2>What our MOOCs offer</h2>
-
-<div class="row">
-	<div *ngFor="let featureCard of featureCards" class="col s3">
-		<div class="card-panel grey lighten-5 z-depth-1">
-    	<div class="row valign-wrapper">
-      	<div class="col s3">
-        	<img src={{featureCard.imageUrl}} class="responsive-img" height="60">
-        </div>
-        <div class="col s9">
-	  			<h5>{{featureCard.title}}</h5>
-          <span class="key_text">
-          {{featureCard.text}}
-          </span>
-        </div>
-      </div>
+<div *ngIf="dataService.areAllPlatformsSelected()">
+	<h2>What our MOOCs offer</h2>
+	<div class="row">
+		<div *ngFor="let featureCard of featureCards" class="col s3">
+			<div class="card-panel grey lighten-5 z-depth-1">
+			<div class="row valign-wrapper">
+			<div class="col s3">
+				<img src={{featureCard.imageUrl}} class="responsive-img" height="60">
+			</div>
+			<div class="col s9">
+					<h5>{{featureCard.title}}</h5>
+			  <span class="key_text">
+			  {{featureCard.text}}
+			  </span>
+			</div>
+		  </div>
+			</div>
 		</div>
 	</div>
 </div>

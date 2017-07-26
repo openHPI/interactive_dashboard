@@ -2,11 +2,12 @@ import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable, Subscription } from 'rxjs/Rx';
 import { Course, GlobalStatistics } from '../api';
-import { Config, Platform, Review } from '../dashboard';
+import { Config, FeatureCard, Platform, Review } from '../dashboard';
 import 'rxjs/add/operator/map';
 
 //import constants
 import { CONFIG } from 'assets/config/config';
+import { FEATURE_CARDS } from 'assets/config/config';
 
 interface UpdateListener {
   update(): void;
@@ -61,6 +62,10 @@ export class DataService {
   
   public isUpdating(): boolean {
 	return this.updatingUnits > 0;
+  }
+  
+  public areAllPlatformsSelected(): boolean {
+	return this.getUnselectedPlatforms().length === 0;
   }
   
   public doNextAnimationStep(): void {
@@ -148,6 +153,10 @@ export class DataService {
 	return Observable.forkJoin(observables);
   }
   
+  // ===== FEATURE CARD COMPONENT =====
+  public getFeatureCards(): FeatureCard[] {
+	return FEATURE_CARDS;
+  }
  
   
   
