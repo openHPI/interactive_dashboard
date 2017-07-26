@@ -8,6 +8,12 @@
 5. Copy file materialize.js from the root directory of this git into jenz/node_modules/materialize-css/dist/js
 5. Run `npm start`
 
+## Errors/ Warnings
+
+When you run `npm install´ there may occur one error regarding the canvas. The canvas is used for the qr-code-generator component. It´s an optional dependency, which we DON´T use. So we can ignore this error message. You can browse this link https://github.com/SuperiorJT/angular2-qrcode to get more details about this.
+
+There are some further warning regarding optional dependencies. Feel free to ignore them as well.
+
 ## Development
 Once you have installed the dependencies, you can start a development server by running `npm start`.
 
