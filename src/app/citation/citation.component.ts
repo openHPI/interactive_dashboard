@@ -10,7 +10,7 @@ export class CitationComponent {
 
   public citation: string;
 
-  constructor(private dataService: DataService) {
+  constructor(public dataService: DataService) {
     dataService.addUpdateListener(this);
   }
 

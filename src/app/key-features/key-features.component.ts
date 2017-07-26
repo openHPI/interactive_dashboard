@@ -9,9 +9,9 @@ import { DataService } from '../services/data-service.service';
 })
 export class KeyFeaturesComponent {
 
-  featureCards: FeatureCard[];
+  public featureCards: FeatureCard[];
 
-  constructor(private dataService: DataService) {
+  constructor(public dataService: DataService) {
 	this.featureCards = dataService.getFeatureCards();
   }
 

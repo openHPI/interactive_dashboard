@@ -38,12 +38,12 @@ export class ReviewsComponent {
   //Component-methods
   private navigatorActions = new EventEmitter<string|MaterializeAction>();
 
-  private previousReview(): void {
+  public previousReview(): void {
 	if (this.getActiveItem() != this.items.first){
 		this.navigatorActions.emit({action:'carousel', params:['prev']});
 	}
   }
-  private nextReview(): void {
+  public nextReview(): void {
 	if (this.getActiveItem() != this.items.last) {
 	    this.navigatorActions.emit({action:'carousel', params:['next']});
 	}
@@ -68,11 +68,11 @@ export class ReviewsComponent {
 	return item.nativeElement.classList.contains('active');
   }  
   
-  private isFirst(): Boolean {
+  public isFirst(): Boolean {
 	return this.items ? this.getActiveItem() == this.items.first : false;
   }
   
-  private isLast(): Boolean {
+  public isLast(): Boolean {
 	return this.items ? this.getActiveItem() == this.items.last : false;
   }
 }
