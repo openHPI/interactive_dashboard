@@ -5,6 +5,7 @@
 2. Run `npm install`
 3. (optionally) if you get an error using windows, run: npm set registry https://registry.npmjs.org/
 4. Run `npm install -g @angular/cli`
+5. Copy file materialize.js from the root directory of this git into jenz/node_modules/materialize-css/dist/js
 5. Run `npm start`
 
 ## Development
