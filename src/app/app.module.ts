@@ -22,6 +22,7 @@ import { CourseCardComponent } from './course-card/course-card.component';
 import { FilterComponent } from './filter/filter.component';
 import { FilterLogoComponent } from './filter-logo/filter-logo.component';
 import { PromoNumbersComponentComponent } from './promo-numbers-component/promo-numbers-component.component';
+import { CitationComponent } from './citation/citation.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { PromoNumbersComponentComponent } from './promo-numbers-component/promo-
     CourseCardComponent,
     FilterComponent,
     FilterLogoComponent,
-    PromoNumbersComponentComponent
+    PromoNumbersComponentComponent,
+    CitationComponent
   ],
   imports: [
     BrowserModule,

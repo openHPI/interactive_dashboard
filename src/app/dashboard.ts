@@ -17,6 +17,7 @@ export class Platform {
 	mapMarkerUrl: string;
 	reviews: Review[];
 	isFilterSelected: boolean;
+	citation: string;
 }
 
 export class Config {

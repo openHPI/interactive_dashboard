@@ -10,7 +10,8 @@ const OPEN_HPI: Platform = {
     logoUrl: PREFIX + '/assets/logos/open_hpi_logo.png',
     mapMarkerUrl: PREFIX + '/assets/marker/hpi.png',
     reviews: OPEN_HPI_REVIEWS,
-    isFilterSelected: true
+    isFilterSelected: true,
+	citation: 'Life is too short to remove USB safely!'
 };
 
 const OPEN_SAP: Platform = {
@@ -18,7 +19,8 @@ const OPEN_SAP: Platform = {
     logoUrl: PREFIX + '/assets/logos/openSAP_Logo_neg.png',
     mapMarkerUrl: PREFIX + '/assets/marker/sap.png',
     reviews: OPEN_SAP_REVIEWS,
-    isFilterSelected: false
+    isFilterSelected: false,
+	citation: 'Life is too short to remove USB safely!'
 };
 
 const MOOC_HOUSE: Platform = {
@@ -26,7 +28,8 @@ const MOOC_HOUSE: Platform = {
     logoUrl: PREFIX + '/assets/logos/mooc_house_logo_neg_srgb_300.png',
     mapMarkerUrl: PREFIX + '/assets/marker/mooc.png',
     reviews: MOOC_HOUSE_REVIEWS,
-    isFilterSelected: false
+    isFilterSelected: false,
+	citation: 'Life is too short to remove USB safely!'
 };
 
 const OPEN_WHO: Platform = {
@@ -34,7 +37,8 @@ const OPEN_WHO: Platform = {
     logoUrl: PREFIX + '/assets/logos/who_logo_white.png',
     mapMarkerUrl: PREFIX + '/assets/marker/who.png',
     reviews: OPEN_WHO_REVIEWS,
-    isFilterSelected: false
+    isFilterSelected: false,
+	citation: 'Life is too short to remove USB safely!'
 };
 
 export const CONFIG: Config = {

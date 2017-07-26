@@ -158,7 +158,10 @@ export class DataService {
 	return FEATURE_CARDS;
   }
  
-  
+  // ===== CITATION COMPONENT =====
+  public getCitation(): string {
+	return this.getSelectedPlatforms()[0].citation;
+  }
   
   
 }
