@@ -416,10 +416,10 @@ export class WorldMapComponent {
   }
 
   private callApisAndSetMarkers(startDate: Date, endDate: Date){
-    this.dataService.getWorldPositions(startDate, endDate).subscribe(plattformAndPositions => {
-        let platforms: Platform[] = plattformAndPositions[0] as Platform[];
+    this.dataService.getWorldPositions(startDate, endDate).subscribe(platformAndPositions => {
+        let platforms: Platform[] = platformAndPositions[0] as Platform[];
         console.log(platforms); //do whatever you like and remove this line please
-        let geoArrays = plattformAndPositions.slice(1, plattformAndPositions.length);
+        let geoArrays = platformAndPositions.slice(1, platformAndPositions.length);
         this.userPositions = [];
         for (var i = platforms.length - 1; i >= 0; i--) {
             this.pushPositions(geoArrays[i], platforms[i].mapMarkerUrl);

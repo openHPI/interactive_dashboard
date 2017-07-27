@@ -8,37 +8,37 @@ const PREFIX = process.env.NODE_ENV === 'production' ? '/jenz' : '';
 const OPEN_HPI: Platform = {
     rootUrl: 'https://open.hpi.de',
     logoUrl: PREFIX + '/assets/logos/open_hpi_logo.png',
-    mapMarkerUrl: PREFIX + '/assets/marker/hpi.png',
+    mapMarkerUrl: PREFIX + '/assets/marker/hpi.svg',
     reviews: OPEN_HPI_REVIEWS,
     isFilterSelected: true,
-	citation: 'Life is too short to remove USB safely!'
+	citation: 'Be curious, be social, be successful.'
 };
 
 const OPEN_SAP: Platform = {
     rootUrl: 'https://open.sap.com',
     logoUrl: PREFIX + '/assets/logos/openSAP_Logo_neg.png',
-    mapMarkerUrl: PREFIX + '/assets/marker/sap.png',
+    mapMarkerUrl: PREFIX + '/assets/marker/sap.svg',
     reviews: OPEN_SAP_REVIEWS,
     isFilterSelected: false,
-	citation: 'Life is too short to remove USB safely!'
+	citation: 'Learn anywhere, anytime and on any device!'
 };
 
 const MOOC_HOUSE: Platform = {
     rootUrl: 'https://mooc.house',
     logoUrl: PREFIX + '/assets/logos/mooc_house_logo_neg_srgb_300.png',
-    mapMarkerUrl: PREFIX + '/assets/marker/mooc.png',
+    mapMarkerUrl: PREFIX + '/assets/marker/mooc.svg',
     reviews: MOOC_HOUSE_REVIEWS,
     isFilterSelected: false,
-	citation: 'Life is too short to remove USB safely!'
+	citation: 'Learn online together. Anytime, anywhere.'
 };
 
 const OPEN_WHO: Platform = {
     rootUrl: 'https://openwho.org',
     logoUrl: PREFIX + '/assets/logos/who_logo_white.png',
-    mapMarkerUrl: PREFIX + '/assets/marker/who.png',
+    mapMarkerUrl: PREFIX + '/assets/marker/who.svg',
     reviews: OPEN_WHO_REVIEWS,
     isFilterSelected: false,
-	citation: 'Life is too short to remove USB safely!'
+	citation: 'Equip frontline responders with the knowledge to better manage health emergencies.'
 };
 
 export const CONFIG: Config = {
