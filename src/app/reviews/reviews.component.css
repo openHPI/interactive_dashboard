@@ -7,13 +7,12 @@
 
 a.arrow_prev {
   display:block;
-  width:70px;
-  height:100px;
-  background:url("http://www.de-online.ru/icon/left_arrow.png") top left no-repeat !important;
+  width:120px;
+  height:120px;
   overflow: hidden;
   position: absolute;
     text-indent: -9999px;
-    margin: 450px 20px 20px -100px;
+    margin: 450px 20px 20px -135px;
 }
 
 
@@ -21,9 +20,8 @@ a.arrow_prev {
 
 a.arrow_next {
   display:block;
-  width:70px;
-  height:100px;
-  background:url("http://www.de-online.ru/icon/right_arrow.png") top left no-repeat !important;
+  width:120px;
+  height:120px;
   overflow: hidden;
   position: absolute;
     text-indent: -9999px;

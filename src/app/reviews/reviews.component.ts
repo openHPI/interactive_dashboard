@@ -4,12 +4,16 @@ import { Review } from '../dashboard';
 import { MaterializeAction } from 'angular2-materialize';
 import { Observable, Subscription } from 'rxjs/Rx';
 
+// Check for production status, see #15
+declare var process: any;
+const PREFIX = process.env.NODE_ENV === 'production' ? '/jenz' : '';
+
 declare var $: any;
 
 @Component({
   selector: 'app-reviews',
   templateUrl: './reviews.component.html',
-  styleUrls: ['./reviews.component.css']
+  styleUrls: ['./reviews.component.css'],
 })
 
 export class ReviewsComponent {
@@ -17,24 +21,26 @@ export class ReviewsComponent {
   @ViewChildren('item') items: QueryList<any>;
   @ViewChild('prev') prev: any;
   @ViewChild('next') next: any;
-  @ViewChild('slider') slider; 
-  
+  @ViewChild('slider') slider;
+
   public reviews: Review[];
-  
+  public leftArrowUrl: string = PREFIX + '/assets/arrows/left-arrow.png';
+  public rightArrowUrl: string = PREFIX + '/assets/arrows/right-arrow.png';
+
   //workaround
   private subscription: Subscription;
-  
+
   public constructor(private reviewService: DataService) {
 	this.reviewService.addUpdateListener(this);
   }
-  
+
   //Service-methods
   public update(): void {
 	this.reviews = this.reviewService.getReviews();
 	let timer = Observable.timer(0, 2000);
     this.subscription = timer.subscribe(() => this.reloadSlider()); //ugly but works
   }
-  
+
   //Component-methods
   private navigatorActions = new EventEmitter<string|MaterializeAction>();
 
@@ -48,7 +54,7 @@ export class ReviewsComponent {
 	    this.navigatorActions.emit({action:'carousel', params:['next']});
 	}
   }
-  
+
   private reloadSlider(): void {
 	if(!this.slider) return;
     //workaround proposed by Rubyboy (a Materialize guy)
@@ -59,19 +65,19 @@ export class ReviewsComponent {
 	this.subscription.unsubscribe();
 	this.reviewService.updateCompleted();
   }
-  
+
   private getActiveItem(){
 	return this.items.find(this.findActiveItem);
   }
-  
+
   private findActiveItem(item){
 	return item.nativeElement.classList.contains('active');
-  }  
-  
+  }
+
   public isFirst(): Boolean {
 	return this.items ? this.getActiveItem() == this.items.first : false;
   }
-  
+
   public isLast(): Boolean {
 	return this.items ? this.getActiveItem() == this.items.last : false;
   }

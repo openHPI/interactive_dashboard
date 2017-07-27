@@ -12,3 +12,10 @@ input{
     margin: 0 auto;
     padding-top: 2rem;
     padding-bottom: 2rem;}
+
+.noUI {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
