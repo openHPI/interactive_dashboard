@@ -1,6 +1,17 @@
 .card {
 	margin: 0;
 }
+
+.card-panel {
+	padding: 10px;
+	display: block;
+	font-size: 23px;
+	text-align: center;
+	color: white;
+	margin: 0 auto;
+	background-color: #e76d3b;
+}
+
 .card .card-image {
 	height: 380px;
 	display: block;
