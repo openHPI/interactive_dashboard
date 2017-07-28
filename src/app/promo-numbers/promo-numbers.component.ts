@@ -13,6 +13,7 @@ import { Observable, Subscription } from 'rxjs/Rx';
 export class PromoNumbersComponent {
 
   promoNumbers: PromoNumber[];
+  primaryColor: string;
 
   public constructor(private numberService: DataService) {
   this.numberService.addUpdateListener(this);
@@ -35,6 +36,7 @@ export class PromoNumbersComponent {
     this.updatePromoNumbers(enrollments, users, 0, 0);
     this.numberService.updateCompleted();
   });
+  this.primaryColor = this.numberService.getPrimaryColor();
   }
 
   private updatePromoNumbers(enrollments: number, users: number, courses: number, certificates: number): void{

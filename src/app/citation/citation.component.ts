@@ -9,6 +9,7 @@ import { DataService } from '../services/data-service.service';
 export class CitationComponent {
 
   public citation: string;
+  primaryColor: string;
 
   constructor(public dataService: DataService) {
     dataService.addUpdateListener(this);
@@ -16,7 +17,8 @@ export class CitationComponent {
 
   public update(): void {
     this.citation = this.dataService.getCitation();
-	this.dataService.updateCompleted();
+	  this.dataService.updateCompleted();
+    this.primaryColor = this.dataService.getPrimaryColor();
   }
 
 }

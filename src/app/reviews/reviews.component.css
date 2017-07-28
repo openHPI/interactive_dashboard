@@ -3,7 +3,9 @@
 	margin-top: 100px;
 }
 
-
+.disabled {
+  opacity: 0.3;
+}
 
 a.arrow_prev {
   display:block;
@@ -14,9 +16,6 @@ a.arrow_prev {
     text-indent: -9999px;
     margin: 450px 20px 20px -135px;
 }
-
-
-
 
 a.arrow_next {
   display:block;

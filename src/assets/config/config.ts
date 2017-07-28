@@ -11,7 +11,8 @@ const OPEN_HPI: Platform = {
     mapMarkerUrl: PREFIX + '/assets/marker/hpi.svg',
     reviews: OPEN_HPI_REVIEWS,
     isFilterSelected: true,
-	citation: 'Be curious, be social, be successful.'
+	citation: 'Be curious, be social, be successful.',
+    primaryColor: '#de6212'
 };
 
 const OPEN_SAP: Platform = {
@@ -20,7 +21,8 @@ const OPEN_SAP: Platform = {
     mapMarkerUrl: PREFIX + '/assets/marker/sap.svg',
     reviews: OPEN_SAP_REVIEWS,
     isFilterSelected: false,
-	citation: 'Learn anywhere, anytime and on any device!'
+	citation: 'Learn anywhere, anytime and on any device!',
+    primaryColor: '#f0ab00'
 };
 
 const MOOC_HOUSE: Platform = {
@@ -29,7 +31,8 @@ const MOOC_HOUSE: Platform = {
     mapMarkerUrl: PREFIX + '/assets/marker/mooc.svg',
     reviews: MOOC_HOUSE_REVIEWS,
     isFilterSelected: false,
-	citation: 'Learn online together. Anytime, anywhere.'
+	citation: 'Learn online together. Anytime, anywhere.',
+    primaryColor: '#abb324'
 };
 
 const OPEN_WHO: Platform = {
@@ -38,7 +41,8 @@ const OPEN_WHO: Platform = {
     mapMarkerUrl: PREFIX + '/assets/marker/who.svg',
     reviews: OPEN_WHO_REVIEWS,
     isFilterSelected: false,
-	citation: 'Equip frontline responders with the knowledge to better manage health emergencies.'
+	citation: 'Equip frontline responders with the knowledge to better manage health emergencies.',
+    primaryColor: '#0b72b5'
 };
 
 export const CONFIG: Config = {

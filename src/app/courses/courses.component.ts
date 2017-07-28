@@ -18,6 +18,7 @@ export class CoursesComponent {
   
   courses: Course [];
   navigatorActions = new EventEmitter<string|MaterializeAction>();
+  primaryColor: string;
   
   //workaround
   subscription: Subscription;
@@ -36,6 +37,7 @@ export class CoursesComponent {
 		let timer = Observable.timer(0, 2000);
 		this.subscription = timer.subscribe(() => this.reloadCarousel()); //ugly but works
 	});
+  this.primaryColor = this.courseService.getPrimaryColor();
   }
   
   public nextAnimationStep(): void {

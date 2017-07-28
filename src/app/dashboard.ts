@@ -18,6 +18,7 @@ export class Platform {
 	reviews: Review[];
 	isFilterSelected: boolean;
 	citation: string;
+	primaryColor: string;
 }
 
 export class Config {

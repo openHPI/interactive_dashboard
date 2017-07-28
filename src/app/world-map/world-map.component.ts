@@ -10,6 +10,7 @@ import { Platform } from '../dashboard';
 
 
 export class WorldMapComponent {
+  primaryColor: string;
   userPositions = [];
   currentHour = new Date().getHours();
   rangeValues = [this.currentHour-2, this.currentHour];
@@ -435,6 +436,7 @@ export class WorldMapComponent {
   }
   
   public update(): void {
+    this.primaryColor = this.dataService.getPrimaryColor();
   }
 
   public nextAnimationStep(): void {

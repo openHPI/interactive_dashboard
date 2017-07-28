@@ -8,7 +8,13 @@ import { PromoNumber } from '../dashboard';
 })
 export class PromoNumbersComponentComponent {
   public intermediate;
+  public _primaryColor: string;
+
   @Input() promo: PromoNumber;
+  @Input()
+  set primaryColor(primaryColor: string) {
+  this._primaryColor = primaryColor;
+  }
   constructor() { }
 
 }

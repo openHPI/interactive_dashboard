@@ -163,5 +163,11 @@ export class DataService {
 	return this.getSelectedPlatforms()[0].citation;
   }
   
+  // ===== PRIMARY COLOR =====
+  public getPrimaryColor() : string {
+  	if (this.getSelectedPlatforms().length == 1) {
+  		return this.getSelectedPlatforms()[0].primaryColor;
+  	} else {return '#67de91';}
+  }
   
 }
