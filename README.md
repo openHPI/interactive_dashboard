@@ -14,6 +14,38 @@ When you run `npm install´ there may occur one error regarding the canvas. The 
 
 There are some further warning regarding optional dependencies. Feel free to ignore them as well.
 
+## Overall Architecture
+
+Die verwendeted Datentypen sind in der dashboard.ts (eigene Datentypen) und api.ts (API-Json-Mapping)
+
+### DataService
+Ein Service, der für das Laden der ausgewählten Daten verantwortlich ist. Bei einer Veränderten Selektion der Plattformen, fordert er jede registrierte Komponente auf, sich zu updaten - also die neuen Daten vom DataService zu holen. Des Weiteren ist der DataService für das Starten und Stoppen der Animationen verantwortlich. Dazu müssen sich die Komponenten vorher beim DataService entsprechend registriert haben. Die Animationen werden bei Inaktivität des Nutzers gestartet.
+
+### Filter
+Der Filter besteht aus mehreren Filter-Logo - Komponenten - eine für jede Plattform. Jede Filter-Logo Komponente ist anklickbar und verändert die momentane Selektierung der Daten im DataService. Es können immer nur eine, oder alle Plattformen ausgewählt werden.
+
+### World-Map
+Eine Google-Maps Komponente zum Anzeigen der Besucher der letzten 24h. Die Auswahl des Zeitfensters ist mittels noUI-Slider Komponente möglich, welche auch das Verschieben eines ausgewählten Zeitfensters ermöglicht. Die Besucher werden geclustert in der Karte angezeigt.
+Des Weiteren wird die Karte in einem dunklen Theme gestyled. Außerdem ist der Zoom eingeschränkt, sowie die Steuerungsinstrumente ausgeblendet.
+
+### Promo-Numbers
+Besteht aus 4 Promo-numbers-Komponenten: Enrollments, Users, Courses, Certificates - Es wird die counto-Komponente verwendet, um die Veränderung der Zahlen zu animieren. Die Zahlen werden aus der GlobalStatistics-Route ausgelesen.
+
+### Key-Features
+Zeigt Informationen zu den Vorteilen von MOOC´s allgemein an. Wird nur angezeigt, wenn alle Plattformen ausgewählt sind.
+
+### Citations
+Wird alternativ zu den Key-Features angezeigt. Wird nur eine Plattform ausgewählt, so wird ein repräsentatives Zitat dieser angezeigt.
+
+### Courses
+Besteht aus einem Carousel von Course-Cards. Zeigt die aktuellen und angekündigten Kurse der ausgewählten Plattformen an.
+
+### Course-Card
+Eine Karte, die zu einem Kurs das Bild, den Titel, die Authoren sowie einen Anrisstext anzeigt. Beim Klick auf diese wird ein QR-Code zur Kursseite angezeigt.
+
+### Reviews
+Ein Slider, der Recommodations von Nutzern u.ä. je nach ausgewählter Plattform anzeigt.
+
 ## Development
 Once you have installed the dependencies, you can start a development server by running `npm start`.
 
