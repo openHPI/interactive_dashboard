@@ -14,6 +14,7 @@ export class WorldMapComponent {
   userPositions = [];
   currentHour = new Date().getHours();
   rangeValues = [this.currentHour-2, this.currentHour];
+  lastRangeValues = [];
   rangeConfig: any = {
   behaviour: 'drag',
   animate: true,
@@ -443,8 +444,11 @@ export class WorldMapComponent {
       }
   }
 
-  public onChange(event) {
-      this.handleChangedRange();
+  public onChange(event): void {
+	if (!this.equalArrays(this.lastRangeValues, this.rangeValues)){
+	  this.lastRangeValues = this.rangeValues;
+	  this.handleChangedRange();	
+	}
   }
 
   private handleChangedRange() {
@@ -455,6 +459,10 @@ export class WorldMapComponent {
     this.callApisAndSetMarkers(startDate, endDate);
   }
 
+  private equalArrays(arrayA, arrayB): boolean {
+	return (arrayA.length == arrayB.length) && arrayA.every(function(element, index) { return element === arrayB[index]; });
+  }
+  
   private getMinutes(decimalNumber){
       let afterDecimalPoint = decimalNumber.toString().split(".")[1];
     if(afterDecimalPoint){
