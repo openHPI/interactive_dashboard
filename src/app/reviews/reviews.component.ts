@@ -4,10 +4,6 @@ import { Review } from '../dashboard';
 import { MaterializeAction } from 'angular2-materialize';
 import { Observable, Subscription } from 'rxjs/Rx';
 
-// Check for production status, see #15
-declare var process: any;
-const PREFIX = process.env.NODE_ENV === 'production' ? '/jenz' : '';
-
 declare var $: any;
 
 @Component({
@@ -24,8 +20,8 @@ export class ReviewsComponent {
   @ViewChild('slider') slider;
 
   public reviews: Review[];
-  public leftArrowUrl: string = PREFIX + '/assets/arrows/left-arrow.png';
-  public rightArrowUrl: string = PREFIX + '/assets/arrows/right-arrow.png';
+  public leftArrowUrl: string = 'assets/arrows/left-arrow.png';
+  public rightArrowUrl: string = 'assets/arrows/right-arrow.png';
 
   //workaround
   private subscription: Subscription;
