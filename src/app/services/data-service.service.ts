@@ -69,7 +69,6 @@ export class DataService {
   }
   
   public doNextAnimationStep(): void {
-    console.log('next');
 	this.animationListener.forEach(listener => listener.nextAnimationStep());
   }
   

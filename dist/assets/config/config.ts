@@ -7,7 +7,7 @@ const PREFIX = process.env.NODE_ENV === 'production' ? '/jenz' : '';
 
 const OPEN_HPI: Platform = {
     rootUrl: 'https://open.hpi.de',
-    logoUrl: PREFIX + '/assets/logos/open_hpi_logo.png',
+    logoUrl: 'assets/logos/open_hpi_logo.png',
     mapMarkerUrl: PREFIX + '/assets/marker/hpi.svg',
     reviews: OPEN_HPI_REVIEWS,
     isFilterSelected: true,

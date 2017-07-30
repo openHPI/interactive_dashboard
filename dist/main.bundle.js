@@ -954,7 +954,6 @@ var DataService = (function () {
         return this.getUnselectedPlatforms().length === 0;
     };
     DataService.prototype.doNextAnimationStep = function () {
-        console.log('next');
         this.animationListener.forEach(function (listener) { return listener.nextAnimationStep(); });
     };
     //Private functions
@@ -1964,7 +1963,7 @@ var FeatureCard = (function () {
 var PREFIX = process.env.NODE_ENV === 'production' ? '/jenz' : '';
 var OPEN_HPI = {
     rootUrl: 'https://open.hpi.de',
-    logoUrl: PREFIX + '/assets/logos/open_hpi_logo.png',
+    logoUrl: 'assets/logos/open_hpi_logo.png',
     mapMarkerUrl: PREFIX + '/assets/marker/hpi.svg',
     reviews: __WEBPACK_IMPORTED_MODULE_0_assets_reviews_reviews__["a" /* OPEN_HPI_REVIEWS */],
     isFilterSelected: true,
