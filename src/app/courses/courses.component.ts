@@ -33,11 +33,14 @@ export class CoursesComponent {
 		this.courses = courses.reduce(function(prev, next) {
 			return prev.concat(next);
 		});
-		this.courses = this.courses.filter(course => (course.attributes.status === 'announced' || course.attributes.status === 'active'));
+		let filteredCourses = this.courses.filter(course => (course.attributes.status === 'announced' || course.attributes.status === 'active'));
+		if (filteredCourses.length > 0) {
+			this.courses = filteredCourses;
+		}
 		let timer = Observable.timer(0, 2000);
 		this.subscription = timer.subscribe(() => this.reloadCarousel()); //ugly but works
 	});
-  this.primaryColor = this.courseService.getPrimaryColor();
+	this.primaryColor = this.courseService.getPrimaryColor();
   }
   
   public nextAnimationStep(): void {
