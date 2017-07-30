@@ -1,4 +1,4 @@
-<ngui-map center="Potsdam, Germany"[options]="mapOptions" (click)="log($event, 'map clicked')">
+<ngui-map center="Potsdam, Germany"[options]="mapOptions">
    <marker *ngFor="let pos of userPositions"
    			[position]= "[pos[0], pos[1]]"
    			[icon]="{

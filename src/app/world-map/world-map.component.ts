@@ -412,30 +412,25 @@ export class WorldMapComponent {
   constructor(private dataService: DataService) { 
     this.dataService.addUpdateListener(this); 
     this.dataService.addAnimationListener(this);	
-    //set initial Map Markers
-    this.handleChangedRange();
   }
 
   private callApisAndSetMarkers(startDate: Date, endDate: Date){
     this.dataService.getWorldPositions(startDate, endDate).subscribe(platformAndPositions => {
         let platforms: Platform[] = platformAndPositions[0] as Platform[];
-        console.log(platforms); //do whatever you like and remove this line please
         let geoArrays = platformAndPositions.slice(1, platformAndPositions.length);
-        this.userPositions = [];
-        for (var i = platforms.length - 1; i >= 0; i--) {
-            this.pushPositions(geoArrays[i], platforms[i].mapMarkerUrl);
-        }
+		let markers = [];
+        for (var i = 0; i < platforms.length; i++) {
+            for (var j = 0; j < geoArrays[i].length; j++) {
+			  markers.push([geoArrays[i][j].lat, geoArrays[i][j].lon, platforms[i].mapMarkerUrl]);
+			}
+		}
+		this.userPositions = markers;
         this.dataService.updateCompleted();
     });
   }
-
-  private pushPositions(jsonArray, mapMarkerUrl): void{
-      for (var i = jsonArray.length - 1; i >= 0; i--) {
-          this.userPositions.push([jsonArray[i].lat, jsonArray[i].lon, mapMarkerUrl]);
-      }
-  }
   
   public update(): void {
+	this.handleChangedRange();
     this.primaryColor = this.dataService.getPrimaryColor();
   }
 
@@ -447,17 +442,8 @@ export class WorldMapComponent {
           this.rangeValues = [0,2];
       }
   }
-  
-  public log(event, str) {
-    if (event instanceof MouseEvent) {
-        return false;
-    }
-
-    console.log('event .... >', event, str);
-  }
 
   public onChange(event) {
-      console.log("RangeVals",this.rangeValues);
       this.handleChangedRange();
   }
 

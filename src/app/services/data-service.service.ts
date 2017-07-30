@@ -136,12 +136,12 @@ export class DataService {
   }
   
   // ===== WORLD MAP COMPONENT =====
-  public getWorldPositions(startDate: Date, endDate: Date): Observable<Object[][]> {
-    let observables: Observable<Object[]>[] = [];
+  public getWorldPositions(startDate: Date, endDate: Date): Observable<any[][]> {
+    let observables: Observable<any[]>[] = [];
 	let subUrl = this.config.geoSubUrl + '?' + this.config.geoStartParam + '=' + startDate.toISOString() + '&' + this.config.geoEndParam + '=' + endDate.toISOString();
 	observables.push(Observable.of(this.getSelectedPlatforms()));
 	this.getSelectedPlatforms().
-		forEach(platform => observables.push(this.getJson(platform.rootUrl + subUrl) as Observable<Object[]>));
+		forEach(platform => observables.push(this.getJson(platform.rootUrl + subUrl) as Observable<any[]>));
 	return Observable.forkJoin(observables);		
   }
   
