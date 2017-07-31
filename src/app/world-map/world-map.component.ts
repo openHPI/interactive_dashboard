@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { DataService } from '../services/data-service.service';
 import { Platform } from '../dashboard';
 
+import limitMap from 'google-map-bounds-limit';
+declare var google: any;
+
 @Component({
   selector: 'world-map',
   templateUrl: './world-map.component.html',
@@ -10,6 +13,7 @@ import { Platform } from '../dashboard';
 
 
 export class WorldMapComponent {
+  
   primaryColor: string;
   userPositions = [];
   currentHour = new Date().getHours();
@@ -412,7 +416,7 @@ export class WorldMapComponent {
 
   constructor(private dataService: DataService) { 
     this.dataService.addUpdateListener(this); 
-    this.dataService.addAnimationListener(this);	
+    this.dataService.addAnimationListener(this);
   }
 
   private callApisAndSetMarkers(startDate: Date, endDate: Date){
@@ -433,6 +437,14 @@ export class WorldMapComponent {
   public update(): void {
 	this.handleChangedRange();
     this.primaryColor = this.dataService.getPrimaryColor();
+  }
+  
+  public onMapReady(googleMap): void {
+	let maxBounds = new google.maps.LatLngBounds(
+	  new google.maps.LatLng(-85, -175),
+	  new google.maps.LatLng(85, 175)
+	);
+	limitMap(googleMap, maxBounds);
   }
 
   public nextAnimationStep(): void {

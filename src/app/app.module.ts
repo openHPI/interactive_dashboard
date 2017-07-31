@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
 
 import { MaterializeModule } from 'angular2-materialize';
-import { NguiMapModule} from '@ngui/map';
+import { NguiMapModule } from '@ngui/map';
 import { NouisliderModule } from 'ng2-nouislider';
 import { CountoModule }  from 'angular2-counto';
 import { QRCodeModule } from 'angular2-qrcode';

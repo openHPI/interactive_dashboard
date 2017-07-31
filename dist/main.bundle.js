@@ -189,7 +189,7 @@ __decorate([
 AppComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-root',
-        template: __webpack_require__(271),
+        template: __webpack_require__(272),
         styles: [__webpack_require__(253)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */]) === "function" && _a || Object])
@@ -210,7 +210,7 @@ var _a;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(97);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_materialize__ = __webpack_require__(196);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ngui_map__ = __webpack_require__(192);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ng2_nouislider__ = __webpack_require__(265);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ng2_nouislider__ = __webpack_require__(266);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ng2_nouislider___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_ng2_nouislider__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angular2_counto__ = __webpack_require__(194);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angular2_counto___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_angular2_counto__);
@@ -332,7 +332,7 @@ var CitationComponent = (function () {
 CitationComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-citation',
-        template: __webpack_require__(272),
+        template: __webpack_require__(273),
         styles: [__webpack_require__(254)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */]) === "function" && _a || Object])
@@ -403,7 +403,7 @@ __decorate([
 CourseCardComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-course-card',
-        template: __webpack_require__(273),
+        template: __webpack_require__(274),
         styles: [__webpack_require__(255)]
     })
 ], CourseCardComponent);
@@ -476,7 +476,7 @@ __decorate([
 CoursesComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-courses',
-        template: __webpack_require__(274),
+        template: __webpack_require__(275),
         styles: [__webpack_require__(256)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */]) === "function" && _a || Object])
@@ -520,7 +520,7 @@ __decorate([
 FilterLogoComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-filter-logo',
-        template: __webpack_require__(275),
+        template: __webpack_require__(276),
         styles: [__webpack_require__(257)]
     }),
     __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */]) === "function" && _b || Object])
@@ -558,7 +558,7 @@ var FilterComponent = (function () {
 FilterComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-filter',
-        template: __webpack_require__(276),
+        template: __webpack_require__(277),
         styles: [__webpack_require__(258)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */]) === "function" && _a || Object])
@@ -597,7 +597,7 @@ var KeyFeaturesComponent = (function () {
 KeyFeaturesComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-key-features',
-        template: __webpack_require__(277),
+        template: __webpack_require__(278),
         styles: [__webpack_require__(259)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */]) === "function" && _a || Object])
@@ -650,7 +650,7 @@ __decorate([
 PromoNumbersComponentComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-promo-numbers-component',
-        template: __webpack_require__(278),
+        template: __webpack_require__(279),
         styles: [__webpack_require__(260)]
     }),
     __metadata("design:paramtypes", [])
@@ -727,7 +727,7 @@ var PromoNumbersComponent = (function () {
 PromoNumbersComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-promo-numbers',
-        template: __webpack_require__(279),
+        template: __webpack_require__(280),
         styles: [__webpack_require__(261)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */]) === "function" && _a || Object])
@@ -768,7 +768,7 @@ __decorate([
 ReviewCardComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-review-card',
-        template: __webpack_require__(280),
+        template: __webpack_require__(281),
         styles: [__webpack_require__(262)]
     }),
     __metadata("design:paramtypes", [])
@@ -870,7 +870,7 @@ __decorate([
 ReviewsComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-reviews',
-        template: __webpack_require__(281),
+        template: __webpack_require__(282),
         styles: [__webpack_require__(263)],
     }),
     __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */]) === "function" && _b || Object])
@@ -887,6 +887,8 @@ var _a, _b;
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_google_map_bounds_limit__ = __webpack_require__(265);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_google_map_bounds_limit___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_google_map_bounds_limit__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WorldMapComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -897,6 +899,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 var WorldMapComponent = (function () {
@@ -1321,6 +1324,10 @@ var WorldMapComponent = (function () {
         this.handleChangedRange();
         this.primaryColor = this.dataService.getPrimaryColor();
     };
+    WorldMapComponent.prototype.onMapReady = function (googleMap) {
+        var maxBounds = new google.maps.LatLngBounds(new google.maps.LatLng(-85, -175), new google.maps.LatLng(85, 175));
+        __WEBPACK_IMPORTED_MODULE_2_google_map_bounds_limit___default()(googleMap, maxBounds);
+    };
     WorldMapComponent.prototype.nextAnimationStep = function () {
         if (this.rangeValues[1] < new Date().getHours()) {
             this.rangeValues = [this.rangeValues[0] + 1, this.rangeValues[1] + 1]; //hop one hour forward
@@ -1359,7 +1366,7 @@ var WorldMapComponent = (function () {
 WorldMapComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'world-map',
-        template: __webpack_require__(282),
+        template: __webpack_require__(283),
         styles: [__webpack_require__(264)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */]) === "function" && _a || Object])
@@ -1813,91 +1820,91 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 271:
+/***/ 272:
 /***/ (function(module, exports) {
 
 module.exports = "<div *ngIf=\"dataService.isUpdating()\" class=\"overlay\">\r\n\t<div class=\"preloader-wrapper big active\">\r\n\t\t<div class=\"spinner-layer\" style=\"border-color: #67DE91\">\r\n\t\t\t<div class=\"circle-clipper left\">\r\n\t\t\t\t<div class=\"circle\"></div>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"gap-patch\">\r\n\t\t\t\t<div class=\"circle\"></div>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"circle-clipper right\">\r\n\t\t\t\t<div class=\"circle\"></div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n<app-filter></app-filter>\r\n\r\n<world-map></world-map>\r\n\r\n<div class=\"container\">\r\n  <div class=\"section\">\r\n    <app-promo-numbers></app-promo-numbers>\r\n  </div>\r\n  <div class=\"section\">\r\n    <app-key-features></app-key-features>\r\n\t<app-citation></app-citation>\r\n  </div>\r\n  <div class=\"section\">\r\n    <app-courses></app-courses>\r\n  </div>\r\n  <div class=\"section\">\r\n    <app-reviews></app-reviews>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
-/***/ 272:
+/***/ 273:
 /***/ (function(module, exports) {
 
 module.exports = "<div *ngIf=\"!dataService.areAllPlatformsSelected()\">\r\n\t<h2 [ngStyle]= \"{'color': primaryColor}\"> {{citation}} </h2>\r\n</div>\r\n"
 
 /***/ }),
 
-/***/ 273:
+/***/ 274:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"card white\">\r\n\t<div class=\"card-image waves-effect waves-block waves-light\">\r\n\t\t<img class=\"activator\" src=\"{{_course.attributes.image_url}}\">\r\n\t</div>\r\n\t<div class=\"card-content\">\r\n\t\t<span class=\"card-title activator truncate\">{{_course.attributes.title}}</span>\r\n\t\t<span class=\"authors\" [ngStyle]= \"{'color': _primaryColor}\">{{_course.attributes.teachers}}</span>\r\n\t\t<p class=\"truncate\">{{_course.attributes.abstract}}</p>\r\n\t</div>\r\n\t<div class=\"card-reveal\">\r\n\t\t<span class=\"card-title grey-text text-darken-4\" style=\"font-size: 36px; line-height: 45px;\">{{_course.attributes.title}}<i class=\"material-icons right\">close</i></span>\r\n\t\t<span class=\"authors\" [ngStyle]= \"{'color': _primaryColor}\">{{_course.attributes.teachers}}</span>\r\n\t\t<br />\r\n\t\t<qr-code [value]=\"qrCodeUrl\" [size]=\"390\" [padding]=\"30\"></qr-code>\r\n\t\t<a class=\"card-panel\" [ngStyle]= \"{'background-color': _primaryColor}\">Scan and try!</a>\r\n\r\n\t</div>\r\n</div>\r\n"
 
 /***/ }),
 
-/***/ 274:
+/***/ 275:
 /***/ (function(module, exports) {
 
 module.exports = "<div #carousel *ngIf=\"courses\" materialize=\"carousel\" class=\"carousel\" [materializeActions]=\"navigatorActions\">\r\n\t<div *ngFor=\"let course of courses\" class=\"carousel-item\">\r\n\t\t<app-course-card [course]=\"course\" [primaryColor]=\"primaryColor\"></app-course-card>\r\n\t</div>\r\n</div>"
 
 /***/ }),
 
-/***/ 275:
+/***/ 276:
 /***/ (function(module, exports) {
 
 module.exports = "<img [ngClass]=\"{'selected': platform.isFilterSelected}\" (click)=\"filterService.togglePlatformState(platform)\" [src]=\"platform.logoUrl\" />"
 
 /***/ }),
 
-/***/ 276:
+/***/ 277:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"section center-align\" style=\"display: flex; justify-content: center; padding-top: 2rem;  padding-bottom: 2rem;\">\r\n  <div *ngFor=\"let platform of filterService.getPlatforms()\">\r\n    <app-filter-logo [platform]=\"platform\"></app-filter-logo>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
-/***/ 277:
+/***/ 278:
 /***/ (function(module, exports) {
 
 module.exports = "<div *ngIf=\"dataService.areAllPlatformsSelected()\">\r\n\t<h2>What our MOOCs offer</h2>\r\n\t<div class=\"row\">\r\n\t\t<div *ngFor=\"let featureCard of featureCards\" class=\"col s3\">\r\n\t\t\t<div class=\"card-panel grey lighten-5 z-depth-1\">\r\n\t\t\t<div class=\"row valign-wrapper\">\r\n\t\t\t<div class=\"col s3\">\r\n\t\t\t\t<img src={{featureCard.imageUrl}} class=\"responsive-img\" height=\"60\">\r\n\t\t\t</div>\r\n\t\t\t<div class=\"col s9\">\r\n\t\t\t\t\t<h5>{{featureCard.title}}</h5>\r\n\t\t\t  <span class=\"key_text\">\r\n\t\t\t  {{featureCard.text}}\r\n\t\t\t  </span>\r\n\t\t\t</div>\r\n\t\t  </div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>"
 
 /***/ }),
 
-/***/ 278:
+/***/ 279:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"center promo\">\r\n\t<h1 [ngStyle]=\"{'color': _primaryColor}\"><div counto [step]=\"30\" \r\n\t\t\t [countTo]=\"promo.count\" \r\n\t\t\t [countFrom]=\"promo.countOld\" \r\n\t\t\t [duration]=\"1.5\" \r\n\t\t\t (countoChange)=\"intermediate = $event\">{{intermediate | number:'1.0-0'}}</div></h1>\r\n\t<hr />\r\n\t<h4>{{promo.title}}</h4>\r\n\t<span>{{promo.description}}</span>\r\n</div>"
 
 /***/ }),
 
-/***/ 279:
+/***/ 280:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"row\">\r\n\t<div *ngFor=\"let promo of promoNumbers\" class=\"col s3\">\r\n\t\t<app-promo-numbers-component [primaryColor]=\"primaryColor\" [promo]=promo></app-promo-numbers-component>\r\n\t</div>\r\n</div>\t"
 
 /***/ }),
 
-/***/ 280:
+/***/ 281:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"card-panel transparent z-depth-0\">\r\n\t<div class=\"bubble\">\r\n\t\t{{review.statement}}\r\n\t</div>\r\n\t<div class=\"bubble-arrow\">\r\n\t</div>\r\n\t<div class=\"row valign-wrapper\">\r\n\t\t<div class=\"col s2\">\r\n\t\t\t<img [src]=\"review.imageUrl\" class=\"circle responsive-img\">\r\n\t\t</div>\r\n\t\t<div class=\"col s12\">\r\n\t\t\t<span class=\"black-text\">{{review.author}}</span>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n"
 
 /***/ }),
 
-/***/ 281:
+/***/ 282:
 /***/ (function(module, exports) {
 
 module.exports = "<a #prev [ngClass]=\"{'disabled': isFirst()}\" [ngStyle]=\"{'background': 'url(' + leftArrowUrl + ') top left no-repeat'}\" class=\"arrow_prev\" (click)=\"previousReview()\">Previous</a>\r\n<a #next [ngClass]=\"{'disabled': isLast()}\" [ngStyle]=\"{'background': 'url(' + rightArrowUrl + ') top left no-repeat'}\" class=\"arrow_next\" (click)=\"nextReview()\">Next</a>\r\n\r\n<div #slider class=\"carousel carousel-slider\" *ngIf=\"reviews\" materialize=\"carousel\" [materializeParams]=\"[{fullWidth: true, noWrap: true}]\" data-indicators=\"true\" [materializeActions]=\"navigatorActions\">\r\n\t<div *ngFor=\"let review of reviews; let iReview = index\">\r\n\t\t<div #item class=\"carousel-item grey lighten-3\" *ngIf=\"iReview % 4 === 0\">\r\n\t\t\t<div class=\"row\">\r\n\t\t\t\t<div class=\"col s6\">\r\n\t\t\t\t\t<app-review-card [review]=\"reviews[iReview]\"></app-review-card>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"col s6\" *ngIf=\"iReview + 1 < reviews.length\">\r\n\t\t\t\t\t<app-review-card [review]=\"reviews[iReview + 1]\"></app-review-card>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"row\">\r\n\t\t\t\t<div class=\"col s6\" *ngIf=\"iReview + 2 < reviews.length\">\r\n\t\t\t\t\t<app-review-card [review]=\"reviews[iReview + 2]\"></app-review-card>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"col s6\" *ngIf=\"iReview + 3 < reviews.length\">\r\n\t\t\t\t\t<app-review-card [review]=\"reviews[iReview + 3]\"></app-review-card>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\r\n</div>\r\n\r\n"
 
 /***/ }),
 
-/***/ 282:
+/***/ 283:
 /***/ (function(module, exports) {
 
-module.exports = "<ngui-map center=\"Potsdam, Germany\"[options]=\"mapOptions\">\r\n   <marker *ngFor=\"let pos of userPositions\"\r\n   \t\t\t[position]= \"[pos[0], pos[1]]\"\r\n   \t\t\t[icon]=\"{\r\n\t\t       url: pos[2],\r\n\t\t       scaleSize: [1,1]\r\n     \t\t}\"></marker>\r\n</ngui-map>\r\n\r\n\r\n<div class=\"noUI\">\r\n\t<nouislider [config]=\"rangeConfig\" [(ngModel)]=\"rangeValues\" (ngModelChange)=\"onChange($event)\"></nouislider>\r\n</div>\r\n"
+module.exports = "<ngui-map #map center=\"Potsdam, Germany\"[options]=\"mapOptions\" (mapReady$)=\"onMapReady($event)\">\r\n   <marker *ngFor=\"let pos of userPositions\"\r\n   \t\t\t[position]= \"[pos[0], pos[1]]\"\r\n   \t\t\t[icon]=\"{\r\n\t\t       url: pos[2],\r\n\t\t       scaleSize: [1,1]\r\n     \t\t}\"></marker>\r\n</ngui-map>\r\n\r\n\r\n<div class=\"noUI\">\r\n\t<nouislider [config]=\"rangeConfig\" [(ngModel)]=\"rangeValues\" (ngModelChange)=\"onChange($event)\"></nouislider>\r\n</div>\r\n"
 
 /***/ }),
 
-/***/ 565:
+/***/ 566:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(166);
@@ -2011,5 +2018,5 @@ var FEATURE_CARDS = [
 
 /***/ })
 
-},[565]);
+},[566]);
 //# sourceMappingURL=main.bundle.js.map
