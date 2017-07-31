@@ -18,6 +18,7 @@ When you run `npm install` there may occur one error regarding the canvas. The c
 There are some further warning regarding optional dependencies. Feel free to ignore them as well.
 
 Q: "Oh my god, the course component does weird things and skipps multiple courses at once"
+
 A: "You forgot you replace the Materialize.js - this should fix it."
 
 ## Development
