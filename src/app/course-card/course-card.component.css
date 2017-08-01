@@ -2,13 +2,13 @@
 	margin: 0;
 }
 
-.card-panel {
-	padding: 10px;
+h2 {
 	display: block;
-	font-size: 23px;
+	font-size: 25px;
+	font-weight: bold;
 	text-align: center;
-	color: white;
 	margin: 0 auto;
+	color: black;
 }
 
 .card .card-image {

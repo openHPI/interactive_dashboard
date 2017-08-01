@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~nouislider/distribute/nouislider.min.css";
+@import "~materialize-css/extras/noUiSlider/nouislider.css";
 
 body {
     overflow-x: hidden;
@@ -58,5 +58,5 @@ qr-code img {
 /*styling the nouislider range in map component*/
 
 .noUi-connect{
-	background: rgb(103, 222, 145);
+	background: rgb(77, 96, 89);
 }

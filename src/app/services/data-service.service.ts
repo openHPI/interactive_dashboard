@@ -166,7 +166,7 @@ export class DataService {
   public getPrimaryColor() : string {
   	if (this.getSelectedPlatforms().length == 1) {
   		return this.getSelectedPlatforms()[0].primaryColor;
-  	} else {return '#67de91';}
+  	} else {return this.getPlatforms().filter(platform => platform.rootUrl == 'https://open.hpi.de')[0].primaryColor;}
   }
   
 }
