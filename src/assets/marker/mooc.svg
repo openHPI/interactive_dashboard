@@ -9,9 +9,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="50"
-   height="50"
-   viewBox="0 0 13.229166 13.229167"
+   width="17.5"
+   height="17.5"
+   viewBox="0 0 4.6302081 4.6302085"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.1 r15371"
@@ -26,8 +26,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="5.6"
-     inkscape:cx="52.40636"
-     inkscape:cy="38.548096"
+     inkscape:cx="-12.335844"
+     inkscape:cy="35.770176"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -54,13 +54,13 @@
      inkscape:label="Ebene 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-283.77082)"
+     transform="translate(-0.73499084,-291.63479)"
      style="display:inline">
     <circle
        id="path3694"
-       cx="6.5481033"
-       cy="290.45187"
-       r="5.8131123"
-       style="stroke-width:0.26458332;fill:#abb324;fill-opacity:1" />
+       cx="3.0500951"
+       cy="293.94989"
+       style="opacity:0.8;fill:#abb324;fill-opacity:1;stroke-width:0.10537177"
+       r="2.3151042" />
   </g>
 </svg>
