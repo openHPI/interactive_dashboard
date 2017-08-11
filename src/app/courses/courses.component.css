@@ -1,9 +1,9 @@
 .carousel {
 	overflow: visible;
-	margin-bottom: 280px;
+	margin-top: -115px;
 }
 .carousel-item {
-	width: 680px;
+	width: 430px;
 }
 .carousel-item p {
     font-size: 18px;

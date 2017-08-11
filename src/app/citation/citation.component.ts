@@ -17,7 +17,7 @@ export class CitationComponent {
 
   public update(): void {
     this.citation = this.dataService.getCitation();
-	  this.dataService.updateCompleted();
+	this.dataService.updateCompleted();
     this.primaryColor = this.dataService.getPrimaryColor();
   }
 

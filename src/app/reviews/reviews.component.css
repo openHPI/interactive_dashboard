@@ -1,5 +1,5 @@
 .carousel {
-	min-height: 900px;
+	min-height: 255px;
 	margin-top: 100px;
 }
 
@@ -9,21 +9,22 @@
 
 a.arrow_prev {
   display:block;
-  width:120px;
-  height:120px;
+  width:60px;
+  height:60px;
   overflow: hidden;
   position: absolute;
-    text-indent: -9999px;
-    margin: 450px 20px 20px -135px;
+  margin: 185px 0 0 -60px;
 }
 
 a.arrow_next {
   display:block;
-  width:120px;
-  height:120px;
+  width:60px;
+  height:60px;
   overflow: hidden;
   position: absolute;
-    text-indent: -9999px;
-    margin-left: 1300px;
-    margin-top: 450px;
+  margin: 185px 0 0 720px;
+}
+
+.row {
+	margin-bottom: 0;
 }

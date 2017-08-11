@@ -12,15 +12,15 @@ h2 {
 }
 
 .card .card-image {
-	height: 380px;
+	height: 233px;
 	display: block;
 	vertical-align: middle;
 	overflow: hidden;
 }
 .card .card-content .card-title {
 	margin-bottom: 0px;
-    font-size: 36px;
-    line-height: 45px;
+    font-size: 24px;
+    line-height: 29px;
     color:black;
 }
 .card .card-content .card-title .btn {
@@ -34,11 +34,17 @@ h2 {
 	margin-top: 6px;
 	color: #696969;
 }
+
+.card .card-content {
+	padding-top: 10px;
+}
+
 .card .card-reveal span {
 
 }
 .authors {
-	font-size: 20px;
+	font-size: 17px;
+	height: 30px;
 }
 
 .activator {

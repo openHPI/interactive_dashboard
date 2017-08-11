@@ -51,7 +51,8 @@ export const CONFIG: Config = {
     globalsSubUrl: '/api/v2/stats/global.json',
 	activeUserSubUrl: '/api/v2/stats/active_users',
 	activeStartParam: 'start_date',
-	activeEndParam: 'end_date'
+	activeEndParam: 'end_date',
+	citationAll: 'Massive Open Online Courses'
 };
 
 export const FEATURE_CARDS: FeatureCard[] = [

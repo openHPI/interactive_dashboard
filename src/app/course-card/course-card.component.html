@@ -4,14 +4,17 @@
 	</div>
 	<div class="card-content">
 		<span class="card-title activator truncate">{{_course.attributes.title}}</span>
-		<span class="authors" [ngStyle]= "{'color': _primaryColor}">{{_course.attributes.teachers}}</span>
-		<p class="truncate">{{_course.attributes.abstract}}</p>
+		<span class="authors activator truncate" [ngStyle]= "{'color': _primaryColor}">{{_course.attributes.teachers}}</span>
+		<p class="truncate activator">{{_course.attributes.abstract}}</p>
 	</div>
 	<div class="card-reveal">
-		<span class="card-title grey-text text-darken-4" style="font-size: 36px; line-height: 45px;">{{_course.attributes.title}}<i class="material-icons right">close</i></span>
-		<span class="authors" [ngStyle]= "{'color': _primaryColor}">{{_course.attributes.teachers}}</span>
+		<span class="card-title grey-text text-darken-4" style="font-size: 22px">
+			<i class="material-icons right activator">close</i>
+			{{_course.attributes.title}}
+		</span>
+		
+		<span class="authors activator" [ngStyle]= "{'color': _primaryColor}">{{_course.attributes.teachers}}</span>
 		<br />
-		<qr-code [value]="qrCodeUrl" [size]="390" [padding]="30"></qr-code>
-		<h2>Scan and try!</h2>
+		<qr-code [value]="qrCodeUrl" [size]="250" [padding]="20"></qr-code>
 	</div>
 </div>

@@ -32,6 +32,7 @@ export class Config {
 	activeUserSubUrl: string;
 	activeStartParam: string;
 	activeEndParam: string;
+	citationAll: string;
 }
 
 export class FeatureCard {

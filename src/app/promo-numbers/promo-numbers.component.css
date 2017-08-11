@@ -1,14 +1,9 @@
-hr {
-	width: 70%;
-	border: 1px solid #9E9E9E;
+.row {
+	margin-bottom: 0;
+	padding-left: 24px;
 }
-h1 {
-	font-weight: bold;
-}
-h4 {
-	padding-top: 15px;
-	font-size: 1.8em;
-}
-span {
-	font-size:1.3em;
+
+.col.s2 {
+	margin-right: -7px;
+	width: 20.666667%;
 }

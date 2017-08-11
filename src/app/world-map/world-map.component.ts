@@ -40,12 +40,12 @@ export class WorldMapComponent {
 
   mapOptions = {
     "center": "Potsdam, Germany",
-    "zoom": 3,
+    "zoom": 2,
     "mapTypeControl": false,
     "streetViewControl": false,
     "scaleControl": false,
     "zoomControl": false,
-    "minZoom": 3,
+    "minZoom": 2,
     "maxZoom": 14,
     "styles": [
         {
@@ -441,8 +441,8 @@ export class WorldMapComponent {
   
   public onMapReady(googleMap): void {
 	let maxBounds = new google.maps.LatLngBounds(
-	  new google.maps.LatLng(-85, -175),
-	  new google.maps.LatLng(85, 175)
+	  new google.maps.LatLng(-81, -175),
+	  new google.maps.LatLng(81, 175)
 	);
 	limitMap(googleMap, maxBounds);
   }

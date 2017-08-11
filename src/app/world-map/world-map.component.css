@@ -2,7 +2,7 @@
 
 ngui-map {
   display: block;
-  height: 600px;
+  height: 400px;
 }
 
 input{
@@ -18,6 +18,6 @@ input{
 .noUI {
     width: 90%;
     margin: 0 auto;
-    padding-top: 50px;
+    padding-top: 17px;
     padding-bottom: 50px;
 }

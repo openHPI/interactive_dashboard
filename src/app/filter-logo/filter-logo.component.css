@@ -1,6 +1,6 @@
 img {
-  margin-right: 3rem;
-  height:80px;
+  margin: 0 0.75rem;
+  height: 52px;
   cursor: pointer;
   opacity: 0.4;
   filter: grayscale(1);

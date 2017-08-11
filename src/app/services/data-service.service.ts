@@ -170,6 +170,9 @@ export class DataService {
  
   // ===== CITATION COMPONENT =====
   public getCitation(): string {
+	if (this.areAllPlatformsSelected()){
+		return this.config.citationAll;
+	}
 	return this.getSelectedPlatforms()[0].citation;
   }
   
