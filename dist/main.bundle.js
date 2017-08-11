@@ -39,6 +39,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dyna
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* unused harmony export ActiveUser */
 /* unused harmony export GlobalStatistic */
 /* unused harmony export GlobalStatistics */
 /* unused harmony export CertificateRate */
@@ -47,6 +48,12 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dyna
 /* unused harmony export Attributes */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Course; });
 /* unused harmony export CourseStatistics */
+var ActiveUser = (function () {
+    function ActiveUser() {
+    }
+    return ActiveUser;
+}());
+
 var GlobalStatistic = (function () {
     function GlobalStatistic() {
     }
@@ -349,7 +356,7 @@ var _a;
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__api__ = __webpack_require__(175);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_assets_config_config__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_assets_config_config__ = __webpack_require__(69);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CourseCardComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -419,7 +426,7 @@ var _a, _b;
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(56);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoursesComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -493,7 +500,7 @@ var _a;
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_dashboard__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_dashboard__ = __webpack_require__(68);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FilterLogoComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -613,7 +620,7 @@ var _a;
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dashboard__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dashboard__ = __webpack_require__(68);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PromoNumbersComponentComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -667,6 +674,8 @@ var _a;
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PromoNumbersComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -679,17 +688,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var PromoNumbersComponent = (function () {
     function PromoNumbersComponent(numberService) {
         this.numberService = numberService;
         this.numberService.addUpdateListener(this);
+        this.initializePrivateUpdater();
     }
-    PromoNumbersComponent.prototype.update = function () {
+    PromoNumbersComponent.prototype.initializePrivateUpdater = function () {
+        var _this = this;
+        var timer = __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].timer(0, 60000);
+        timer.subscribe(function () { return _this.updateNumbers(true); });
+    };
+    PromoNumbersComponent.prototype.updateNumbers = function (isPrivateUpdate) {
         var _this = this;
         var enrollments = 0;
         var users = 0;
         var courses = 0;
         var certificates = 0;
+        var activeUsers = 0;
         this.numberService.getGlobalNumbers().subscribe(function (array) {
             array.forEach(function (element) {
                 var statistic = element.global_statistic;
@@ -698,28 +715,40 @@ var PromoNumbersComponent = (function () {
                 courses += statistic.courses_count;
                 certificates += statistic.certificates_count;
             });
-            //this.updatePromoNumbers(enrollments, users, courses, certificates);
-            _this.updatePromoNumbers(enrollments, users, 0, 0);
-            _this.numberService.updateCompleted();
+            _this.numberService.getActiveUsers().subscribe(function (array) {
+                array.forEach(function (element) {
+                    activeUsers += element.count;
+                });
+                _this.updatePromoNumbers(enrollments, users, courses, certificates, activeUsers);
+                if (isPrivateUpdate) {
+                    _this.numberService.updateCompleted();
+                }
+            });
         });
-        this.primaryColor = this.numberService.getPrimaryColor();
     };
-    PromoNumbersComponent.prototype.updatePromoNumbers = function (enrollments, users, courses, certificates) {
+    PromoNumbersComponent.prototype.update = function () {
+        this.primaryColor = this.numberService.getPrimaryColor();
+        this.updateNumbers(false);
+    };
+    PromoNumbersComponent.prototype.updatePromoNumbers = function (enrollments, users, courses, certificates, activeUsers) {
         var enrollmentsOld = 0;
         var usersOld = 0;
         var coursesOld = 0;
         var certificatesOld = 0;
+        var activeUsersOld = 0;
         if (this.promoNumbers) {
             enrollmentsOld = this.promoNumbers[0].count;
             usersOld = this.promoNumbers[1].count;
             coursesOld = this.promoNumbers[2].count || 0;
             certificatesOld = this.promoNumbers[3].count || 0;
+            activeUsersOld = this.promoNumbers[4].count || 0;
         }
         this.promoNumbers = [
             { count: enrollments, countOld: enrollmentsOld, title: 'Enrollments', description: 'Total enrollments' },
             { count: users, countOld: usersOld, title: 'Users', description: 'Unique users' },
             { count: courses, countOld: coursesOld, title: 'Courses', description: 'Available courses' },
-            { count: certificates, countOld: certificatesOld, title: 'Certificates', description: 'Handed certificates' }
+            { count: certificates, countOld: certificatesOld, title: 'Certificates', description: 'Handed certificates' },
+            { count: activeUsers, countOld: activeUsersOld, title: 'Active users', description: 'Active users of the last 30 min' }
         ];
     };
     return PromoNumbersComponent;
@@ -743,7 +772,7 @@ var _a;
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dashboard__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dashboard__ = __webpack_require__(68);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReviewCardComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -785,7 +814,7 @@ var _a;
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(56);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReviewsComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -817,14 +846,14 @@ var ReviewsComponent = (function () {
         this.subscription = timer.subscribe(function () { return _this.reloadSlider(); }); //ugly but works
     };
     ReviewsComponent.prototype.previousReview = function () {
-        if (this.getActiveItem() != this.items.first) {
-            this.navigatorActions.emit({ action: 'carousel', params: ['prev'] });
-        }
+        //if (this.getActiveItem() != this.items.first){
+        this.navigatorActions.emit({ action: 'carousel', params: ['prev'] });
+        //}
     };
     ReviewsComponent.prototype.nextReview = function () {
-        if (this.getActiveItem() != this.items.last) {
-            this.navigatorActions.emit({ action: 'carousel', params: ['next'] });
-        }
+        //if (this.getActiveItem() != this.items.last) {
+        this.navigatorActions.emit({ action: 'carousel', params: ['next'] });
+        //}
     };
     ReviewsComponent.prototype.reloadSlider = function () {
         if (!this.slider)
@@ -833,7 +862,7 @@ var ReviewsComponent = (function () {
         var jSlider = $(this.slider.nativeElement);
         jSlider.find('.indicators').detach();
         jSlider.removeClass("initialized");
-        this.navigatorActions.emit({ action: 'carousel', params: [{ fullWidth: true, noWrap: true }] });
+        this.navigatorActions.emit({ action: 'carousel', params: [{ fullWidth: true, noWrap: false }] });
         this.subscription.unsubscribe();
         this.reviewService.updateCompleted();
     };
@@ -844,10 +873,12 @@ var ReviewsComponent = (function () {
         return item.nativeElement.classList.contains('active');
     };
     ReviewsComponent.prototype.isFirst = function () {
-        return this.items ? this.getActiveItem() == this.items.first : false;
+        //return this.items ? this.getActiveItem() == this.items.first : false;
+        return false;
     };
     ReviewsComponent.prototype.isLast = function () {
-        return this.items ? this.getActiveItem() == this.items.last : false;
+        //return this.items ? this.getActiveItem() == this.items.last : false;
+        return false;
     };
     return ReviewsComponent;
 }());
@@ -1423,11 +1454,11 @@ var OPEN_WHO_REVIEWS = [
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(96);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(56);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(130);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_assets_config_config__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_assets_config_config__ = __webpack_require__(69);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DataService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1563,6 +1594,17 @@ var DataService = (function () {
             .forEach(function (platform) { return observables.push(_this.getJson(platform.rootUrl + _this.config.globalsSubUrl)); });
         return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].forkJoin(observables);
     };
+    DataService.prototype.getActiveUsers = function () {
+        var _this = this;
+        var observables = [];
+        var startTime = new Date();
+        startTime.setMinutes(startTime.getMinutes() - 30);
+        var endTime = new Date();
+        var subUrl = '?' + this.config.activeStartParam + '=' + startTime.toISOString() + '&' + this.config.activeEndParam + '=' + endTime.toISOString();
+        this.getSelectedPlatforms()
+            .forEach(function (platform) { return observables.push(_this.getJson(platform.rootUrl + _this.config.activeUserSubUrl + subUrl)); });
+        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].forkJoin(observables);
+    };
     // ===== FEATURE CARD COMPONENT =====
     DataService.prototype.getFeatureCards = function () {
         return __WEBPACK_IMPORTED_MODULE_4_assets_config_config__["b" /* FEATURE_CARDS */];
@@ -1648,7 +1690,7 @@ exports = module.exports = __webpack_require__(11)(false);
 
 
 // module
-exports.push([module.i, ".card {\n\tmargin: 0;\n}\n\nh2 {\n\tdisplay: block;\n\tfont-size: 25px;\n\tfont-weight: bold;\n\ttext-align: center;\n\tmargin: 0 auto;\n\tcolor: black;\n}\n\n.card .card-image {\n\theight: 380px;\n\tdisplay: block;\n\tvertical-align: middle;\n\toverflow: hidden;\n}\n.card .card-content .card-title {\n\tmargin-bottom: 0px;\n    font-size: 36px;\n    line-height: 45px;\n    color:black;\n}\n.card .card-content .card-title .btn {\n\tline-height: 32px;\n}\n.card .card-content .card-title .btn .material-icons{\n\tline-height: 40px;\n\tfont-size: 36px;\n}\n.card .card-content p {\n\tmargin-top: 6px;\n\tcolor: #696969;\n}\n.card .card-reveal span {\n\n}\n.authors {\n\tfont-size: 20px;\n}\n\n.activator {\n\tcursor: pointer;\n}\n.truncate {\n    overflow: hidden;\n    text-overflow: ellipsis;\n    display: -webkit-box;\n    -webkit-line-clamp: 3;\n    -webkit-box-orient: vertical;\n    white-space: normal;\n}", ""]);
+exports.push([module.i, ".card {\r\n\tmargin: 0;\r\n}\r\n\r\nh2 {\r\n\tdisplay: block;\r\n\tfont-size: 25px;\r\n\tfont-weight: bold;\r\n\ttext-align: center;\r\n\tmargin: 0 auto;\r\n\tcolor: black;\r\n}\r\n\r\n.card .card-image {\r\n\theight: 380px;\r\n\tdisplay: block;\r\n\tvertical-align: middle;\r\n\toverflow: hidden;\r\n}\r\n.card .card-content .card-title {\r\n\tmargin-bottom: 0px;\r\n    font-size: 36px;\r\n    line-height: 45px;\r\n    color:black;\r\n}\r\n.card .card-content .card-title .btn {\r\n\tline-height: 32px;\r\n}\r\n.card .card-content .card-title .btn .material-icons{\r\n\tline-height: 40px;\r\n\tfont-size: 36px;\r\n}\r\n.card .card-content p {\r\n\tmargin-top: 6px;\r\n\tcolor: #696969;\r\n}\r\n.card .card-reveal span {\r\n\r\n}\r\n.authors {\r\n\tfont-size: 20px;\r\n}\r\n\r\n.activator {\r\n\tcursor: pointer;\r\n}\r\n.truncate {\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n    display: -webkit-box;\r\n    -webkit-line-clamp: 3;\r\n    -webkit-box-orient: vertical;\r\n    white-space: normal;\r\n}", ""]);
 
 // exports
 
@@ -1666,7 +1708,7 @@ exports = module.exports = __webpack_require__(11)(false);
 
 
 // module
-exports.push([module.i, ".carousel {\n\toverflow: visible;\n\tmargin-bottom: 280px;\n}\n.carousel-item {\n\twidth: 680px;\n}\n.carousel-item p {\n    font-size: 18px;\n}", ""]);
+exports.push([module.i, ".carousel {\r\n\toverflow: visible;\r\n\tmargin-bottom: 280px;\r\n}\r\n.carousel-item {\r\n\twidth: 680px;\r\n}\r\n.carousel-item p {\r\n    font-size: 18px;\r\n}", ""]);
 
 // exports
 
@@ -1720,7 +1762,7 @@ exports = module.exports = __webpack_require__(11)(false);
 
 
 // module
-exports.push([module.i, "h2 {\n\ttext-align: center;\n}\n", ""]);
+exports.push([module.i, "h2 {\r\n\ttext-align: center;\r\n}\r\n", ""]);
 
 // exports
 
@@ -1756,7 +1798,7 @@ exports = module.exports = __webpack_require__(11)(false);
 
 
 // module
-exports.push([module.i, "hr {\n\twidth: 70%;\n\tborder: 1px solid #9E9E9E;\n}\nh1 {\n\tfont-weight: bold;\n}\nh4 {\n\tpadding-top: 15px;\n\tfont-size: 1.8em;\n}\nspan {\n\tfont-size:1.3em;\n}", ""]);
+exports.push([module.i, "hr {\r\n\twidth: 70%;\r\n\tborder: 1px solid #9E9E9E;\r\n}\r\nh1 {\r\n\tfont-weight: bold;\r\n}\r\nh4 {\r\n\tpadding-top: 15px;\r\n\tfont-size: 1.8em;\r\n}\r\nspan {\r\n\tfont-size:1.3em;\r\n}", ""]);
 
 // exports
 
@@ -1774,7 +1816,7 @@ exports = module.exports = __webpack_require__(11)(false);
 
 
 // module
-exports.push([module.i, ".bubble {\n\tpadding: 35px;\n    border-radius: 10px;\n    background-color: #fff;\n\tfont-size: 24px;\n}\n\n.bubble-arrow {\n\twidth: 0;\n    height: 0;\n    margin-left: 35px;\n\tmargin-bottom: 10px;\n    border: 12px solid;\n    border-color: #fff transparent transparent #fff;\n}", ""]);
+exports.push([module.i, ".bubble {\r\n\tpadding: 35px;\r\n    border-radius: 10px;\r\n    background-color: #fff;\r\n\tfont-size: 24px;\r\n}\r\n\r\n.bubble-arrow {\r\n\twidth: 0;\r\n    height: 0;\r\n    margin-left: 35px;\r\n\tmargin-bottom: 10px;\r\n    border: 12px solid;\r\n    border-color: #fff transparent transparent #fff;\r\n}", ""]);
 
 // exports
 
@@ -1837,14 +1879,14 @@ module.exports = "<div *ngIf=\"!dataService.areAllPlatformsSelected()\">\r\n\t<h
 /***/ 275:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"card white\">\n\t<div class=\"card-image waves-effect waves-block waves-light\">\n\t\t<img class=\"activator\" src=\"{{_course.attributes.image_url}}\">\n\t</div>\n\t<div class=\"card-content\">\n\t\t<span class=\"card-title activator truncate\">{{_course.attributes.title}}</span>\n\t\t<span class=\"authors\" [ngStyle]= \"{'color': _primaryColor}\">{{_course.attributes.teachers}}</span>\n\t\t<p class=\"truncate\">{{_course.attributes.abstract}}</p>\n\t</div>\n\t<div class=\"card-reveal\">\n\t\t<span class=\"card-title grey-text text-darken-4\" style=\"font-size: 36px; line-height: 45px;\">{{_course.attributes.title}}<i class=\"material-icons right\">close</i></span>\n\t\t<span class=\"authors\" [ngStyle]= \"{'color': _primaryColor}\">{{_course.attributes.teachers}}</span>\n\t\t<br />\n\t\t<qr-code [value]=\"qrCodeUrl\" [size]=\"390\" [padding]=\"30\"></qr-code>\n\t\t<h2>Scan and try!</h2>\n\n\t</div>\n</div>\n"
+module.exports = "<div class=\"card white\">\r\n\t<div class=\"card-image waves-effect waves-block waves-light\">\r\n\t\t<img class=\"activator\" src=\"{{_course.attributes.image_url}}\">\r\n\t</div>\r\n\t<div class=\"card-content\">\r\n\t\t<span class=\"card-title activator truncate\">{{_course.attributes.title}}</span>\r\n\t\t<span class=\"authors\" [ngStyle]= \"{'color': _primaryColor}\">{{_course.attributes.teachers}}</span>\r\n\t\t<p class=\"truncate\">{{_course.attributes.abstract}}</p>\r\n\t</div>\r\n\t<div class=\"card-reveal\">\r\n\t\t<span class=\"card-title grey-text text-darken-4\" style=\"font-size: 36px; line-height: 45px;\">{{_course.attributes.title}}<i class=\"material-icons right\">close</i></span>\r\n\t\t<span class=\"authors\" [ngStyle]= \"{'color': _primaryColor}\">{{_course.attributes.teachers}}</span>\r\n\t\t<br />\r\n\t\t<qr-code [value]=\"qrCodeUrl\" [size]=\"390\" [padding]=\"30\"></qr-code>\r\n\t\t<h2>Scan and try!</h2>\r\n\t</div>\r\n</div>\r\n"
 
 /***/ }),
 
 /***/ 276:
 /***/ (function(module, exports) {
 
-module.exports = "<div #carousel *ngIf=\"courses\" materialize=\"carousel\" class=\"carousel\" [materializeActions]=\"navigatorActions\">\n\t<div *ngFor=\"let course of courses\" class=\"carousel-item\">\n\t\t<app-course-card [course]=\"course\" [primaryColor]=\"primaryColor\"></app-course-card>\n\t</div>\n</div>"
+module.exports = "<div #carousel *ngIf=\"courses\" materialize=\"carousel\" class=\"carousel\" [materializeActions]=\"navigatorActions\">\r\n\t<div *ngFor=\"let course of courses\" class=\"carousel-item\">\r\n\t\t<app-course-card [course]=\"course\" [primaryColor]=\"primaryColor\"></app-course-card>\r\n\t</div>\r\n</div>"
 
 /***/ }),
 
@@ -1858,7 +1900,7 @@ module.exports = "<img [ngClass]=\"{'selected': platform.isFilterSelected}\" (cl
 /***/ 278:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"section center-align\" style=\"display: flex; justify-content: center; padding-top: 2rem;  padding-bottom: 2rem;\">\n  <div *ngFor=\"let platform of filterService.getPlatforms()\">\n    <app-filter-logo [platform]=\"platform\"></app-filter-logo>\n  </div>\n</div>\n"
+module.exports = "<div class=\"section center-align\" style=\"display: flex; justify-content: center; padding-top: 2rem;  padding-bottom: 2rem;\">\r\n  <div *ngFor=\"let platform of filterService.getPlatforms()\">\r\n    <app-filter-logo [platform]=\"platform\"></app-filter-logo>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -1872,28 +1914,28 @@ module.exports = "<div *ngIf=\"dataService.areAllPlatformsSelected()\">\r\n\t<h2
 /***/ 280:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"center promo\">\n\t<h1 [ngStyle]=\"{'color': _primaryColor}\"><div counto [step]=\"30\" \n\t\t\t [countTo]=\"promo.count\" \n\t\t\t [countFrom]=\"promo.countOld\" \n\t\t\t [duration]=\"1.5\" \n\t\t\t (countoChange)=\"intermediate = $event\">{{intermediate | number:'1.0-0'}}</div></h1>\n\t<hr />\n\t<h4>{{promo.title}}</h4>\n\t<span>{{promo.description}}</span>\n</div>"
+module.exports = "<div class=\"center promo\">\r\n\t<h1 [ngStyle]=\"{'color': _primaryColor}\"><div counto [step]=\"30\" \r\n\t\t\t [countTo]=\"promo.count\" \r\n\t\t\t [countFrom]=\"promo.countOld\" \r\n\t\t\t [duration]=\"1.5\" \r\n\t\t\t (countoChange)=\"intermediate = $event\">{{intermediate | number:'1.0-0'}}</div></h1>\r\n\t<hr />\r\n\t<h4>{{promo.title}}</h4>\r\n\t<span>{{promo.description}}</span>\r\n</div>"
 
 /***/ }),
 
 /***/ 281:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n\t<div *ngFor=\"let promo of promoNumbers\" class=\"col s3\">\n\t\t<app-promo-numbers-component [primaryColor]=\"primaryColor\" [promo]=promo></app-promo-numbers-component>\n\t</div>\n</div>\t"
+module.exports = "<div class=\"row\">\r\n\t<div *ngFor=\"let promo of promoNumbers\" class=\"col s3\">\r\n\t\t<app-promo-numbers-component [primaryColor]=\"primaryColor\" [promo]=promo></app-promo-numbers-component>\r\n\t</div>\r\n</div>\t"
 
 /***/ }),
 
 /***/ 282:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"card-panel transparent z-depth-0\">\n\t<div class=\"bubble\">\n\t\t{{review.statement}}\n\t</div>\n\t<div class=\"bubble-arrow\">\n\t</div>\n\t<div class=\"row valign-wrapper\">\n\t\t<div class=\"col s2\">\n\t\t\t<img [src]=\"review.imageUrl\" class=\"circle responsive-img\">\n\t\t</div>\n\t\t<div class=\"col s12\">\n\t\t\t<span class=\"black-text\">{{review.author}}</span>\n\t\t</div>\n\t</div>\n</div>\n"
+module.exports = "<div class=\"card-panel transparent z-depth-0\">\r\n\t<div class=\"bubble\">\r\n\t\t{{review.statement}}\r\n\t</div>\r\n\t<div class=\"bubble-arrow\">\r\n\t</div>\r\n\t<div class=\"row valign-wrapper\">\r\n\t\t<div class=\"col s2\">\r\n\t\t\t<img [src]=\"review.imageUrl\" class=\"circle responsive-img\">\r\n\t\t</div>\r\n\t\t<div class=\"col s12\">\r\n\t\t\t<span class=\"black-text\">{{review.author}}</span>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n"
 
 /***/ }),
 
 /***/ 283:
 /***/ (function(module, exports) {
 
-module.exports = "<a #prev [ngClass]=\"{'disabled': isFirst()}\" [ngStyle]=\"{'background': 'url(' + leftArrowUrl + ') top left no-repeat'}\" class=\"arrow_prev\" (click)=\"previousReview()\">Previous</a>\r\n<a #next [ngClass]=\"{'disabled': isLast()}\" [ngStyle]=\"{'background': 'url(' + rightArrowUrl + ') top left no-repeat'}\" class=\"arrow_next\" (click)=\"nextReview()\">Next</a>\r\n\r\n<div #slider class=\"carousel carousel-slider\" *ngIf=\"reviews\" materialize=\"carousel\" [materializeParams]=\"[{fullWidth: true, noWrap: true}]\" data-indicators=\"true\" [materializeActions]=\"navigatorActions\">\r\n\t<div *ngFor=\"let review of reviews; let iReview = index\">\r\n\t\t<div #item class=\"carousel-item grey lighten-3\" *ngIf=\"iReview % 4 === 0\">\r\n\t\t\t<div class=\"row\">\r\n\t\t\t\t<div class=\"col s6\">\r\n\t\t\t\t\t<app-review-card [review]=\"reviews[iReview]\"></app-review-card>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"col s6\" *ngIf=\"iReview + 1 < reviews.length\">\r\n\t\t\t\t\t<app-review-card [review]=\"reviews[iReview + 1]\"></app-review-card>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"row\">\r\n\t\t\t\t<div class=\"col s6\" *ngIf=\"iReview + 2 < reviews.length\">\r\n\t\t\t\t\t<app-review-card [review]=\"reviews[iReview + 2]\"></app-review-card>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"col s6\" *ngIf=\"iReview + 3 < reviews.length\">\r\n\t\t\t\t\t<app-review-card [review]=\"reviews[iReview + 3]\"></app-review-card>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\r\n</div>\r\n\r\n"
+module.exports = "<a #prev [ngClass]=\"{'disabled': isFirst()}\" [ngStyle]=\"{'background': 'url(' + leftArrowUrl + ') top left no-repeat'}\" class=\"arrow_prev\" (click)=\"previousReview()\">Previous</a>\r\n<a #next [ngClass]=\"{'disabled': isLast()}\" [ngStyle]=\"{'background': 'url(' + rightArrowUrl + ') top left no-repeat'}\" class=\"arrow_next\" (click)=\"nextReview()\">Next</a>\r\n\r\n<div #slider class=\"carousel carousel-slider\" *ngIf=\"reviews\" materialize=\"carousel\" [materializeParams]=\"[{fullWidth: true, noWrap: false}]\" data-indicators=\"true\" [materializeActions]=\"navigatorActions\">\r\n\t<div *ngFor=\"let review of reviews; let iReview = index\">\r\n\t\t<div #item class=\"carousel-item grey lighten-3\" *ngIf=\"iReview % 4 === 0\">\r\n\t\t\t<div class=\"row\">\r\n\t\t\t\t<div class=\"col s6\">\r\n\t\t\t\t\t<app-review-card [review]=\"reviews[iReview]\"></app-review-card>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"col s6\" *ngIf=\"iReview + 1 < reviews.length\">\r\n\t\t\t\t\t<app-review-card [review]=\"reviews[iReview + 1]\"></app-review-card>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"row\">\r\n\t\t\t\t<div class=\"col s6\" *ngIf=\"iReview + 2 < reviews.length\">\r\n\t\t\t\t\t<app-review-card [review]=\"reviews[iReview + 2]\"></app-review-card>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"col s6\" *ngIf=\"iReview + 3 < reviews.length\">\r\n\t\t\t\t\t<app-review-card [review]=\"reviews[iReview + 3]\"></app-review-card>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\r\n</div>\r\n\r\n"
 
 /***/ }),
 
@@ -1912,7 +1954,7 @@ module.exports = __webpack_require__(165);
 
 /***/ }),
 
-/***/ 67:
+/***/ 68:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1955,7 +1997,7 @@ var FeatureCard = (function () {
 
 /***/ }),
 
-/***/ 68:
+/***/ 69:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2006,7 +2048,10 @@ var CONFIG = {
     geoSubUrl: '/api/v2/stats/geo.json',
     geoStartParam: 'start_date',
     geoEndParam: 'end_date',
-    globalsSubUrl: '/api/v2/stats/global.json'
+    globalsSubUrl: '/api/v2/stats/global.json',
+    activeUserSubUrl: '/api/v2/stats/active_users',
+    activeStartParam: 'start_date',
+    activeEndParam: 'end_date'
 };
 var FEATURE_CARDS = [
     { imageUrl: 'assets/many-people.svg', title: 'Massive', text: 'Learn with thousands of interested students.' },
