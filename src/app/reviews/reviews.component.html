@@ -1,7 +1,7 @@
 <a #prev [ngClass]="{'disabled': isFirst()}" [ngStyle]="{'background': 'url(' + leftArrowUrl + ') top left no-repeat'}" class="arrow_prev" (click)="previousReview()">Previous</a>
 <a #next [ngClass]="{'disabled': isLast()}" [ngStyle]="{'background': 'url(' + rightArrowUrl + ') top left no-repeat'}" class="arrow_next" (click)="nextReview()">Next</a>
 
-<div #slider class="carousel carousel-slider" *ngIf="reviews" materialize="carousel" [materializeParams]="[{fullWidth: true, noWrap: true}]" data-indicators="true" [materializeActions]="navigatorActions">
+<div #slider class="carousel carousel-slider" *ngIf="reviews" materialize="carousel" [materializeParams]="[{fullWidth: true, noWrap: false}]" data-indicators="true" [materializeActions]="navigatorActions">
 	<div *ngFor="let review of reviews; let iReview = index">
 		<div #item class="carousel-item grey lighten-3" *ngIf="iReview % 4 === 0">
 			<div class="row">

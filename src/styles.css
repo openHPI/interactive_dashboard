@@ -60,3 +60,8 @@ qr-code img {
 .noUi-connect{
 	background: rgb(103, 222, 145);
 }
+
+.carousel-item:not(.active) app-course-card .card .card-reveal {
+	display: none !important; 
+	transform: translateY(0px) !important;
+}

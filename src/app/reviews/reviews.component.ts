@@ -41,14 +41,14 @@ export class ReviewsComponent {
   private navigatorActions = new EventEmitter<string|MaterializeAction>();
 
   public previousReview(): void {
-	if (this.getActiveItem() != this.items.first){
+	//if (this.getActiveItem() != this.items.first){
 		this.navigatorActions.emit({action:'carousel', params:['prev']});
-	}
+	//}
   }
   public nextReview(): void {
-	if (this.getActiveItem() != this.items.last) {
+	//if (this.getActiveItem() != this.items.last) {
 	    this.navigatorActions.emit({action:'carousel', params:['next']});
-	}
+	//}
   }
 
   private reloadSlider(): void {
@@ -57,7 +57,7 @@ export class ReviewsComponent {
 	let jSlider = $(this.slider.nativeElement);
 	jSlider.find('.indicators').detach();
 	jSlider.removeClass("initialized");
-	this.navigatorActions.emit({action:'carousel', params:[{fullWidth: true, noWrap: true}]});
+	this.navigatorActions.emit({action:'carousel', params:[{fullWidth: true, noWrap: false}]});
 	this.subscription.unsubscribe();
 	this.reviewService.updateCompleted();
   }
@@ -71,11 +71,13 @@ export class ReviewsComponent {
   }
 
   public isFirst(): Boolean {
-	return this.items ? this.getActiveItem() == this.items.first : false;
+	//return this.items ? this.getActiveItem() == this.items.first : false;
+	return false;
   }
 
   public isLast(): Boolean {
-	return this.items ? this.getActiveItem() == this.items.last : false;
+	//return this.items ? this.getActiveItem() == this.items.last : false;
+	return false;
   }
 }
 
