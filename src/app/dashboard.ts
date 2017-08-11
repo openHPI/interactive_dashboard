@@ -29,6 +29,9 @@ export class Config {
 	geoStartParam: string;
 	geoEndParam: string;
 	globalsSubUrl: string;
+	activeUserSubUrl: string;
+	activeStartParam: string;
+	activeEndParam: string;
 }
 
 export class FeatureCard {

@@ -48,7 +48,10 @@ export const CONFIG: Config = {
     geoSubUrl: '/api/v2/stats/geo.json',
     geoStartParam: 'start_date',
     geoEndParam: 'end_date',
-    globalsSubUrl: '/api/v2/stats/global.json'
+    globalsSubUrl: '/api/v2/stats/global.json',
+	activeUserSubUrl: '/api/v2/stats/active_users',
+	activeStartParam: 'start_date',
+	activeEndParam: 'end_date'
 };
 
 export const FEATURE_CARDS: FeatureCard[] = [

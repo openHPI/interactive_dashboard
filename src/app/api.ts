@@ -1,3 +1,8 @@
+export class ActiveUser {
+	current_user_activity: number;
+	count: number;
+}
+
 export class GlobalStatistic {
 	confirmed_users: number;
     confirmed_users_last_day: number;

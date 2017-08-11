@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable, Subscription } from 'rxjs/Rx';
-import { Course, GlobalStatistics } from '../api';
+import { ActiveUser, Course, GlobalStatistics } from '../api';
 import { Config, FeatureCard, Platform, Review } from '../dashboard';
 import 'rxjs/add/operator/map';
 
@@ -149,6 +149,17 @@ export class DataService {
 	let observables: Observable<GlobalStatistics>[] = [];
 	this.getSelectedPlatforms()
 		.forEach(platform => observables.push(this.getJson(platform.rootUrl + this.config.globalsSubUrl) as Observable<GlobalStatistics>));
+	return Observable.forkJoin(observables);
+  }
+  
+  public getActiveUsers(): Observable<ActiveUser[]> {
+    let observables: Observable<ActiveUser>[] = [];
+	let startTime = new Date();
+	startTime.setMinutes(startTime.getMinutes() - 30);
+	let endTime = new Date();
+	let subUrl = '?' + this.config.activeStartParam + '=' + startTime.toISOString() + '&' + this.config.activeEndParam + '=' + endTime.toISOString();
+	this.getSelectedPlatforms()
+		.forEach(platform => observables.push(this.getJson(platform.rootUrl + this.config.activeUserSubUrl + subUrl) as Observable<ActiveUser>));
 	return Observable.forkJoin(observables);
   }
   
