@@ -417,6 +417,7 @@ export class WorldMapComponent {
   constructor(private dataService: DataService) { 
     this.dataService.addUpdateListener(this); 
     this.dataService.addAnimationListener(this);
+	this.dataService.addResetListener(this);
   }
 
   private callApisAndSetMarkers(startDate: Date, endDate: Date){
@@ -483,5 +484,9 @@ export class WorldMapComponent {
     else{
         return 0;
     }
+  }
+  
+  public reset(): void {
+	this.rangeValues = [this.currentHour-2, this.currentHour];
   }
 }

@@ -15,6 +15,9 @@ interface UpdateListener {
 interface AnimationListener {
   nextAnimationStep(): void;
 }
+interface ResetListener {
+  reset(): void;
+}
 
 @Injectable()
 export class DataService {
@@ -23,6 +26,7 @@ export class DataService {
   
   private updateListener: UpdateListener[] = [];
   private animationListener: AnimationListener[] = [];
+  private resetListener: ResetListener[] = [];
   private updatingUnits: number = 0;
   private subscription: Subscription;
   private timer: any = Observable.timer(60000, 10000);
@@ -38,6 +42,9 @@ export class DataService {
   addAnimationListener(listener: AnimationListener): void {
 	this.animationListener.push(listener);
   }
+  addResetListener(listener: ResetListener): void {
+	this.resetListener.push(listener);
+  }
   
   //General
   public getPlatforms(): Platform[] {
@@ -47,6 +54,10 @@ export class DataService {
   private update(): void {
     this.updatingUnits += this.updateListener.length;
     this.updateListener.forEach(listener => listener.update());
+  }
+  
+  public reset(): void {
+	this.resetListener.forEach(listener => listener.reset());
   }
   
   public updateCompleted(): void {

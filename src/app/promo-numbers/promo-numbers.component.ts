@@ -25,6 +25,13 @@ export class PromoNumbersComponent {
 	timer.subscribe(() => this.updateNumbers(true));
   }
   
+  public handlePromoNumberClick(promoNumber: PromoNumber): void {
+    let last = this.promoNumbers[this.promoNumbers.length - 1];
+	if (promoNumber === last){
+	  this.numberService.reset();
+	}
+  }
+  
   private updateNumbers(isPrivateUpdate: boolean): void {
 	let enrollments = 0;
 	  let users = 0;
