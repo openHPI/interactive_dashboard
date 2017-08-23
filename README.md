@@ -19,7 +19,7 @@ There are some further warning regarding optional dependencies. Feel free to ign
 
 Q: "Oh my god, the course component does weird things and skipps multiple courses at once"
 
-A: "You forgot you replace the Materialize.js - this should fix it."
+A: "You forgot to replace the Materialize.js - this should fix it."
 
 ## Development
 Once you have installed the dependencies, you can start a development server by running `npm start`.
