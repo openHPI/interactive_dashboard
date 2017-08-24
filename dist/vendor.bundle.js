@@ -741,7 +741,7 @@ var SafeSubscriber = (function (_super) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵu", function() { return DebugContext; });
 
 /**
- * @license Angular v4.3.2
+ * @license Angular v4.3.1
  * (c) 2010-2017 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -1537,7 +1537,7 @@ var Version = (function () {
 /**
  * \@stable
  */
-var VERSION = new Version('4.3.2');
+var VERSION = new Version('4.3.1');
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -4650,7 +4650,7 @@ function forkInnerZoneWithAngularBehavior(zone) {
         },
         onHandleError: function (delegate, current, target, error) {
             delegate.handleError(target, error);
-            zone.runOutsideAngular(function () { return zone.onError.emit(error); });
+            zone.onError.emit(error);
             return false;
         }
     });
@@ -5138,16 +5138,15 @@ var PlatformRef = (function () {
 }());
 /**
  * @param {?} errorHandler
- * @param {?} ngZone
  * @param {?} callback
  * @return {?}
  */
-function _callAndReportToErrorHandler(errorHandler, ngZone, callback) {
+function _callAndReportToErrorHandler(errorHandler, callback) {
     try {
         var /** @type {?} */ result = callback();
         if (isPromise(result)) {
             return result.catch(function (e) {
-                ngZone.runOutsideAngular(function () { return errorHandler.handleError(e); });
+                errorHandler.handleError(e);
                 // rethrow as the exception handler might not do it
                 throw e;
             });
@@ -5155,7 +5154,7 @@ function _callAndReportToErrorHandler(errorHandler, ngZone, callback) {
         return result;
     }
     catch (e) {
-        ngZone.runOutsideAngular(function () { return errorHandler.handleError(e); });
+        errorHandler.handleError(e);
         // rethrow as the exception handler might not do it
         throw e;
     }
@@ -5241,8 +5240,8 @@ var PlatformRef_ = (function (_super) {
                 throw new Error('No ErrorHandler. Is platform module (BrowserModule) included?');
             }
             moduleRef.onDestroy(function () { return remove(_this._modules, moduleRef); }); /** @type {?} */
-            ((ngZone)).runOutsideAngular(function () { return ((ngZone)).onError.subscribe({ next: function (error) { exceptionHandler.handleError(error); } }); });
-            return _callAndReportToErrorHandler(exceptionHandler, /** @type {?} */ ((ngZone)), function () {
+            ((ngZone)).onError.subscribe({ next: function (error) { exceptionHandler.handleError(error); } });
+            return _callAndReportToErrorHandler(exceptionHandler, function () {
                 var /** @type {?} */ initStatus = moduleRef.injector.get(ApplicationInitStatus);
                 initStatus.runInitializers();
                 return initStatus.donePromise.then(function () {
@@ -5538,7 +5537,6 @@ var ApplicationRef_ = (function (_super) {
      * @return {?}
      */
     ApplicationRef_.prototype.tick = function () {
-        var _this = this;
         if (this._runningTick) {
             throw new Error('ApplicationRef.tick is called recursively');
         }
@@ -5552,7 +5550,7 @@ var ApplicationRef_ = (function (_super) {
         }
         catch (e) {
             // Attention: Don't rethrow as it could cancel subscriptions to Observables!
-            this._zone.runOutsideAngular(function () { return _this._exceptionHandler.handleError(e); });
+            this._exceptionHandler.handleError(e);
         }
         finally {
             this._runningTick = false;
@@ -18028,7 +18026,7 @@ exports.ArgumentOutOfRangeError = ArgumentOutOfRangeError;
 /* unused harmony export ɵb */
 
 /**
- * @license Angular v4.3.2
+ * @license Angular v4.3.1
  * (c) 2010-2017 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -21971,7 +21969,7 @@ function isPlatformWorkerUi(platformId) {
 /**
  * \@stable
  */
-var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.2');
+var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.1');
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -22058,7 +22056,7 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.2'
 /* unused harmony export ɵe */
 
 /**
- * @license Angular v4.3.2
+ * @license Angular v4.3.1
  * (c) 2010-2017 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -26465,7 +26463,7 @@ var By = (function () {
 /**
  * \@stable
  */
-var VERSION = new __WEBPACK_IMPORTED_MODULE_2__angular_core__["Version"]('4.3.2');
+var VERSION = new __WEBPACK_IMPORTED_MODULE_2__angular_core__["Version"]('4.3.1');
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -28523,7 +28521,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵr", function() { return REQUIRED_VALIDATOR; });
 
 /**
- * @license Angular v4.3.2
+ * @license Angular v4.3.1
  * (c) 2010-2017 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -34372,7 +34370,7 @@ FormBuilder.ctorParameters = function () { return []; };
 /**
  * \@stable
  */
-var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.2');
+var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.1');
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -34584,7 +34582,7 @@ ReactiveFormsModule.ctorParameters = function () { return []; };
 /* unused harmony export ɵd */
 
 /**
- * @license Angular v4.3.2
+ * @license Angular v4.3.1
  * (c) 2010-2017 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -36739,7 +36737,7 @@ JsonpModule.ctorParameters = function () { return []; };
 /**
  * \@stable
  */
-var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.2');
+var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.1');
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -38052,8 +38050,7 @@ var MaterializeDirective = (function () {
          * @param {?} options
          * @return {?}
          */
-        set: function (options) {
-        },
+        set: function (options) { },
         enumerable: true,
         configurable: true
     });
@@ -38160,12 +38157,7 @@ var MaterializeDirective = (function () {
             var /** @type {?} */ datePicker = jqueryPickerElement_1[this._functionName].apply(jqueryPickerElement_1, this._params);
             var /** @type {?} */ picker_1 = datePicker.pickadate('picker');
             setTimeout(function () {
-                if (_this.ngModel) {
-                    picker_1.set('select', _this.ngModel);
-                }
-                else {
-                    picker_1.set('select', jqueryPickerElement_1.val());
-                }
+                picker_1.set('select', _this.ngModel);
                 jqueryPickerElement_1.on('change', function (e) { return nativeElement_3.dispatchEvent(new Event('input')); });
             });
         }
@@ -38182,11 +38174,7 @@ var MaterializeDirective = (function () {
             jQueryElement.on("chip.select", function (e, chip) { return nativeElement_5.dispatchEvent(((__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__custom_event_polyfill__["a" /* CustomEvent */])("chip.select", chip)))); });
         }
         if (this.isTextarea()) {
-            this._el.nativeElement.dispatchEvent(((__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__custom_event_polyfill__["a" /* CustomEvent */])("autoresize", {
-                bubbles: true,
-                cancelable: false,
-                detail: undefined
-            }))));
+            this._el.nativeElement.dispatchEvent(((__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__custom_event_polyfill__["a" /* CustomEvent */])("autoresize", { bubbles: true, cancelable: false, detail: undefined }))));
         }
         this.performLocalElementUpdates();
     };
@@ -41544,7 +41532,7 @@ exports.noop = noop;
 /* unused harmony export removeSummaryDuplicates */
 
 /**
- * @license Angular v4.3.2
+ * @license Angular v4.3.1
  * (c) 2010-2017 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -41564,7 +41552,7 @@ exports.noop = noop;
 /**
  * \@stable
  */
-var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.2');
+var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.1');
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -48541,7 +48529,7 @@ function isExpansionFormStart(input, offset, interpolationConfig) {
  * @return {?}
  */
 function isExpansionCaseStart(peek) {
-    return peek === $EQ || isAsciiLetter(peek) || isDigit(peek);
+    return peek === $EQ || isAsciiLetter(peek);
 }
 /**
  * @param {?} code1
@@ -51485,9 +51473,8 @@ var _WriteVisitor$1 = (function () {
      * @return {?}
      */
     _WriteVisitor$1.prototype.visitPlaceholder = function (ph, context) {
-        var /** @type {?} */ idStr = (this._nextPlaceholderId++).toString();
         return [new Tag(_PLACEHOLDER_TAG$1, {
-                id: idStr,
+                id: (this._nextPlaceholderId++).toString(),
                 equiv: ph.name,
                 disp: "{{" + ph.value + "}}",
             })];
@@ -51498,9 +51485,7 @@ var _WriteVisitor$1 = (function () {
      * @return {?}
      */
     _WriteVisitor$1.prototype.visitIcuPlaceholder = function (ph, context) {
-        var /** @type {?} */ cases = Object.keys(ph.value.cases).map(function (value) { return value + ' {...}'; }).join(' ');
-        var /** @type {?} */ idStr = (this._nextPlaceholderId++).toString();
-        return [new Tag(_PLACEHOLDER_TAG$1, { id: idStr, equiv: ph.name, disp: "{" + ph.value.expression + ", " + ph.value.type + ", " + cases + "}" })];
+        return [new Tag(_PLACEHOLDER_TAG$1, { id: (this._nextPlaceholderId++).toString() })];
     };
     /**
      * @param {?} nodes
@@ -69201,7 +69186,7 @@ function _mergeArrays(parts) {
 /* unused harmony export ɵResourceLoaderImpl */
 
 /**
- * @license Angular v4.3.2
+ * @license Angular v4.3.1
  * (c) 2010-2017 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -69334,7 +69319,7 @@ var CachedResourceLoader = (function (_super) {
 /**
  * @stable
  */
-var VERSION = new __WEBPACK_IMPORTED_MODULE_2__angular_core__["Version"]('4.3.2');
+var VERSION = new __WEBPACK_IMPORTED_MODULE_2__angular_core__["Version"]('4.3.1');
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -69911,7 +69896,7 @@ exports = module.exports = __webpack_require__(11)(false);
 
 
 // module
-exports.push([module.i, "/*! nouislider - 10.1.0 - 2017-07-28 13:09:54 */.noUi-target,.noUi-target *{-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent;-webkit-user-select:none;-ms-touch-action:none;touch-action:none;-ms-user-select:none;-moz-user-select:none;user-select:none;box-sizing:border-box}.noUi-target{position:relative;direction:ltr}.noUi-base{width:100%;height:100%;position:relative;z-index:1}.noUi-connect{position:absolute;right:0;top:0;left:0;bottom:0}.noUi-origin{position:absolute;height:0;width:0}.noUi-handle{position:relative;z-index:1}.noUi-state-tap .noUi-connect,.noUi-state-tap .noUi-origin{transition:top .3s,right .3s,bottom .3s,left .3s}.noUi-state-drag *{cursor:inherit!important}.noUi-base,.noUi-handle{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.noUi-horizontal{height:18px}.noUi-horizontal .noUi-handle{width:34px;height:28px;left:-17px;top:-6px}.noUi-vertical{width:18px}.noUi-vertical .noUi-handle{width:28px;height:34px;left:-6px;top:-17px}.noUi-target{background:#FAFAFA;border-radius:4px;border:1px solid #D3D3D3;box-shadow:inset 0 1px 1px #F0F0F0,0 3px 6px -5px #BBB}.noUi-connect{background:#3FB8AF;border-radius:4px;box-shadow:inset 0 0 3px rgba(51,51,51,.45);transition:background 450ms}.noUi-draggable{cursor:ew-resize}.noUi-vertical .noUi-draggable{cursor:ns-resize}.noUi-handle{border:1px solid #D9D9D9;border-radius:3px;background:#FFF;cursor:default;box-shadow:inset 0 0 1px #FFF,inset 0 1px 7px #EBEBEB,0 3px 6px -3px #BBB}.noUi-active{box-shadow:inset 0 0 1px #FFF,inset 0 1px 7px #DDD,0 3px 6px -3px #BBB}.noUi-handle:after,.noUi-handle:before{content:\"\";display:block;position:absolute;height:14px;width:1px;background:#E8E7E6;left:14px;top:6px}.noUi-handle:after{left:17px}.noUi-vertical .noUi-handle:after,.noUi-vertical .noUi-handle:before{width:14px;height:1px;left:6px;top:14px}.noUi-vertical .noUi-handle:after{top:17px}[disabled] .noUi-connect{background:#B8B8B8}[disabled] .noUi-handle,[disabled].noUi-handle,[disabled].noUi-target{cursor:not-allowed}.noUi-pips,.noUi-pips *{box-sizing:border-box}.noUi-pips{position:absolute;color:#999}.noUi-value{position:absolute;white-space:nowrap;text-align:center}.noUi-value-sub{color:#ccc;font-size:10px}.noUi-marker{position:absolute;background:#CCC}.noUi-marker-large,.noUi-marker-sub{background:#AAA}.noUi-pips-horizontal{padding:10px 0;height:80px;top:100%;left:0;width:100%}.noUi-value-horizontal{-webkit-transform:translate3d(-50%,50%,0);transform:translate3d(-50%,50%,0)}.noUi-marker-horizontal.noUi-marker{margin-left:-1px;width:2px;height:5px}.noUi-marker-horizontal.noUi-marker-sub{height:10px}.noUi-marker-horizontal.noUi-marker-large{height:15px}.noUi-pips-vertical{padding:0 10px;height:100%;top:0;left:100%}.noUi-value-vertical{-webkit-transform:translate3d(0,50%,0);transform:translate3d(0,50%,0);padding-left:25px}.noUi-marker-vertical.noUi-marker{width:5px;height:2px;margin-top:-1px}.noUi-marker-vertical.noUi-marker-sub{width:10px}.noUi-marker-vertical.noUi-marker-large{width:15px}.noUi-tooltip{display:block;position:absolute;border:1px solid #D9D9D9;border-radius:3px;background:#fff;color:#000;padding:5px;text-align:center;white-space:nowrap}.noUi-horizontal .noUi-tooltip{-webkit-transform:translate(-50%,0);transform:translate(-50%,0);left:50%;bottom:120%}.noUi-vertical .noUi-tooltip{-webkit-transform:translate(0,-50%);transform:translate(0,-50%);top:50%;right:120%}", ""]);
+exports.push([module.i, "/*! nouislider - 10.0.0 - 2017-05-28 14:52:48 */.noUi-target,.noUi-target *{-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent;-webkit-user-select:none;-ms-touch-action:none;touch-action:none;-ms-user-select:none;-moz-user-select:none;user-select:none;box-sizing:border-box}.noUi-target{position:relative;direction:ltr}.noUi-base{width:100%;height:100%;position:relative;z-index:1}.noUi-connect{position:absolute;right:0;top:0;left:0;bottom:0}.noUi-origin{position:absolute;height:0;width:0}.noUi-handle{position:relative;z-index:1}.noUi-state-tap .noUi-connect,.noUi-state-tap .noUi-origin{transition:top .3s,right .3s,bottom .3s,left .3s}.noUi-state-drag *{cursor:inherit!important}.noUi-base,.noUi-handle{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.noUi-horizontal{height:18px}.noUi-horizontal .noUi-handle{width:34px;height:28px;left:-17px;top:-6px}.noUi-vertical{width:18px}.noUi-vertical .noUi-handle{width:28px;height:34px;left:-6px;top:-17px}.noUi-target{background:#FAFAFA;border-radius:4px;border:1px solid #D3D3D3;box-shadow:inset 0 1px 1px #F0F0F0,0 3px 6px -5px #BBB}.noUi-connect{background:#3FB8AF;border-radius:4px;box-shadow:inset 0 0 3px rgba(51,51,51,.45);transition:background 450ms}.noUi-draggable{cursor:ew-resize}.noUi-vertical .noUi-draggable{cursor:ns-resize}.noUi-handle{border:1px solid #D9D9D9;border-radius:3px;background:#FFF;cursor:default;box-shadow:inset 0 0 1px #FFF,inset 0 1px 7px #EBEBEB,0 3px 6px -3px #BBB}.noUi-active{box-shadow:inset 0 0 1px #FFF,inset 0 1px 7px #DDD,0 3px 6px -3px #BBB}.noUi-handle:after,.noUi-handle:before{content:\"\";display:block;position:absolute;height:14px;width:1px;background:#E8E7E6;left:14px;top:6px}.noUi-handle:after{left:17px}.noUi-vertical .noUi-handle:after,.noUi-vertical .noUi-handle:before{width:14px;height:1px;left:6px;top:14px}.noUi-vertical .noUi-handle:after{top:17px}[disabled] .noUi-connect{background:#B8B8B8}[disabled] .noUi-handle,[disabled].noUi-handle,[disabled].noUi-target{cursor:not-allowed}.noUi-pips,.noUi-pips *{box-sizing:border-box}.noUi-pips{position:absolute;color:#999}.noUi-value{position:absolute;white-space:nowrap;text-align:center}.noUi-value-sub{color:#ccc;font-size:10px}.noUi-marker{position:absolute;background:#CCC}.noUi-marker-large,.noUi-marker-sub{background:#AAA}.noUi-pips-horizontal{padding:10px 0;height:80px;top:100%;left:0;width:100%}.noUi-value-horizontal{-webkit-transform:translate3d(-50%,50%,0);transform:translate3d(-50%,50%,0)}.noUi-marker-horizontal.noUi-marker{margin-left:-1px;width:2px;height:5px}.noUi-marker-horizontal.noUi-marker-sub{height:10px}.noUi-marker-horizontal.noUi-marker-large{height:15px}.noUi-pips-vertical{padding:0 10px;height:100%;top:0;left:100%}.noUi-value-vertical{-webkit-transform:translate3d(0,50%,0);transform:translate3d(0,50%,0);padding-left:25px}.noUi-marker-vertical.noUi-marker{width:5px;height:2px;margin-top:-1px}.noUi-marker-vertical.noUi-marker-sub{width:10px}.noUi-marker-vertical.noUi-marker-large{width:15px}.noUi-tooltip{display:block;position:absolute;border:1px solid #D9D9D9;border-radius:3px;background:#fff;color:#000;padding:5px;text-align:center;white-space:nowrap}.noUi-horizontal .noUi-tooltip{-webkit-transform:translate(-50%,0);transform:translate(-50%,0);left:50%;bottom:120%}.noUi-vertical .noUi-tooltip{-webkit-transform:translate(0,-50%);transform:translate(0,-50%);top:50%;right:120%}", ""]);
 
 // exports
 
@@ -70401,7 +70386,7 @@ var NouisliderComponent_1;
 /* 268 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! nouislider - 10.1.0 - 2017-07-28 17:11:18 */
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! nouislider - 10.0.0 - 2017-05-28 14:52:48 */
 
 (function (factory) {
 
@@ -70428,7 +70413,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 	'use strict';
 
-	var VERSION = '10.1.0';
+	var VERSION = '10.0.0';
 
 
 	function isValidFormatter ( entry ) {
@@ -71129,14 +71114,6 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 		};
 	}
 
-	function testMultitouch ( parsed, entry ) {
-		parsed.multitouch = entry;
-
-		if ( typeof entry !== 'boolean' ){
-			throw new Error("noUiSlider (" + VERSION + "): 'multitouch' option must be a boolean.");
-		}
-	}
-
 	function testTooltips ( parsed, entry ) {
 
 		if ( entry === false ) {
@@ -71246,7 +71223,6 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 			'limit': { r: false, t: testLimit },
 			'padding': { r: false, t: testPadding },
 			'behaviour': { r: true, t: testBehaviour },
-			'multitouch': { r: true, t: testMultitouch },
 			'ariaFormat': { r: false, t: testAriaFormat },
 			'format': { r: false, t: testFormat },
 			'tooltips': { r: false, t: testTooltips },
@@ -71259,7 +71235,6 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 			'connect': false,
 			'direction': 'ltr',
 			'behaviour': 'tap',
-			'multitouch': false,
 			'orientation': 'horizontal',
 			'cssPrefix' : 'noUi-',
 			'cssClasses': {
@@ -71347,13 +71322,14 @@ function closure ( target, options, originalOptions ){
 	var scope_Base;
 	var scope_Handles;
 	var scope_HandleNumbers = [];
-	var scope_ActiveHandlesCount = 0;
+	var scope_ActiveHandle = false;
 	var scope_Connects;
 	var scope_Spectrum = options.spectrum;
 	var scope_Values = [];
 	var scope_Events = {};
 	var scope_Self;
 	var scope_Pips;
+	var scope_Listeners = null;
 	var scope_Document = target.ownerDocument;
 	var scope_DocumentElement = scope_Document.documentElement;
 	var scope_Body = scope_Document.body;
@@ -71791,7 +71767,7 @@ function closure ( target, options, originalOptions ){
 				return false;
 			}
 
-			e = fixEvent(e, data.pageOffset, data.target || element);
+			e = fixEvent(e, data.pageOffset);
 
 			// Handle reject of multitouch
 			if ( !e ) {
@@ -71835,7 +71811,7 @@ function closure ( target, options, originalOptions ){
 	}
 
 	// Provide a clean event with standardized offset values.
-	function fixEvent ( e, pageOffset, target ) {
+	function fixEvent ( e, pageOffset ) {
 
 		// Filter the event to register the type, which can be
 		// touch, mouse or pointer. Offset changes need to be
@@ -71852,35 +71828,8 @@ function closure ( target, options, originalOptions ){
 			pointer = true;
 		}
 
+		if ( touch ) {
 
-		// In the event that multitouch is activated, the only thing one handle should be concerned
-		// about is the touches that originated on top of it.
-		if ( touch && options.multitouch ) {
-			// Returns true if a touch originated on the target.
-			var isTouchOnTarget = function (touch) {
-				return touch.target === target || target.contains(touch.target);
-			};
-			// In the case of touchstart events, we need to make sure there is still no more than one
-			// touch on the target so we look amongst all touches.
-			if (e.type === 'touchstart') {
-				var targetTouches = Array.prototype.filter.call(e.touches, isTouchOnTarget);
-				// Do not support more than one touch per handle.
-				if ( targetTouches.length > 1 ) {
-					return false;
-				}
-				x = targetTouches[0].pageX;
-				y = targetTouches[0].pageY;
-			} else {
-			// In the other cases, find on changedTouches is enough.
-				var targetTouch = Array.prototype.find.call(e.changedTouches, isTouchOnTarget);
-				// Cancel if the target touch has not moved.
-				if ( !targetTouch ) {
-					return false;
-				}
-				x = targetTouch.pageX;
-				y = targetTouch.pageY;
-			}
-		} else if ( touch ) {
 			// Fix bug when user touches with two or more fingers on mobile devices.
 			// It's useful when you have two or more sliders on one page,
 			// that can be touched simultaneously.
@@ -72058,27 +72007,26 @@ function closure ( target, options, originalOptions ){
 	function eventEnd ( event, data ) {
 
 		// The handle is no longer active, so remove the class.
-		if ( data.handle ) {
-			removeClass(data.handle, options.cssClasses.active);
-			scope_ActiveHandlesCount -= 1;
+		if ( scope_ActiveHandle ) {
+			removeClass(scope_ActiveHandle, options.cssClasses.active);
+			scope_ActiveHandle = false;
+		}
+
+		// Remove cursor styles and text-selection events bound to the body.
+		if ( event.cursor ) {
+			scope_Body.style.cursor = '';
+			scope_Body.removeEventListener('selectstart', preventDefault);
 		}
 
 		// Unbind the move and end events, which are added on 'start'.
-		data.listeners.forEach(function( c ) {
+		scope_Listeners.forEach(function( c ) {
 			scope_DocumentElement.removeEventListener(c[0], c[1]);
 		});
 
-		if ( scope_ActiveHandlesCount === 0 ) {
-			// Remove dragging class.
-			removeClass(scope_Target, options.cssClasses.drag);
-			setZindex();
+		// Remove dragging class.
+		removeClass(scope_Target, options.cssClasses.drag);
 
-			// Remove cursor styles and text-selection events bound to the body.
-			if ( event.cursor ) {
-				scope_Body.style.cursor = '';
-				scope_Body.removeEventListener('selectstart', preventDefault);
-			}
-		}
+		setZindex();
 
 		data.handleNumbers.forEach(function(handleNumber){
 			fireEvent('change', handleNumber);
@@ -72090,36 +72038,25 @@ function closure ( target, options, originalOptions ){
 	// Bind move events on document.
 	function eventStart ( event, data ) {
 
-		var handle;
 		if ( data.handleNumbers.length === 1 ) {
 
-			var handleOrigin = scope_Handles[data.handleNumbers[0]];
+			var handle = scope_Handles[data.handleNumbers[0]];
 
 			// Ignore 'disabled' handles
-			if ( handleOrigin.hasAttribute('disabled') ) {
+			if ( handle.hasAttribute('disabled') ) {
 				return false;
 			}
 
-			handle = handleOrigin.children[0];
-			scope_ActiveHandlesCount += 1;
-
 			// Mark the handle as 'active' so it can be styled.
-			addClass(handle, options.cssClasses.active);
+			scope_ActiveHandle = handle.children[0];
+			addClass(scope_ActiveHandle, options.cssClasses.active);
 		}
 
 		// A drag should never propagate up to the 'tap' event.
 		event.stopPropagation();
 
-		// Record the event listeners.
-		var listeners = [];
-
 		// Attach the move and end events.
 		var moveEvent = attachEvent(actions.move, scope_DocumentElement, eventMove, {
-			// The event target has changed so we need to propagate the original one so that we keep
-			// relying on it to extract target touches.
-			target: event.target,
-			handle: handle,
-			listeners: listeners,
 			startCalcPoint: event.calcPoint,
 			baseSize: baseSize(),
 			pageOffset: event.pageOffset,
@@ -72129,22 +72066,14 @@ function closure ( target, options, originalOptions ){
 		});
 
 		var endEvent = attachEvent(actions.end, scope_DocumentElement, eventEnd, {
-			target: event.target,
-			handle: handle,
-			listeners: listeners,
 			handleNumbers: data.handleNumbers
 		});
 
 		var outEvent = attachEvent("mouseout", scope_DocumentElement, documentLeave, {
-			target: event.target,
-			handle: handle,
-			listeners: listeners,
 			handleNumbers: data.handleNumbers
 		});
 
-		// We want to make sure we pushed the listeners in the listener list rather than creating
-		// a new one as it has already been passed to the event handlers.
-		listeners.push.apply(listeners, moveEvent.concat(endEvent, outEvent));
+		scope_Listeners = moveEvent.concat(endEvent, outEvent);
 
 		// Text selection isn't an issue on touch devices,
 		// so adding cursor styles can be skipped.

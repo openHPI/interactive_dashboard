@@ -45,6 +45,7 @@ export class WorldMapComponent {
     "streetViewControl": false,
     "scaleControl": false,
     "zoomControl": false,
+    "fullscreenControl": false,
     "minZoom": 2,
     "maxZoom": 14,
     "styles": [
@@ -427,7 +428,10 @@ export class WorldMapComponent {
 		let markers = [];
         for (var i = 0; i < platforms.length; i++) {
             for (var j = 0; j < geoArrays[i].length; j++) {
-			  markers.push([geoArrays[i][j].lat, geoArrays[i][j].lon, platforms[i].mapMarkerUrl]);
+			  markers.push([
+			  	geoArrays[i][j].lat, 
+			  	geoArrays[i][j].lon, 
+			  	platforms[i].mapMarkerUrl]);
 			}
 		}
 		this.userPositions = markers;
