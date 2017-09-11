@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { ViewChild, Component,  } from '@angular/core';
 import { DataService } from '../services/data-service.service';
 import { Platform } from '../dashboard';
+import { Observable, Subscription } from 'rxjs/Rx';
 
 import limitMap from 'google-map-bounds-limit';
 declare var google: any;
@@ -13,10 +14,10 @@ declare var google: any;
 
 
 export class WorldMapComponent {
-  
+  @ViewChild('sliderRef') sliderRef;  
   primaryColor: string;
   userPositions = [];
-  currentHour = new Date().getHours();
+  currentHour = new Date().getHours() + 1;//.getMinutes(); //.getHours();
   rangeValues = [this.currentHour-2, this.currentHour];
   lastRangeValues = [];
   rangeConfig: any = {
@@ -27,15 +28,16 @@ export class WorldMapComponent {
   margin: 0.5, // min space between sliders
   start: [this.currentHour-2, this.currentHour],
   range: {
-    min: 0,
-    max: 24
-      },
+    min: this.currentHour - 24,
+    max: this.currentHour
+    },
   pips: {
     mode: 'count',
     values: 25,
     density: 2, 
-    stepped: true
-      }
+    stepped: true,
+    format: {to: this.formatHours}
+    }
   };
 
   mapOptions = {
@@ -419,6 +421,7 @@ export class WorldMapComponent {
     this.dataService.addUpdateListener(this); 
     this.dataService.addAnimationListener(this);
 	this.dataService.addResetListener(this);
+    this.initializeTimeRangeUpdater();
   }
 
   private callApisAndSetMarkers(startDate: Date, endDate: Date){
@@ -453,12 +456,42 @@ export class WorldMapComponent {
 	limitMap(googleMap, maxBounds);
   }
 
+  public formatHours(value, type){
+      if(value < 0){
+          value = 24 + value;
+      }
+      return Math.round(value);
+  }
+
+  public updateTimeRange(){
+      console.log("update");
+      this.sliderRef.slider.updateOptions({
+          range: {
+              min: this.currentHour - 24,
+              max: this.currentHour
+          },
+          pips: {
+              mode: 'count',
+              values: 25,
+              density: 2, 
+              stepped: true,
+              format: {to: this.formatHours}
+          }
+          
+      });
+  }
+
+  private initializeTimeRangeUpdater(): void {
+    let timer = Observable.timer(0, 1200000)
+    timer.subscribe(() => this.updateTimeRange());
+  }
+
   public nextAnimationStep(): void {
-      if(this.rangeValues[1] < new Date().getHours()){
+      if(this.rangeValues[1] < this.currentHour){
           this.rangeValues = [this.rangeValues[0]+1, this.rangeValues[1]+1]; //hop one hour forward
       }
       else{
-          this.rangeValues = [0,2];
+          this.rangeValues = [this.currentHour-24,this.currentHour-22];
       }
   }
 
@@ -472,8 +505,16 @@ export class WorldMapComponent {
   private handleChangedRange() {
     let startDate = new Date();
     let endDate = new Date();
-    startDate.setUTCHours(this.rangeValues[0], this.getMinutes(this.rangeValues[0]), 0, 0);
-    endDate.setUTCHours(this.rangeValues[1], this.getMinutes(this.rangeValues[1]), 0, 0);
+    let minutes = this.getMinutes(this.rangeValues[0]);
+    if(this.rangeValues[0]<0){
+        minutes = -minutes;
+    }
+    startDate.setUTCHours(this.rangeValues[0], minutes, 0, 0);
+    minutes = this.getMinutes(this.rangeValues[1]);
+    if(this.rangeValues[1]<0){
+        minutes = -minutes;
+    }
+    endDate.setUTCHours(this.rangeValues[1], minutes, 0, 0);
     this.callApisAndSetMarkers(startDate, endDate);
   }
 
@@ -494,4 +535,5 @@ export class WorldMapComponent {
   public reset(): void {
 	this.rangeValues = [this.currentHour-2, this.currentHour];
   }
+
 }
