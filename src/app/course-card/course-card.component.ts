@@ -15,22 +15,22 @@ export class CourseCardComponent {
   public config: Config = CONFIG;
   public qrCodeUrl: string;
   public _primaryColor: string;
-	
+
   @Input()
   set course(course: Course) {
-	this._course = course;
-	//hacky way to build up the qrCodeUrl
-	this.qrCodeUrl = this.getHost(this._course.attributes.image_url) + this.config.directCourseUrl + this._course.attributes.slug;
+  this._course = course;
+  // hacky way to build up the qrCodeUrl
+  this.qrCodeUrl = this.getHost(this._course.attributes.image_url) + this.config.directCourseUrl + this._course.attributes.slug;
   }
   @Input()
   set primaryColor(primaryColor: string) {
   this._primaryColor = primaryColor;
   }
-  
+
   private getHost(url: string): string {
-	let location = document.createElement('a');
+  let location = document.createElement('a');
     location.href = url;
     return location.hostname;
   }
-  
+
 }

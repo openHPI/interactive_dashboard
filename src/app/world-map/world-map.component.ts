@@ -34,7 +34,7 @@ export class WorldMapComponent {
   pips: {
     mode: 'count',
     values: 25,
-    density: 2, 
+    density: 2,
     stepped: true,
     format: {to: this.formatHours}
     }
@@ -420,7 +420,7 @@ export class WorldMapComponent {
   constructor(private dataService: DataService) { 
     this.dataService.addUpdateListener(this); 
     this.dataService.addAnimationListener(this);
-	this.dataService.addResetListener(this);
+    this.dataService.addResetListener(this);
     this.initializeTimeRangeUpdater();
   }
 
@@ -428,32 +428,32 @@ export class WorldMapComponent {
     this.dataService.getWorldPositions(startDate, endDate).subscribe(platformAndPositions => {
         let platforms: Platform[] = platformAndPositions[0] as Platform[];
         let geoArrays = platformAndPositions.slice(1, platformAndPositions.length);
-		let markers = [];
+        let markers = [];
         for (var i = 0; i < platforms.length; i++) {
             for (var j = 0; j < geoArrays[i].length; j++) {
-			  markers.push([
-			  	// adding offset to the markers
-			  	geoArrays[i][j].lat + ((Math.random() > 0.5 ? 1 : -1) * Math.floor(Math.random() * 30)), 
-			  	geoArrays[i][j].lon + ((Math.random() > 0.5 ? 1 : -1) * Math.floor(Math.random() * 30)), 
-			  	platforms[i].mapMarkerUrl]);
-			}
-		}
-		this.userPositions = markers;
+              markers.push([
+                  // adding offset to the markers
+                  geoArrays[i][j].lat + ((Math.random() > 0.5 ? 1 : -1) * Math.floor(Math.random() * 30)),
+                  geoArrays[i][j].lon + ((Math.random() > 0.5 ? 1 : -1) * Math.floor(Math.random() * 30)),
+                  platforms[i].mapMarkerUrl]);
+            }
+        }
+        this.userPositions = markers;
         this.dataService.updateCompleted();
     });
   }
   
   public update(): void {
-	this.handleChangedRange();
+    this.handleChangedRange();
     this.primaryColor = this.dataService.getPrimaryColor();
   }
   
   public onMapReady(googleMap): void {
-	let maxBounds = new google.maps.LatLngBounds(
-	  new google.maps.LatLng(-81, -175),
-	  new google.maps.LatLng(81, 175)
-	);
-	limitMap(googleMap, maxBounds);
+    let maxBounds = new google.maps.LatLngBounds(
+      new google.maps.LatLng(-81, -175),
+      new google.maps.LatLng(81, 175)
+    );
+    limitMap(googleMap, maxBounds);
   }
 
   public formatHours(value, type){
@@ -496,10 +496,10 @@ export class WorldMapComponent {
   }
 
   public onChange(event): void {
-	if (!this.equalArrays(this.lastRangeValues, this.rangeValues)){
-	  this.lastRangeValues = this.rangeValues;
-	  this.handleChangedRange();	
-	}
+    if (!this.equalArrays(this.lastRangeValues, this.rangeValues)){
+      this.lastRangeValues = this.rangeValues;
+      this.handleChangedRange();	
+    }
   }
 
   private handleChangedRange() {
@@ -519,7 +519,7 @@ export class WorldMapComponent {
   }
 
   private equalArrays(arrayA, arrayB): boolean {
-	return (arrayA.length == arrayB.length) && arrayA.every(function(element, index) { return element === arrayB[index]; });
+    return (arrayA.length == arrayB.length) && arrayA.every(function(element, index) { return element === arrayB[index]; });
   }
   
   private getMinutes(decimalNumber){
@@ -533,7 +533,7 @@ export class WorldMapComponent {
   }
   
   public reset(): void {
-	this.rangeValues = [this.currentHour-2, this.currentHour];
+    this.rangeValues = [this.currentHour-2, this.currentHour];
   }
 
 }
