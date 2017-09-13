@@ -1,6 +1,12 @@
 <div class="card white">
 	<div class="card-image waves-effect waves-block waves-light">
-		<img class="activator" src="{{_course.attributes.image_url}}">
+		<span>
+			<span id="pl-indicator"
+				  class="new badge"
+				  data-badge-caption=""
+				 [ngStyle]= "{'background-color': _primaryColor}">openHPI</span>
+			<img class="activator" src="{{_course.attributes.image_url}}">
+		</span>
 	</div>
 	<div class="card-content">
 		<span class="card-title activator truncate">{{_course.attributes.title}}</span>

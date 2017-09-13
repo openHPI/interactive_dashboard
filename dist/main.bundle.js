@@ -378,7 +378,7 @@ var CourseCardComponent = (function () {
     Object.defineProperty(CourseCardComponent.prototype, "course", {
         set: function (course) {
             this._course = course;
-            //hacky way to build up the qrCodeUrl
+            // hacky way to build up the qrCodeUrl
             this.qrCodeUrl = this.getHost(this._course.attributes.image_url) + this.config.directCourseUrl + this._course.attributes.slug;
         },
         enumerable: true,
@@ -452,6 +452,7 @@ var CoursesComponent = (function () {
     CoursesComponent.prototype.update = function () {
         var _this = this;
         this.courseService.getCourses().subscribe(function (courses) {
+            console.error(JSON.stringify(courses));
             _this.courses = courses.reduce(function (prev, next) {
                 return prev.concat(next);
             });
@@ -468,8 +469,9 @@ var CoursesComponent = (function () {
         this.navigatorActions.emit({ action: 'carousel', params: ['next'] });
     };
     CoursesComponent.prototype.reloadCarousel = function () {
-        if (!this.carousel)
+        if (!this.carousel) {
             return;
+        }
         $(this.carousel.nativeElement).removeClass('initialized');
         this.navigatorActions.emit({ action: 'carousel', params: [{}] });
         this.subscription.unsubscribe();
@@ -633,10 +635,15 @@ var DataService = (function () {
     };
     // ===== COURSE COMPONENT =====
     DataService.prototype.getCourses = function () {
-        var _this = this;
         var observables = [];
+        var _this = this;
         this.getSelectedPlatforms().
-            forEach(function (platform) { return observables.push(_this.getJsonObservable(platform.rootUrl + _this.config.courseSubUrl)); });
+            forEach(function doIt(platform) {
+            var platformName = platform.displayName;
+            var a = _this.getJsonObservable(platform.rootUrl + _this.config.courseSubUrl);
+            // TODO set platformName for each course
+            observables.push(a);
+        });
         return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].forkJoin(observables);
     };
     // ===== WORLD MAP COMPONENT =====
@@ -681,11 +688,11 @@ var DataService = (function () {
     };
     // ===== PRIMARY COLOR =====
     DataService.prototype.getPrimaryColor = function () {
-        if (this.getSelectedPlatforms().length == 1) {
+        if (this.getSelectedPlatforms().length === 1) {
             return this.getSelectedPlatforms()[0].primaryColor;
         }
         else {
-            return this.getPlatforms().filter(function (platform) { return platform.rootUrl == 'https://open.hpi.de'; })[0].primaryColor;
+            return this.getPlatforms().filter(function (platform) { return platform.rootUrl === 'https://open.hpi.de'; })[0].primaryColor;
         }
     };
     return DataService;
@@ -1771,7 +1778,7 @@ exports = module.exports = __webpack_require__(10)(false);
 
 
 // module
-exports.push([module.i, ".card {\r\n\tmargin: 0;\r\n}\r\n\r\nh2 {\r\n\tdisplay: block;\r\n\tfont-size: 25px;\r\n\tfont-weight: bold;\r\n\ttext-align: center;\r\n\tmargin: 0 auto;\r\n\tcolor: black;\r\n}\r\n\r\n.card .card-image {\r\n\theight: 233px;\r\n\tdisplay: block;\r\n\tvertical-align: middle;\r\n\toverflow: hidden;\r\n}\r\n.card .card-content .card-title {\r\n\tmargin-bottom: 0px;\r\n    font-size: 24px;\r\n    line-height: 29px;\r\n    color:black;\r\n}\r\n.card .card-content .card-title .btn {\r\n\tline-height: 32px;\r\n}\r\n.card .card-content .card-title .btn .material-icons{\r\n\tline-height: 40px;\r\n\tfont-size: 36px;\r\n}\r\n.card .card-content p {\r\n\tmargin-top: 6px;\r\n\tcolor: #696969;\r\n}\r\n\r\n.card .card-content {\r\n\tpadding-top: 10px;\r\n}\r\n\r\n.card .card-reveal span {\r\n\r\n}\r\n.authors {\r\n\tfont-size: 17px;\r\n\theight: 30px;\r\n}\r\n\r\n.activator {\r\n\tcursor: pointer;\r\n}\r\n.truncate {\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n    display: -webkit-box;\r\n    -webkit-line-clamp: 3;\r\n    -webkit-box-orient: vertical;\r\n    white-space: normal;\r\n}", ""]);
+exports.push([module.i, ".card {\r\n\tmargin: 0;\r\n}\r\n\r\nh2 {\r\n\tdisplay: block;\r\n\tfont-size: 25px;\r\n\tfont-weight: bold;\r\n\ttext-align: center;\r\n\tmargin: 0 auto;\r\n\tcolor: black;\r\n}\r\n\r\n.card .card-image {\r\n\theight: 233px;\r\n\tdisplay: block;\r\n\tvertical-align: middle;\r\n\toverflow: hidden;\r\n}\r\n.card .card-content .card-title {\r\n\tmargin-bottom: 0px;\r\n    font-size: 24px;\r\n    line-height: 29px;\r\n    color:black;\r\n}\r\n.card .card-content .card-title .btn {\r\n\tline-height: 32px;\r\n}\r\n.card .card-content .card-title .btn .material-icons{\r\n\tline-height: 40px;\r\n\tfont-size: 36px;\r\n}\r\n.card .card-content p {\r\n\tmargin-top: 6px;\r\n\tcolor: #696969;\r\n}\r\n\r\n.card .card-content {\r\n\tpadding-top: 10px;\r\n}\r\n\r\n.card .card-reveal span {\r\n\r\n}\r\n.authors {\r\n\tfont-size: 17px;\r\n\theight: 30px;\r\n}\r\n\r\n.activator {\r\n\tcursor: pointer;\r\n}\r\n.truncate {\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n    display: -webkit-box;\r\n    -webkit-line-clamp: 3;\r\n    -webkit-box-orient: vertical;\r\n    white-space: normal;\r\n}\r\n\r\nspan#pl-indicator {\r\n\tz-index: 1000;\r\n    position: absolute;\r\n    right: 10px;\r\n    top: 10px;\r\n}", ""]);
 
 // exports
 
@@ -1960,7 +1967,7 @@ module.exports = "<h2 [ngStyle]= \"{'color': primaryColor}\"> {{citation}} </h2>
 /***/ 274:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"card white\">\r\n\t<div class=\"card-image waves-effect waves-block waves-light\">\r\n\t\t<img class=\"activator\" src=\"{{_course.attributes.image_url}}\">\r\n\t</div>\r\n\t<div class=\"card-content\">\r\n\t\t<span class=\"card-title activator truncate\">{{_course.attributes.title}}</span>\r\n\t\t<span class=\"authors activator truncate\" [ngStyle]= \"{'color': _primaryColor}\">{{_course.attributes.teachers}}</span>\r\n\t\t<p class=\"truncate activator\">{{_course.attributes.abstract}}</p>\r\n\t</div>\r\n\t<div class=\"card-reveal\">\r\n\t\t<span class=\"card-title grey-text text-darken-4\" style=\"font-size: 22px\">\r\n\t\t\t<i class=\"material-icons right activator\">close</i>\r\n\t\t\t{{_course.attributes.title}}\r\n\t\t</span>\r\n\t\t\r\n\t\t<span class=\"authors activator\" [ngStyle]= \"{'color': _primaryColor}\">{{_course.attributes.teachers}}</span>\r\n\t\t<br />\r\n\t\t<qr-code [value]=\"qrCodeUrl\" [size]=\"250\" [padding]=\"20\"></qr-code>\r\n\t</div>\r\n</div>\r\n"
+module.exports = "<div class=\"card white\">\r\n\t<div class=\"card-image waves-effect waves-block waves-light\">\r\n\t\t<span>\r\n\t\t\t<span id=\"pl-indicator\"\r\n\t\t\t\t  class=\"new badge\"\r\n\t\t\t\t  data-badge-caption=\"\"\r\n\t\t\t\t [ngStyle]= \"{'background-color': _primaryColor}\">openHPI</span>\r\n\t\t\t<img class=\"activator\" src=\"{{_course.attributes.image_url}}\">\r\n\t\t</span>\r\n\t</div>\r\n\t<div class=\"card-content\">\r\n\t\t<span class=\"card-title activator truncate\">{{_course.attributes.title}}</span>\r\n\t\t<span class=\"authors activator truncate\" [ngStyle]= \"{'color': _primaryColor}\">{{_course.attributes.teachers}}</span>\r\n\t\t<p class=\"truncate activator\">{{_course.attributes.abstract}}</p>\r\n\t</div>\r\n\t<div class=\"card-reveal\">\r\n\t\t<span class=\"card-title grey-text text-darken-4\" style=\"font-size: 22px\">\r\n\t\t\t<i class=\"material-icons right activator\">close</i>\r\n\t\t\t{{_course.attributes.title}}\r\n\t\t</span>\r\n\t\t\r\n\t\t<span class=\"authors activator\" [ngStyle]= \"{'color': _primaryColor}\">{{_course.attributes.teachers}}</span>\r\n\t\t<br />\r\n\t\t<qr-code [value]=\"qrCodeUrl\" [size]=\"250\" [padding]=\"20\"></qr-code>\r\n\t</div>\r\n</div>\r\n"
 
 /***/ }),
 

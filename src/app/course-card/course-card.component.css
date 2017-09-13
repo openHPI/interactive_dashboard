@@ -58,3 +58,10 @@ h2 {
     -webkit-box-orient: vertical;
     white-space: normal;
 }
+
+span#pl-indicator {
+	z-index: 1000;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}

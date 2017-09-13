@@ -13,23 +13,24 @@ declare var $: any;
 })
 
 export class CoursesComponent {
-  
-  @ViewChild('carousel') carousel; 
-  
+
+  @ViewChild('carousel') carousel;
+
   courses: Course [];
   navigatorActions = new EventEmitter<string|MaterializeAction>();
   primaryColor: string;
-  
-  //workaround
+
+  // workaround
   subscription: Subscription;
-  
+
   constructor(private courseService: DataService) {
   this.courseService.addUpdateListener(this);
   this.courseService.addAnimationListener(this);
   }
-  
+
   public update(): void {
   this.courseService.getCourses().subscribe(courses => {
+    console.error(JSON.stringify(courses))
     this.courses = courses.reduce(function(prev, next) {
       return prev.concat(next);
     });
@@ -42,19 +43,16 @@ export class CoursesComponent {
   });
   this.primaryColor = this.courseService.getPrimaryColor();
   }
-  
+
   public nextAnimationStep(): void {
-    this.navigatorActions.emit({action:'carousel', params:['next']});
+    this.navigatorActions.emit({action: 'carousel', params: ['next']});
   }
-  
+
   private reloadCarousel(): void {
-  if (!this.carousel) return;
+  if (!this.carousel) { return; }
   $(this.carousel.nativeElement).removeClass('initialized');
-  this.navigatorActions.emit({action: 'carousel', params:[{}]});
+  this.navigatorActions.emit({action: 'carousel', params: [{}]});
   this.subscription.unsubscribe();
   this.courseService.updateCompleted();
   }
-  
-  
-  
 }

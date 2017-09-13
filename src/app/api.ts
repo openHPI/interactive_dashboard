@@ -67,6 +67,7 @@ export class Attributes {
 export class Course {
 	type: string;
 	id: string;
+	platform: string;
 	links: Link;
 	attributes: Attributes;
 	relationships: any;
