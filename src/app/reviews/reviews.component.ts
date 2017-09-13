@@ -23,17 +23,17 @@ export class ReviewsComponent {
   public leftArrowUrl: string = 'assets/arrows/left-arrow.png';
   public rightArrowUrl: string = 'assets/arrows/right-arrow.png';
 
-  //workaround
+  // workaround
   private subscription: Subscription;
 
   public constructor(private reviewService: DataService) {
-	this.reviewService.addUpdateListener(this);
+  this.reviewService.addUpdateListener(this);
   }
 
-  //Service-methods
+  // Service-methods
   public update(): void {
-	this.reviews = this.reviewService.getReviews();
-	let timer = Observable.timer(0, 2000);
+  this.reviews = this.reviewService.getReviews();
+  let timer = Observable.timer(0, 2000);
     this.subscription = timer.subscribe(() => this.reloadSlider()); //ugly but works
   }
 
@@ -41,43 +41,43 @@ export class ReviewsComponent {
   private navigatorActions = new EventEmitter<string|MaterializeAction>();
 
   public previousReview(): void {
-	//if (this.getActiveItem() != this.items.first){
-		this.navigatorActions.emit({action:'carousel', params:['prev']});
-	//}
+  // if (this.getActiveItem() != this.items.first){
+    this.navigatorActions.emit({action: 'carousel', params: ['prev']});
+  // }
   }
   public nextReview(): void {
-	//if (this.getActiveItem() != this.items.last) {
-	    this.navigatorActions.emit({action:'carousel', params:['next']});
-	//}
+  // if (this.getActiveItem() != this.items.last) {
+      this.navigatorActions.emit({action: 'carousel', params: ['next']});
+  // }
   }
 
   private reloadSlider(): void {
-	if(!this.slider) return;
-    //workaround proposed by Rubyboy (a Materialize guy)
-	let jSlider = $(this.slider.nativeElement);
-	jSlider.find('.indicators').detach();
-	jSlider.removeClass("initialized");
-	this.navigatorActions.emit({action:'carousel', params:[{fullWidth: true, noWrap: false}]});
-	this.subscription.unsubscribe();
-	this.reviewService.updateCompleted();
+  if (!this.slider) { return; }
+    // workaround proposed by Rubyboy (a Materialize guy)
+  const jSlider = $(this.slider.nativeElement);
+  jSlider.find('.indicators').detach();
+  jSlider.removeClass('initialized');
+  this.navigatorActions.emit({action: 'carousel', params: [{fullWidth: true, noWrap: false}]});
+  this.subscription.unsubscribe();
+  this.reviewService.updateCompleted();
   }
 
   private getActiveItem(){
-	return this.items.find(this.findActiveItem);
+  return this.items.find(this.findActiveItem);
   }
 
   private findActiveItem(item){
-	return item.nativeElement.classList.contains('active');
+  return item.nativeElement.classList.contains('active');
   }
 
   public isFirst(): Boolean {
-	//return this.items ? this.getActiveItem() == this.items.first : false;
-	return false;
+  // return this.items ? this.getActiveItem() == this.items.first : false;
+  return false;
   }
 
   public isLast(): Boolean {
-	//return this.items ? this.getActiveItem() == this.items.last : false;
-	return false;
+  // return this.items ? this.getActiveItem() == this.items.last : false;
+  return false;
   }
 }
 

@@ -24,23 +24,23 @@ export class CoursesComponent {
   subscription: Subscription;
   
   constructor(private courseService: DataService) {
-	this.courseService.addUpdateListener(this);
-	this.courseService.addAnimationListener(this);
+  this.courseService.addUpdateListener(this);
+  this.courseService.addAnimationListener(this);
   }
   
   public update(): void {
-	this.courseService.getCourses().subscribe(courses => {
-		this.courses = courses.reduce(function(prev, next) {
-			return prev.concat(next);
-		});
-		let filteredCourses = this.courses.filter(course => (course.attributes.status === 'announced' || course.attributes.status === 'active'));
-		if (filteredCourses.length > 0) {
-			this.courses = filteredCourses;
-		}
-		let timer = Observable.timer(0, 2000);
-		this.subscription = timer.subscribe(() => this.reloadCarousel()); //ugly but works
-	});
-	this.primaryColor = this.courseService.getPrimaryColor();
+  this.courseService.getCourses().subscribe(courses => {
+    this.courses = courses.reduce(function(prev, next) {
+      return prev.concat(next);
+    });
+    let filteredCourses = this.courses.filter(course => (course.attributes.status === 'announced' || course.attributes.status === 'active'));
+    if (filteredCourses.length > 0) {
+      this.courses = filteredCourses;
+    }
+    let timer = Observable.timer(0, 4000);
+    this.subscription = timer.subscribe(() => this.reloadCarousel()); //ugly but works
+  });
+  this.primaryColor = this.courseService.getPrimaryColor();
   }
   
   public nextAnimationStep(): void {
@@ -48,11 +48,11 @@ export class CoursesComponent {
   }
   
   private reloadCarousel(): void {
-	if (!this.carousel) return;
-	$(this.carousel.nativeElement).removeClass('initialized');
-	this.navigatorActions.emit({action: 'carousel', params:[{}]});
-	this.subscription.unsubscribe();
-	this.courseService.updateCompleted();
+  if (!this.carousel) return;
+  $(this.carousel.nativeElement).removeClass('initialized');
+  this.navigatorActions.emit({action: 'carousel', params:[{}]});
+  this.subscription.unsubscribe();
+  this.courseService.updateCompleted();
   }
   
   
