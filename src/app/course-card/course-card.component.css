@@ -60,7 +60,7 @@ h2 {
 }
 
 span#pl-indicator {
-	z-index: 1000;
+	  z-index: 1000;
     position: absolute;
     right: 10px;
     top: 10px;
