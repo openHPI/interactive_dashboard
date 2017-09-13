@@ -146,16 +146,11 @@ export class DataService {
   }
 
   // ===== COURSE COMPONENT =====
-  public getCourses(): Observable<Course[][]> {
-    let observables: Observable<Course[]>[] = [];
-    const _this = this;
+  public getCourses(): Observable<any[][]> {
+    let observables: Observable<any[]>[] = [];
+    observables.push(Observable.of(this.getSelectedPlatforms()));
     this.getSelectedPlatforms().
-      forEach(function doIt(platform) {
-        const platformName = platform.displayName;
-        let a = _this.getJsonObservable(platform.rootUrl + _this.config.courseSubUrl)
-        // TODO set platformName for each course
-        observables.push(a as Observable<Course[]>);
-      });
+      forEach(platform => observables.push(this.getJsonObservable(platform.rootUrl + this.config.courseSubUrl) as Observable<any[]>));
     return Observable.forkJoin(observables);
   }
 

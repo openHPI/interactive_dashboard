@@ -451,9 +451,17 @@ var CoursesComponent = (function () {
     }
     CoursesComponent.prototype.update = function () {
         var _this = this;
-        this.courseService.getCourses().subscribe(function (courses) {
-            console.error(JSON.stringify(courses));
-            _this.courses = courses.reduce(function (prev, next) {
+        this.courseService.getCourses().subscribe(function (platformsAndCourses) {
+            var platforms = platformsAndCourses[0];
+            var coursesArray = platformsAndCourses.slice(1, platformsAndCourses.length);
+            for (var i = 0; i < coursesArray.length; i++) {
+                for (var _i = 0, _a = coursesArray[i]; _i < _a.length; _i++) {
+                    var course = _a[_i];
+                    course['platform'] = platforms[i].displayName;
+                    course['primaryColor'] = platforms[i].primaryColor;
+                }
+            }
+            _this.courses = coursesArray.reduce(function (prev, next) {
                 return prev.concat(next);
             });
             var filteredCourses = _this.courses.filter(function (course) { return (course.attributes.status === 'announced' || course.attributes.status === 'active'); });
@@ -635,15 +643,11 @@ var DataService = (function () {
     };
     // ===== COURSE COMPONENT =====
     DataService.prototype.getCourses = function () {
-        var observables = [];
         var _this = this;
+        var observables = [];
+        observables.push(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].of(this.getSelectedPlatforms()));
         this.getSelectedPlatforms().
-            forEach(function doIt(platform) {
-            var platformName = platform.displayName;
-            var a = _this.getJsonObservable(platform.rootUrl + _this.config.courseSubUrl);
-            // TODO set platformName for each course
-            observables.push(a);
-        });
+            forEach(function (platform) { return observables.push(_this.getJsonObservable(platform.rootUrl + _this.config.courseSubUrl)); });
         return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].forkJoin(observables);
     };
     // ===== WORLD MAP COMPONENT =====
@@ -1967,7 +1971,7 @@ module.exports = "<h2 [ngStyle]= \"{'color': primaryColor}\"> {{citation}} </h2>
 /***/ 274:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"card white\">\r\n\t<div class=\"card-image waves-effect waves-block waves-light\">\r\n\t\t<span>\r\n\t\t\t<span id=\"pl-indicator\"\r\n\t\t\t\t  class=\"new badge\"\r\n\t\t\t\t  data-badge-caption=\"\"\r\n\t\t\t\t [ngStyle]= \"{'background-color': _primaryColor}\">openHPI</span>\r\n\t\t\t<img class=\"activator\" src=\"{{_course.attributes.image_url}}\">\r\n\t\t</span>\r\n\t</div>\r\n\t<div class=\"card-content\">\r\n\t\t<span class=\"card-title activator truncate\">{{_course.attributes.title}}</span>\r\n\t\t<span class=\"authors activator truncate\" [ngStyle]= \"{'color': _primaryColor}\">{{_course.attributes.teachers}}</span>\r\n\t\t<p class=\"truncate activator\">{{_course.attributes.abstract}}</p>\r\n\t</div>\r\n\t<div class=\"card-reveal\">\r\n\t\t<span class=\"card-title grey-text text-darken-4\" style=\"font-size: 22px\">\r\n\t\t\t<i class=\"material-icons right activator\">close</i>\r\n\t\t\t{{_course.attributes.title}}\r\n\t\t</span>\r\n\t\t\r\n\t\t<span class=\"authors activator\" [ngStyle]= \"{'color': _primaryColor}\">{{_course.attributes.teachers}}</span>\r\n\t\t<br />\r\n\t\t<qr-code [value]=\"qrCodeUrl\" [size]=\"250\" [padding]=\"20\"></qr-code>\r\n\t</div>\r\n</div>\r\n"
+module.exports = "<div class=\"card white\">\r\n\t<div class=\"card-image waves-effect waves-block waves-light\">\r\n\t\t<span>\r\n\t\t\t<span id=\"pl-indicator\"\r\n\t\t\t\t  class=\"new badge\"\r\n\t\t\t\t  data-badge-caption=\"\"\r\n\t\t\t\t [ngStyle]= \"{'background-color': _course.primaryColor}\">{{_course.platform}}</span>\r\n\t\t\t<img class=\"activator\" src=\"{{_course.attributes.image_url}}\">\r\n\t\t</span>\r\n\t</div>\r\n\t<div class=\"card-content\">\r\n\t\t<span class=\"card-title activator truncate\">{{_course.attributes.title}}</span>\r\n\t\t<span class=\"authors activator truncate\" [ngStyle]= \"{'color': _primaryColor}\">{{_course.attributes.teachers}}</span>\r\n\t\t<p class=\"truncate activator\">{{_course.attributes.abstract}}</p>\r\n\t</div>\r\n\t<div class=\"card-reveal\">\r\n\t\t<span class=\"card-title grey-text text-darken-4\" style=\"font-size: 22px\">\r\n\t\t\t<i class=\"material-icons right activator\">close</i>\r\n\t\t\t{{_course.attributes.title}}\r\n\t\t</span>\r\n\t\t\r\n\t\t<span class=\"authors activator\" [ngStyle]= \"{'color': _primaryColor}\">{{_course.attributes.teachers}}</span>\r\n\t\t<br />\r\n\t\t<qr-code [value]=\"qrCodeUrl\" [size]=\"250\" [padding]=\"20\"></qr-code>\r\n\t</div>\r\n</div>\r\n"
 
 /***/ }),
 

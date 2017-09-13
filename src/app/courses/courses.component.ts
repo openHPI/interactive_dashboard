@@ -1,5 +1,6 @@
 import { Component, EventEmitter, ViewChild } from '@angular/core';
 import { Course } from '../api';
+import { Platform } from '../dashboard';
 import { DataService } from '../services/data-service.service';
 import { MaterializeAction } from 'angular2-materialize';
 import { Observable, Subscription } from 'rxjs/Rx';
@@ -29,9 +30,17 @@ export class CoursesComponent {
   }
 
   public update(): void {
-  this.courseService.getCourses().subscribe(courses => {
-    console.error(JSON.stringify(courses))
-    this.courses = courses.reduce(function(prev, next) {
+  this.courseService.getCourses().subscribe(platformsAndCourses => {
+    let platforms: Platform[] = platformsAndCourses[0] as Platform[];
+    let coursesArray = platformsAndCourses.slice(1, platformsAndCourses.length);
+
+    for (let i = 0; i < coursesArray.length; i++) {
+      for(let course of coursesArray[i]) {
+        course['platform'] = platforms[i].displayName;
+        course['primaryColor'] = platforms[i].primaryColor;
+      }
+    }
+    this.courses = coursesArray.reduce(function(prev, next) {
       return prev.concat(next);
     });
     let filteredCourses = this.courses.filter(course => (course.attributes.status === 'announced' || course.attributes.status === 'active'));
@@ -49,10 +58,10 @@ export class CoursesComponent {
   }
 
   private reloadCarousel(): void {
-  if (!this.carousel) { return; }
-  $(this.carousel.nativeElement).removeClass('initialized');
-  this.navigatorActions.emit({action: 'carousel', params: [{}]});
-  this.subscription.unsubscribe();
-  this.courseService.updateCompleted();
+    if (!this.carousel) { return; }
+    $(this.carousel.nativeElement).removeClass('initialized');
+    this.navigatorActions.emit({action: 'carousel', params: [{}]});
+    this.subscription.unsubscribe();
+    this.courseService.updateCompleted();
   }
 }

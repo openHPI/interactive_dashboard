@@ -68,6 +68,7 @@ export class Course {
 	type: string;
 	id: string;
 	platform: string;
+	primaryColor: string;
 	links: Link;
 	attributes: Attributes;
 	relationships: any;
