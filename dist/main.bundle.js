@@ -1,6 +1,6 @@
 webpackJsonp([1,5],{
 
-/***/ 163:
+/***/ 164:
 /***/ (function(module, exports) {
 
 function webpackEmptyContext(req) {
@@ -9,20 +9,20 @@ function webpackEmptyContext(req) {
 webpackEmptyContext.keys = function() { return []; };
 webpackEmptyContext.resolve = webpackEmptyContext;
 module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 163;
+webpackEmptyContext.id = 164;
 
 
 /***/ }),
 
-/***/ 164:
+/***/ 165:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(172);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__(176);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(189);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(173);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__(177);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(190);
 
 
 
@@ -35,7 +35,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dyna
 
 /***/ }),
 
-/***/ 174:
+/***/ 175:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -106,12 +106,12 @@ var CourseStatistics = (function () {
 
 /***/ }),
 
-/***/ 175:
+/***/ 176:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__ = __webpack_require__(19);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -197,7 +197,7 @@ AppComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-root',
         template: __webpack_require__(272),
-        styles: [__webpack_require__(253)]
+        styles: [__webpack_require__(254)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */]) === "function" && _a || Object])
 ], AppComponent);
@@ -207,35 +207,34 @@ var _a;
 
 /***/ }),
 
-/***/ 176:
+/***/ 177:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(48);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(94);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(95);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_materialize__ = __webpack_require__(194);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ngui_map__ = __webpack_require__(190);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ngui_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__ngui_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(95);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(96);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_materialize__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ngui_map__ = __webpack_require__(191);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ng2_nouislider__ = __webpack_require__(266);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ng2_nouislider___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_ng2_nouislider__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angular2_counto__ = __webpack_require__(192);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angular2_counto__ = __webpack_require__(193);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angular2_counto___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_angular2_counto__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_angular2_qrcode__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_component__ = __webpack_require__(175);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__key_features_key_features_component__ = __webpack_require__(182);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__promo_numbers_promo_numbers_component__ = __webpack_require__(184);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__reviews_reviews_component__ = __webpack_require__(186);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__world_map_world_map_component__ = __webpack_require__(187);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__courses_courses_component__ = __webpack_require__(179);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__services_data_service_service__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__review_card_review_card_component__ = __webpack_require__(185);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__course_card_course_card_component__ = __webpack_require__(178);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__filter_filter_component__ = __webpack_require__(181);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__filter_logo_filter_logo_component__ = __webpack_require__(180);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__promo_numbers_component_promo_numbers_component_component__ = __webpack_require__(183);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__citation_citation_component__ = __webpack_require__(177);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_angular2_qrcode__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_component__ = __webpack_require__(176);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__key_features_key_features_component__ = __webpack_require__(183);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__promo_numbers_promo_numbers_component__ = __webpack_require__(185);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__reviews_reviews_component__ = __webpack_require__(187);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__world_map_world_map_component__ = __webpack_require__(188);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__courses_courses_component__ = __webpack_require__(180);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__services_data_service_service__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__review_card_review_card_component__ = __webpack_require__(186);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__course_card_course_card_component__ = __webpack_require__(179);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__filter_filter_component__ = __webpack_require__(182);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__filter_logo_filter_logo_component__ = __webpack_require__(181);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__promo_numbers_component_promo_numbers_component_component__ = __webpack_require__(184);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__citation_citation_component__ = __webpack_require__(178);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -293,7 +292,7 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */],
             __WEBPACK_IMPORTED_MODULE_4_angular2_materialize__["a" /* MaterializeModule */],
             __WEBPACK_IMPORTED_MODULE_6_ng2_nouislider__["NouisliderModule"],
-            __WEBPACK_IMPORTED_MODULE_5__ngui_map__["NguiMapModule"].forRoot({ apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyCQLhnDxhB2Gb7CRWLlZvWcYdEqK0GqseI' }),
+            __WEBPACK_IMPORTED_MODULE_5__ngui_map__["a" /* NguiMapModule */].forRoot({ apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyCQLhnDxhB2Gb7CRWLlZvWcYdEqK0GqseI' }),
             __WEBPACK_IMPORTED_MODULE_8_angular2_qrcode__["a" /* QRCodeModule */]
         ],
         providers: [
@@ -307,12 +306,12 @@ AppModule = __decorate([
 
 /***/ }),
 
-/***/ 177:
+/***/ 178:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__ = __webpack_require__(19);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CitationComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -341,7 +340,7 @@ CitationComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-citation',
         template: __webpack_require__(273),
-        styles: [__webpack_require__(254)]
+        styles: [__webpack_require__(255)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */]) === "function" && _a || Object])
 ], CitationComponent);
@@ -351,13 +350,13 @@ var _a;
 
 /***/ }),
 
-/***/ 178:
+/***/ 179:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__api__ = __webpack_require__(174);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_assets_config_config__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__api__ = __webpack_require__(175);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_assets_config_config__ = __webpack_require__(69);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CourseCardComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -412,7 +411,7 @@ CourseCardComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-course-card',
         template: __webpack_require__(274),
-        styles: [__webpack_require__(255)]
+        styles: [__webpack_require__(256)]
     })
 ], CourseCardComponent);
 
@@ -421,13 +420,13 @@ var _a, _b;
 
 /***/ }),
 
-/***/ 179:
+/***/ 180:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoursesComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -495,7 +494,7 @@ CoursesComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-courses',
         template: __webpack_require__(275),
-        styles: [__webpack_require__(256)]
+        styles: [__webpack_require__(257)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */]) === "function" && _a || Object])
 ], CoursesComponent);
@@ -505,219 +504,13 @@ var _a;
 
 /***/ }),
 
-/***/ 18:
+/***/ 181:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(95);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(129);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_assets_config_config__ = __webpack_require__(68);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DataService; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-//import constants
-
-
-var DataService = (function () {
-    function DataService(http) {
-        this.http = http;
-        this.config = __WEBPACK_IMPORTED_MODULE_4_assets_config_config__["a" /* CONFIG */];
-        this.updateListener = [];
-        this.animationListener = [];
-        this.resetListener = [];
-        this.updatingUnits = 0;
-        this.timer = __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].timer(60000, 10000);
-    }
-    //"Listener" - Functions
-    DataService.prototype.addUpdateListener = function (listener) {
-        this.updateListener.push(listener);
-        this.updatingUnits++;
-        listener.update();
-    };
-    DataService.prototype.addAnimationListener = function (listener) {
-        this.animationListener.push(listener);
-    };
-    DataService.prototype.addResetListener = function (listener) {
-        this.resetListener.push(listener);
-    };
-    //General
-    DataService.prototype.getPlatforms = function () {
-        return this.config.platforms;
-    };
-    DataService.prototype.update = function () {
-        this.updatingUnits += this.updateListener.length;
-        this.updateListener.forEach(function (listener) { return listener.update(); });
-    };
-    DataService.prototype.reset = function () {
-        this.resetListener.forEach(function (listener) { return listener.reset(); });
-    };
-    DataService.prototype.updateCompleted = function () {
-        this.updatingUnits = Math.max(this.updatingUnits - 1, 0);
-    };
-    DataService.prototype.recognizedUserInteraction = function () {
-        var _this = this;
-        if (this.subscription) {
-            this.subscription.unsubscribe();
-        }
-        this.subscription = this.timer.subscribe(function () { return _this.doNextAnimationStep(); });
-    };
-    DataService.prototype.isUpdating = function () {
-        return this.updatingUnits > 0;
-    };
-    DataService.prototype.areAllPlatformsSelected = function () {
-        return this.getUnselectedPlatforms().length === 0;
-    };
-    DataService.prototype.doNextAnimationStep = function () {
-        this.animationListener.forEach(function (listener) { return listener.nextAnimationStep(); });
-    };
-    //Private functions
-    DataService.prototype.getSelectedPlatforms = function () {
-        return this.config.platforms.filter(function (platform) { return platform.isFilterSelected; });
-    };
-    DataService.prototype.getUnselectedPlatforms = function () {
-        return this.config.platforms.filter(function (platform) { return !platform.isFilterSelected; });
-    };
-    DataService.prototype.getJsonObservable = function (url) {
-        return this.http.get(url).map(this.extractJsonData);
-    };
-    DataService.prototype.getJson = function (url) {
-        return this.http.get(url).map(this.extractJson);
-    };
-    DataService.prototype.extractJsonData = function (response) {
-        var json = response.json();
-        return (json) ? json.data : {};
-    };
-    DataService.prototype.extractJson = function (response) {
-        var json = response.json();
-        return (json) ? json : {};
-    };
-    // ===== FILTER COMPONENT =====
-    DataService.prototype.togglePlatformState = function (platform) {
-        if (platform.isFilterSelected) {
-            if (this.getSelectedPlatforms().length == 1) {
-                this.getUnselectedPlatforms().forEach(function (p) { return p.isFilterSelected = true; });
-            }
-            else {
-                this.getSelectedPlatforms().forEach(function (p) {
-                    if (p != platform) {
-                        p.isFilterSelected = false;
-                    }
-                });
-            }
-        }
-        else {
-            this.getSelectedPlatforms().forEach(function (p) { return p.isFilterSelected = false; });
-            platform.isFilterSelected = true;
-        }
-        this.update();
-    };
-    // ===== REVIEW COMPONENT =====
-    DataService.prototype.getReviews = function () {
-        var reviews = [];
-        this.getSelectedPlatforms().forEach(function concatAndAddPlatform(platform) {
-            var reviewsWithPlatform = [];
-            var platformName = platform.displayName;
-            for (var _i = 0, _a = platform.reviews; _i < _a.length; _i++) {
-                var review = _a[_i];
-                review['platform'] = platformName;
-                reviewsWithPlatform.push(review);
-            }
-            reviews = reviews.concat(reviewsWithPlatform);
-        });
-        return reviews;
-    };
-    // ===== COURSE COMPONENT =====
-    DataService.prototype.getCourses = function () {
-        var _this = this;
-        var observables = [];
-        observables.push(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].of(this.getSelectedPlatforms()));
-        this.getSelectedPlatforms().
-            forEach(function (platform) { return observables.push(_this.getJsonObservable(platform.rootUrl + _this.config.courseSubUrl)); });
-        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].forkJoin(observables);
-    };
-    // ===== WORLD MAP COMPONENT =====
-    DataService.prototype.getWorldPositions = function (startDate, endDate) {
-        var _this = this;
-        var observables = [];
-        var subUrl = this.config.geoSubUrl + '?' + this.config.geoStartParam + '=' + startDate.toISOString() + '&' + this.config.geoEndParam + '=' + endDate.toISOString();
-        observables.push(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].of(this.getSelectedPlatforms()));
-        this.getSelectedPlatforms().
-            forEach(function (platform) { return observables.push(_this.getJson(platform.rootUrl + subUrl)); });
-        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].forkJoin(observables);
-    };
-    // ===== PROMO NUMBER COMPONENT =====
-    DataService.prototype.getGlobalNumbers = function () {
-        var _this = this;
-        var observables = [];
-        this.getSelectedPlatforms()
-            .forEach(function (platform) { return observables.push(_this.getJson(platform.rootUrl + _this.config.globalsSubUrl)); });
-        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].forkJoin(observables);
-    };
-    DataService.prototype.getActiveUsers = function () {
-        var _this = this;
-        var observables = [];
-        var startTime = new Date();
-        startTime.setMinutes(startTime.getMinutes() - 30);
-        var endTime = new Date();
-        var subUrl = '?' + this.config.activeStartParam + '=' + startTime.toISOString() + '&' + this.config.activeEndParam + '=' + endTime.toISOString();
-        this.getSelectedPlatforms()
-            .forEach(function (platform) { return observables.push(_this.getJson(platform.rootUrl + _this.config.activeUserSubUrl + subUrl)); });
-        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].forkJoin(observables);
-    };
-    // ===== FEATURE CARD COMPONENT =====
-    DataService.prototype.getFeatureCards = function () {
-        return __WEBPACK_IMPORTED_MODULE_4_assets_config_config__["b" /* FEATURE_CARDS */];
-    };
-    // ===== CITATION COMPONENT =====
-    DataService.prototype.getCitation = function () {
-        if (this.areAllPlatformsSelected()) {
-            return this.config.citationAll;
-        }
-        return this.getSelectedPlatforms()[0].citation;
-    };
-    // ===== PRIMARY COLOR =====
-    DataService.prototype.getPrimaryColor = function () {
-        if (this.getSelectedPlatforms().length === 1) {
-            return this.getSelectedPlatforms()[0].primaryColor;
-        }
-        else {
-            return this.getPlatforms().filter(function (platform) { return platform.rootUrl === 'https://open.hpi.de'; })[0].primaryColor;
-        }
-    };
-    return DataService;
-}());
-DataService = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
-], DataService);
-
-var _a;
-//# sourceMappingURL=data-service.service.js.map
-
-/***/ }),
-
-/***/ 180:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_dashboard__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_dashboard__ = __webpack_require__(68);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FilterLogoComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -745,7 +538,7 @@ FilterLogoComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-filter-logo',
         template: __webpack_require__(276),
-        styles: [__webpack_require__(257)]
+        styles: [__webpack_require__(258)]
     }),
     __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */]) === "function" && _b || Object])
 ], FilterLogoComponent);
@@ -755,12 +548,12 @@ var _a, _b;
 
 /***/ }),
 
-/***/ 181:
+/***/ 182:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__ = __webpack_require__(19);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FilterComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -783,7 +576,7 @@ FilterComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-filter',
         template: __webpack_require__(277),
-        styles: [__webpack_require__(258)]
+        styles: [__webpack_require__(259)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */]) === "function" && _a || Object])
 ], FilterComponent);
@@ -793,12 +586,12 @@ var _a;
 
 /***/ }),
 
-/***/ 182:
+/***/ 183:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__ = __webpack_require__(19);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return KeyFeaturesComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -822,7 +615,7 @@ KeyFeaturesComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-key-features',
         template: __webpack_require__(278),
-        styles: [__webpack_require__(259)]
+        styles: [__webpack_require__(260)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */]) === "function" && _a || Object])
 ], KeyFeaturesComponent);
@@ -832,12 +625,12 @@ var _a;
 
 /***/ }),
 
-/***/ 183:
+/***/ 184:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dashboard__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dashboard__ = __webpack_require__(68);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PromoNumbersComponentComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -875,7 +668,7 @@ PromoNumbersComponentComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-promo-numbers-component',
         template: __webpack_require__(279),
-        styles: [__webpack_require__(260)]
+        styles: [__webpack_require__(261)]
     }),
     __metadata("design:paramtypes", [])
 ], PromoNumbersComponentComponent);
@@ -885,13 +678,13 @@ var _a;
 
 /***/ }),
 
-/***/ 184:
+/***/ 185:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PromoNumbersComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -980,7 +773,7 @@ PromoNumbersComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-promo-numbers',
         template: __webpack_require__(280),
-        styles: [__webpack_require__(261)]
+        styles: [__webpack_require__(262)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */]) === "function" && _a || Object])
 ], PromoNumbersComponent);
@@ -990,12 +783,12 @@ var _a;
 
 /***/ }),
 
-/***/ 185:
+/***/ 186:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dashboard__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dashboard__ = __webpack_require__(68);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReviewCardComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1021,7 +814,7 @@ ReviewCardComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-review-card',
         template: __webpack_require__(281),
-        styles: [__webpack_require__(262)]
+        styles: [__webpack_require__(263)]
     }),
     __metadata("design:paramtypes", [])
 ], ReviewCardComponent);
@@ -1031,13 +824,13 @@ var _a;
 
 /***/ }),
 
-/***/ 186:
+/***/ 187:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReviewsComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1126,7 +919,7 @@ ReviewsComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-reviews',
         template: __webpack_require__(282),
-        styles: [__webpack_require__(263)],
+        styles: [__webpack_require__(264)],
     }),
     __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */]) === "function" && _b || Object])
 ], ReviewsComponent);
@@ -1136,16 +929,14 @@ var _a, _b;
 
 /***/ }),
 
-/***/ 187:
+/***/ 188:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_google_map_bounds_limit__ = __webpack_require__(265);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_google_map_bounds_limit___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_google_map_bounds_limit__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WorldMapComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1156,7 +947,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
 
 
 
@@ -1593,16 +1383,18 @@ var WorldMapComponent = (function () {
     };
     WorldMapComponent.prototype.onMapReady = function (googleMap) {
         var maxBounds = new google.maps.LatLngBounds(new google.maps.LatLng(-81, -175), new google.maps.LatLng(81, 175));
-        __WEBPACK_IMPORTED_MODULE_3_google_map_bounds_limit___default()(googleMap, maxBounds);
+        //limitMap(googleMap, maxBounds);
     };
     WorldMapComponent.prototype.formatHours = function (value, type) {
+        if (value == 16) {
+            return 'Now';
+        }
         if (value < 0) {
             value = 24 + value;
         }
         return Math.round(value);
     };
     WorldMapComponent.prototype.updateTimeRange = function () {
-        console.log("update");
         this.sliderRef.slider.updateOptions({
             range: {
                 min: this.currentHour - 24,
@@ -1676,7 +1468,7 @@ WorldMapComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'world-map',
         template: __webpack_require__(283),
-        styles: [__webpack_require__(264)]
+        styles: [__webpack_require__(265)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */]) === "function" && _a || Object])
 ], WorldMapComponent);
@@ -1686,7 +1478,7 @@ var _a;
 
 /***/ }),
 
-/***/ 188:
+/***/ 189:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1726,7 +1518,213 @@ var OPEN_WHO_REVIEWS = [
 
 /***/ }),
 
-/***/ 189:
+/***/ 19:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(96);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(130);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_assets_config_config__ = __webpack_require__(69);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DataService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+//import constants
+
+
+var DataService = (function () {
+    function DataService(http) {
+        this.http = http;
+        this.config = __WEBPACK_IMPORTED_MODULE_4_assets_config_config__["a" /* CONFIG */];
+        this.updateListener = [];
+        this.animationListener = [];
+        this.resetListener = [];
+        this.updatingUnits = 0;
+        this.timer = __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].timer(60000, 10000);
+    }
+    //"Listener" - Functions
+    DataService.prototype.addUpdateListener = function (listener) {
+        this.updateListener.push(listener);
+        this.updatingUnits++;
+        listener.update();
+    };
+    DataService.prototype.addAnimationListener = function (listener) {
+        this.animationListener.push(listener);
+    };
+    DataService.prototype.addResetListener = function (listener) {
+        this.resetListener.push(listener);
+    };
+    //General
+    DataService.prototype.getPlatforms = function () {
+        return this.config.platforms;
+    };
+    DataService.prototype.update = function () {
+        this.updatingUnits += this.updateListener.length;
+        this.updateListener.forEach(function (listener) { return listener.update(); });
+    };
+    DataService.prototype.reset = function () {
+        this.resetListener.forEach(function (listener) { return listener.reset(); });
+    };
+    DataService.prototype.updateCompleted = function () {
+        this.updatingUnits = Math.max(this.updatingUnits - 1, 0);
+    };
+    DataService.prototype.recognizedUserInteraction = function () {
+        var _this = this;
+        if (this.subscription) {
+            this.subscription.unsubscribe();
+        }
+        this.subscription = this.timer.subscribe(function () { return _this.doNextAnimationStep(); });
+    };
+    DataService.prototype.isUpdating = function () {
+        return this.updatingUnits > 0;
+    };
+    DataService.prototype.areAllPlatformsSelected = function () {
+        return this.getUnselectedPlatforms().length === 0;
+    };
+    DataService.prototype.doNextAnimationStep = function () {
+        this.animationListener.forEach(function (listener) { return listener.nextAnimationStep(); });
+    };
+    //Private functions
+    DataService.prototype.getSelectedPlatforms = function () {
+        return this.config.platforms.filter(function (platform) { return platform.isFilterSelected; });
+    };
+    DataService.prototype.getUnselectedPlatforms = function () {
+        return this.config.platforms.filter(function (platform) { return !platform.isFilterSelected; });
+    };
+    DataService.prototype.getJsonObservable = function (url) {
+        return this.http.get(url).map(this.extractJsonData);
+    };
+    DataService.prototype.getJson = function (url) {
+        return this.http.get(url).map(this.extractJson);
+    };
+    DataService.prototype.extractJsonData = function (response) {
+        var json = response.json();
+        return (json) ? json.data : {};
+    };
+    DataService.prototype.extractJson = function (response) {
+        var json = response.json();
+        return (json) ? json : {};
+    };
+    // ===== FILTER COMPONENT =====
+    DataService.prototype.togglePlatformState = function (platform) {
+        if (platform.isFilterSelected) {
+            if (this.getSelectedPlatforms().length == 1) {
+                this.getUnselectedPlatforms().forEach(function (p) { return p.isFilterSelected = true; });
+            }
+            else {
+                this.getSelectedPlatforms().forEach(function (p) {
+                    if (p != platform) {
+                        p.isFilterSelected = false;
+                    }
+                });
+            }
+        }
+        else {
+            this.getSelectedPlatforms().forEach(function (p) { return p.isFilterSelected = false; });
+            platform.isFilterSelected = true;
+        }
+        this.update();
+    };
+    // ===== REVIEW COMPONENT =====
+    DataService.prototype.getReviews = function () {
+        var reviews = [];
+        this.getSelectedPlatforms().forEach(function concatAndAddPlatform(platform) {
+            var reviewsWithPlatform = [];
+            var platformName = platform.displayName;
+            for (var _i = 0, _a = platform.reviews; _i < _a.length; _i++) {
+                var review = _a[_i];
+                review['platform'] = platformName;
+                reviewsWithPlatform.push(review);
+            }
+            reviews = reviews.concat(reviewsWithPlatform);
+        });
+        return reviews;
+    };
+    // ===== COURSE COMPONENT =====
+    DataService.prototype.getCourses = function () {
+        var _this = this;
+        var observables = [];
+        observables.push(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].of(this.getSelectedPlatforms()));
+        this.getSelectedPlatforms().
+            forEach(function (platform) { return observables.push(_this.getJsonObservable(platform.rootUrl + _this.config.courseSubUrl)); });
+        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].forkJoin(observables);
+    };
+    // ===== WORLD MAP COMPONENT =====
+    DataService.prototype.getWorldPositions = function (startDate, endDate) {
+        var _this = this;
+        var observables = [];
+        var subUrl = this.config.geoSubUrl + '?' + this.config.geoStartParam + '=' + startDate.toISOString() + '&' + this.config.geoEndParam + '=' + endDate.toISOString();
+        observables.push(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].of(this.getSelectedPlatforms()));
+        this.getSelectedPlatforms().
+            forEach(function (platform) { return observables.push(_this.getJson(platform.rootUrl + subUrl)); });
+        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].forkJoin(observables);
+    };
+    // ===== PROMO NUMBER COMPONENT =====
+    DataService.prototype.getGlobalNumbers = function () {
+        var _this = this;
+        var observables = [];
+        this.getSelectedPlatforms()
+            .forEach(function (platform) { return observables.push(_this.getJson(platform.rootUrl + _this.config.globalsSubUrl)); });
+        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].forkJoin(observables);
+    };
+    DataService.prototype.getActiveUsers = function () {
+        var _this = this;
+        var observables = [];
+        var startTime = new Date();
+        startTime.setMinutes(startTime.getMinutes() - 30);
+        var endTime = new Date();
+        var subUrl = '?' + this.config.activeStartParam + '=' + startTime.toISOString() + '&' + this.config.activeEndParam + '=' + endTime.toISOString();
+        this.getSelectedPlatforms()
+            .forEach(function (platform) { return observables.push(_this.getJson(platform.rootUrl + _this.config.activeUserSubUrl + subUrl)); });
+        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].forkJoin(observables);
+    };
+    // ===== FEATURE CARD COMPONENT =====
+    DataService.prototype.getFeatureCards = function () {
+        return __WEBPACK_IMPORTED_MODULE_4_assets_config_config__["b" /* FEATURE_CARDS */];
+    };
+    // ===== CITATION COMPONENT =====
+    DataService.prototype.getCitation = function () {
+        if (this.areAllPlatformsSelected()) {
+            return this.config.citationAll;
+        }
+        return this.getSelectedPlatforms()[0].citation;
+    };
+    // ===== PRIMARY COLOR =====
+    DataService.prototype.getPrimaryColor = function () {
+        if (this.getSelectedPlatforms().length === 1) {
+            return this.getSelectedPlatforms()[0].primaryColor;
+        }
+        else {
+            return this.getPlatforms().filter(function (platform) { return platform.rootUrl === 'https://open.hpi.de'; })[0].primaryColor;
+        }
+    };
+    return DataService;
+}());
+DataService = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
+], DataService);
+
+var _a;
+//# sourceMappingURL=data-service.service.js.map
+
+/***/ }),
+
+/***/ 190:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1738,10 +1736,10 @@ var environment = {
 
 /***/ }),
 
-/***/ 253:
+/***/ 254:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(10)(false);
+exports = module.exports = __webpack_require__(11)(false);
 // imports
 
 
@@ -1756,10 +1754,10 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 254:
+/***/ 255:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(10)(false);
+exports = module.exports = __webpack_require__(11)(false);
 // imports
 
 
@@ -1774,15 +1772,15 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 255:
+/***/ 256:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(10)(false);
+exports = module.exports = __webpack_require__(11)(false);
 // imports
 
 
 // module
-exports.push([module.i, ".card {\r\n\tmargin: 0;\r\n}\r\n\r\nh2 {\r\n\tdisplay: block;\r\n\tfont-size: 25px;\r\n\tfont-weight: bold;\r\n\ttext-align: center;\r\n\tmargin: 0 auto;\r\n\tcolor: black;\r\n}\r\n\r\n.card .card-image {\r\n\theight: 233px;\r\n\tdisplay: block;\r\n\tvertical-align: middle;\r\n\toverflow: hidden;\r\n}\r\n.card .card-content .card-title {\r\n\tmargin-bottom: 0px;\r\n    font-size: 24px;\r\n    line-height: 29px;\r\n    color:black;\r\n}\r\n.card .card-content .card-title .btn {\r\n\tline-height: 32px;\r\n}\r\n.card .card-content .card-title .btn .material-icons{\r\n\tline-height: 40px;\r\n\tfont-size: 36px;\r\n}\r\n.card .card-content p {\r\n\tmargin-top: 6px;\r\n\tcolor: #696969;\r\n}\r\n\r\n.card .card-content {\r\n\tpadding-top: 10px;\r\n}\r\n\r\n.card .card-reveal span {\r\n\r\n}\r\n.authors {\r\n\tfont-size: 17px;\r\n\theight: 30px;\r\n}\r\n\r\n.activator {\r\n\tcursor: pointer;\r\n}\r\n.truncate {\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n    display: -webkit-box;\r\n    -webkit-line-clamp: 3;\r\n    -webkit-box-orient: vertical;\r\n    white-space: normal;\r\n}\r\n\r\nspan#pl-indicator {\r\n\tz-index: 1000;\r\n    position: absolute;\r\n    right: 10px;\r\n    top: 10px;\r\n}", ""]);
+exports.push([module.i, ".card {\r\n\tmargin: 0;\r\n}\r\n\r\nh2 {\r\n\tdisplay: block;\r\n\tfont-size: 25px;\r\n\tfont-weight: bold;\r\n\ttext-align: center;\r\n\tmargin: 0 auto;\r\n\tcolor: black;\r\n}\r\n\r\n.card .card-image {\r\n\theight: 233px;\r\n\tdisplay: block;\r\n\tvertical-align: middle;\r\n\toverflow: hidden;\r\n}\r\n.card .card-content .card-title {\r\n\tmargin-bottom: 0px;\r\n    font-size: 24px;\r\n    line-height: 29px;\r\n    color:black;\r\n}\r\n.card .card-content .card-title .btn {\r\n\tline-height: 32px;\r\n}\r\n.card .card-content .card-title .btn .material-icons{\r\n\tline-height: 40px;\r\n\tfont-size: 36px;\r\n}\r\n.card .card-content p {\r\n\tmargin-top: 6px;\r\n\tcolor: #696969;\r\n}\r\n\r\n.card .card-content {\r\n\tpadding-top: 10px;\r\n}\r\n\r\n.card .card-reveal span {\r\n\r\n}\r\n.authors {\r\n\tfont-size: 17px;\r\n\theight: 30px;\r\n}\r\n\r\n.activator {\r\n\tcursor: pointer;\r\n}\r\n.truncate {\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n    display: -webkit-box;\r\n    -webkit-line-clamp: 3;\r\n    -webkit-box-orient: vertical;\r\n    white-space: normal;\r\n}\r\n\r\nspan#pl-indicator {\r\n    z-index: 1000;\r\n    position: absolute;\r\n    right: 10px;\r\n    top: 10px;\r\n}\r\n", ""]);
 
 // exports
 
@@ -1792,10 +1790,10 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 256:
+/***/ 257:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(10)(false);
+exports = module.exports = __webpack_require__(11)(false);
 // imports
 
 
@@ -1810,10 +1808,10 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 257:
+/***/ 258:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(10)(false);
+exports = module.exports = __webpack_require__(11)(false);
 // imports
 
 
@@ -1828,10 +1826,10 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 258:
+/***/ 259:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(10)(false);
+exports = module.exports = __webpack_require__(11)(false);
 // imports
 
 
@@ -1846,10 +1844,10 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 259:
+/***/ 260:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(10)(false);
+exports = module.exports = __webpack_require__(11)(false);
 // imports
 
 
@@ -1864,10 +1862,10 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 260:
+/***/ 261:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(10)(false);
+exports = module.exports = __webpack_require__(11)(false);
 // imports
 
 
@@ -1882,10 +1880,10 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 261:
+/***/ 262:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(10)(false);
+exports = module.exports = __webpack_require__(11)(false);
 // imports
 
 
@@ -1900,10 +1898,10 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 262:
+/***/ 263:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(10)(false);
+exports = module.exports = __webpack_require__(11)(false);
 // imports
 
 
@@ -1918,10 +1916,10 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 263:
+/***/ 264:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(10)(false);
+exports = module.exports = __webpack_require__(11)(false);
 // imports
 
 
@@ -1936,12 +1934,12 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 264:
+/***/ 265:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(10)(false);
+exports = module.exports = __webpack_require__(11)(false);
 // imports
-exports.i(__webpack_require__(251), "");
+exports.i(__webpack_require__(252), "");
 
 // module
 exports.push([module.i, "ngui-map {\r\n  display: block;\r\n  height: 400px;\r\n}\r\n\r\ninput{\r\n\tborder: none;\r\n}\r\n\r\n.range-field {\r\n    width: 1400px;\r\n    margin: 0 auto;\r\n    padding-top: 2rem;\r\n    padding-bottom: 2rem;}\r\n\r\n.noUI {\r\n    width: 90%;\r\n    margin: 0 auto;\r\n    padding-top: 17px;\r\n    padding-bottom: 50px;\r\n}", ""]);
@@ -2034,19 +2032,19 @@ module.exports = "<a #prev [ngClass]=\"{'disabled': isFirst()}\" [ngStyle]=\"{'b
 /***/ 283:
 /***/ (function(module, exports) {
 
-module.exports = "<ngui-map #map center=\"Potsdam, Germany\"[options]=\"mapOptions\" (mapReady$)=\"onMapReady($event)\">\r\n   <marker *ngFor=\"let pos of userPositions\"\r\n   \t\t\t[position]= \"[pos[0], pos[1]]\"\r\n   \t\t\t[icon]=\"{\r\n\t\t       url: pos[2],\r\n\t\t       scaleSize: [1,1]\r\n     \t\t}\"></marker>\r\n</ngui-map>\r\n\r\n\r\n<div class=\"noUI\">\r\n\t<nouislider [config]=\"rangeConfig\" [(ngModel)]=\"rangeValues\" (ngModelChange)=\"onChange($event)\"  #sliderRef></nouislider>\r\n</div>\r\n"
+module.exports = "<ngui-map #map center=\"Potsdam, Germany\"[options]=\"mapOptions\" (mapReady$)=\"onMapReady($event)\">\r\n   <marker *ngFor=\"let pos of userPositions\"\r\n   \t\t\t[position]= \"[pos[0], pos[1]]\"\r\n   \t\t\t[icon]=\"{\r\n\t\t       url: pos[2],\r\n\t\t       scaleSize: [1,1]}\">\r\n\t</marker>\r\n</ngui-map>\r\n\r\n\r\n<div class=\"noUI\">\r\n\t<nouislider [config]=\"rangeConfig\" [(ngModel)]=\"rangeValues\" (ngModelChange)=\"onChange($event)\"  #sliderRef></nouislider>\r\n</div>\r\n"
 
 /***/ }),
 
 /***/ 566:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(164);
+module.exports = __webpack_require__(165);
 
 
 /***/ }),
 
-/***/ 67:
+/***/ 68:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2089,11 +2087,11 @@ var FeatureCard = (function () {
 
 /***/ }),
 
-/***/ 68:
+/***/ 69:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_assets_reviews_reviews__ = __webpack_require__(188);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_assets_reviews_reviews__ = __webpack_require__(189);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CONFIG; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return FEATURE_CARDS; });
 

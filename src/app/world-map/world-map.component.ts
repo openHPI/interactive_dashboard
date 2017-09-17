@@ -436,7 +436,7 @@ export class WorldMapComponent {
                   geoArrays[i][j].lat + ((Math.random() > 0.5 ? 1 : -1) * Math.floor(Math.random() * 30)),
                   geoArrays[i][j].lon + ((Math.random() > 0.5 ? 1 : -1) * Math.floor(Math.random() * 30)),
                   platforms[i].mapMarkerUrl]);
-            }
+			}
         }
         this.userPositions = markers;
         this.dataService.updateCompleted();
@@ -453,10 +453,13 @@ export class WorldMapComponent {
       new google.maps.LatLng(-81, -175),
       new google.maps.LatLng(81, 175)
     );
-    limitMap(googleMap, maxBounds);
+    //limitMap(googleMap, maxBounds);
   }
 
   public formatHours(value, type){
+	  if (value == 16) {
+		return 'Now';
+	  }
       if(value < 0){
           value = 24 + value;
       }
@@ -464,7 +467,6 @@ export class WorldMapComponent {
   }
 
   public updateTimeRange(){
-      console.log("update");
       this.sliderRef.slider.updateOptions({
           range: {
               min: this.currentHour - 24,

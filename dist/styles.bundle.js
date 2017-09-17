@@ -1,6 +1,6 @@
 webpackJsonp([2,5],{
 
-/***/ 10:
+/***/ 11:
 /***/ (function(module, exports) {
 
 /*
@@ -83,7 +83,7 @@ function toComment(sourceMap) {
 
 /***/ }),
 
-/***/ 162:
+/***/ 163:
 /***/ (function(module, exports) {
 
 /*
@@ -336,16 +336,16 @@ function updateLink(linkElement, obj) {
 
 /***/ }),
 
-/***/ 169:
+/***/ 170:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(249);
+var content = __webpack_require__(250);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(162)(content, {});
+var update = __webpack_require__(163)(content, {});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -363,16 +363,16 @@ if(false) {
 
 /***/ }),
 
-/***/ 170:
+/***/ 171:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(252);
+var content = __webpack_require__(253);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(162)(content, {});
+var update = __webpack_require__(163)(content, {});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -390,10 +390,10 @@ if(false) {
 
 /***/ }),
 
-/***/ 249:
+/***/ 250:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(10)(false);
+exports = module.exports = __webpack_require__(11)(false);
 // imports
 
 
@@ -405,10 +405,10 @@ exports.push([module.i, "/*!\n * Materialize v0.98.2 (http://materializecss.com)
 
 /***/ }),
 
-/***/ 250:
+/***/ 251:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(10)(false);
+exports = module.exports = __webpack_require__(11)(false);
 // imports
 
 
@@ -420,12 +420,12 @@ exports.push([module.i, "/*!\n * Materialize v0.98.2 (http://materializecss.com)
 
 /***/ }),
 
-/***/ 252:
+/***/ 253:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(10)(false);
+exports = module.exports = __webpack_require__(11)(false);
 // imports
-exports.i(__webpack_require__(250), "");
+exports.i(__webpack_require__(251), "");
 
 // module
 exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\r\n\r\nbody {\r\n    overflow-x: hidden;\r\n    width: 100%;\r\n}\r\n\r\nbody, .carousel.carousel-slider .carousel-item {\r\n\tbackground-color: #24282B !important;\r\n}\r\n\r\n\r\nh2 {\r\n\tcolor:white;\r\n}\r\n\r\n\r\nh3 {\r\n\tcolor:white;\r\n}\r\n\r\nh4 {\r\n\tcolor:white;\r\n}\r\n\r\nh5 {\r\n\tcolor:white;\r\n\tfont-size: 2.64rem;\r\n}\r\n\r\nspan {\r\n\tcolor:white;\r\n}\r\n\r\n\r\n.black-text {color:white !important}\r\n\r\n.grey.lighten-5 {background:#e76d3b !important;}\r\n\r\n.key_text {font-size:1.3em;}\r\n\r\n.carousel .indicators .indicator-item {\r\n  width: 10px;\r\n  height: 10px;\r\n  margin: 0px 4px;\r\n}\r\n.gmnoprint, gmnoscreen {display:none;}\r\n\r\nqr-code img {\r\n\tdisplay: block;\r\n\tmargin: 0 auto;\r\n}\r\n\r\n/*styling the nouislider range in map component*/\r\n\r\n.noUi-connect, .noUi-horizontal .noUi-handle {\r\n\tbackground: rgb(77, 96, 89);\r\n}\r\n\r\n.noUi-horizontal {\r\n    height: 5px;\r\n}\r\n\r\n.noUi-value-horizontal {\r\n\tfont-size: 20px;\r\n}\r\n\r\n.carousel-item:not(.active) app-course-card .card .card-reveal {\r\n\tdisplay: none !important; \r\n\t-webkit-transform: translateY(0px) !important; \r\n\t        transform: translateY(0px) !important;\r\n}\r\n\r\n::-webkit-scrollbar {\r\n    height: 12px;\r\n    width: 12px;\r\n    background: #000;\r\n}\r\n\r\n::-webkit-scrollbar-thumb {\r\n    background: rgb(77, 96, 89);\r\n    -webkit-border-radius: 1ex;\r\n    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);\r\n}\r\n\r\n::-webkit-scrollbar-corner {\r\n    background: #000;\r\n}", ""]);
@@ -508,8 +508,8 @@ module.exports = __webpack_require__.p + "Roboto-Thin.1f35e6a11d27d2e10d28.woff2
 /***/ 565:
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(169);
-module.exports = __webpack_require__(170);
+__webpack_require__(170);
+module.exports = __webpack_require__(171);
 
 
 /***/ })
