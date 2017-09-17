@@ -433,8 +433,8 @@ export class WorldMapComponent {
             for (var j = 0; j < geoArrays[i].length; j++) {
               markers.push([
                   // adding offset to the markers
-                  geoArrays[i][j].lat + ((Math.random() > 0.5 ? 1 : -1) * Math.floor(Math.random() * 30)),
-                  geoArrays[i][j].lon + ((Math.random() > 0.5 ? 1 : -1) * Math.floor(Math.random() * 30)),
+                  geoArrays[i][j].lat + ((Math.random() > 0.5 ? 1 : -1) * Math.floor(Math.random())),
+                  geoArrays[i][j].lon + ((Math.random() > 0.5 ? 1 : -1) * Math.floor(Math.random())),
                   platforms[i].mapMarkerUrl]);
 			}
         }
