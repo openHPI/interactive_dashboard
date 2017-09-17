@@ -453,7 +453,7 @@ export class WorldMapComponent {
       new google.maps.LatLng(-81, -175),
       new google.maps.LatLng(81, 175)
     );
-    //limitMap(googleMap, maxBounds);
+    limitMap(googleMap, maxBounds);
   }
 
   public formatHours(value, type){
