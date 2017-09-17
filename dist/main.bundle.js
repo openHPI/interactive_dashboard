@@ -1389,7 +1389,7 @@ var WorldMapComponent = (function () {
         __WEBPACK_IMPORTED_MODULE_3_google_map_bounds_limit___default()(googleMap, maxBounds);
     };
     WorldMapComponent.prototype.formatHours = function (value, type) {
-        if (value == 16) {
+        if (value == new Date().getHours() + 1) {
             return 'Now';
         }
         if (value < 0) {

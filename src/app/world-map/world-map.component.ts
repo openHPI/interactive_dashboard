@@ -457,7 +457,7 @@ export class WorldMapComponent {
   }
 
   public formatHours(value, type){
-	  if (value == 16) {
+	  if (value == new Date().getHours() + 1) {
 		return 'Now';
 	  }
       if(value < 0){
