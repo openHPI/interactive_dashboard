@@ -1703,30 +1703,22 @@ var _a;
 var OPEN_HPI_REVIEWS = [
     { statement: '120 Schüler waren beim openHPI-Programmierkurs auch in ihrer Freizeit mit viel Engagement und großem Interesse bei der Sache.', imageUrl: 'assets/reviews/square_dominik.jpg', author: 'Dominik Hausner, Informatik-Lehrer' },
     { statement: 'Prof. Meinel begeisterte mich für das Thema Web-Technologien.', imageUrl: 'assets/reviews/square_elisabeth.jpg', author: 'Elisabeth Jass (Jahrgang 1934)' },
-    { statement: 'Hello. I\'m a random guy. This is a very long text. Bla bli blub di blub. This is a very long text. Bla bli blub di blub.', imageUrl: 'https://static.tildacdn.com/tild6231-3138-4531-b132-313863343037/28m.jpg', author: 'Max Mustermann' },
     { statement: 'openHPI offers a variety of interesting courses. Video indexation or collaboration spaces make it easier to follow and learn.', imageUrl: 'assets/reviews/square_oriol.jpg', author: 'Oriol Borras Gene, Ph.D. Student' },
-    { statement: 'Hello. I\'m a random guy. This is a very long text. Bla bli blub di blub. This is a very long text. Bla bli blub di blub.', imageUrl: 'https://static.tildacdn.com/tild6231-3138-4531-b132-313863343037/28m.jpg', author: 'Max Mustermann' },
 ];
 var OPEN_SAP_REVIEWS = [
     { statement: '120 Schüler waren beim openHPI-Programmierkurs auch in ihrer Freizeit mit viel Engagement und großem Interesse bei der Sache.', imageUrl: 'assets/reviews/square_dominik.jpg', author: 'Dominik Hausner, Informatik-Lehrer' },
     { statement: 'Prof. Meinel begeisterte mich für das Thema Web-Technologien.', imageUrl: 'assets/reviews/square_elisabeth.jpg', author: 'Elisabeth Jass (Jahrgang 1934)' },
-    { statement: 'Hello. I\'m a random guy. This is a very long text. Bla bli blub di blub. This is a very long text. Bla bli blub di blub.', imageUrl: 'https://static.tildacdn.com/tild6231-3138-4531-b132-313863343037/28m.jpg', author: 'Max Mustermann' },
     { statement: 'openHPI offers a variety of interesting courses. Video indexation or collaboration spaces make it easier to follow and learn.', imageUrl: 'assets/reviews/square_oriol.jpg', author: 'Oriol Borras Gene, Ph.D. Student' },
-    { statement: 'Hello. I\'m a random guy. This is a very long text. Bla bli blub di blub. This is a very long text. Bla bli blub di blub.', imageUrl: 'https://static.tildacdn.com/tild6231-3138-4531-b132-313863343037/28m.jpg', author: 'Max Mustermann' },
 ];
 var MOOC_HOUSE_REVIEWS = [
     { statement: '120 Schüler waren beim openHPI-Programmierkurs auch in ihrer Freizeit mit viel Engagement und großem Interesse bei der Sache.', imageUrl: 'assets/reviews/square_dominik.jpg', author: 'Dominik Hausner, Informatik-Lehrer' },
     { statement: 'Prof. Meinel begeisterte mich für das Thema Web-Technologien.', imageUrl: 'assets/reviews/square_elisabeth.jpg', author: 'Elisabeth Jass (Jahrgang 1934)' },
-    { statement: 'Hello. I\'m a random guy. This is a very long text. Bla bli blub di blub. This is a very long text. Bla bli blub di blub.', imageUrl: 'https://static.tildacdn.com/tild6231-3138-4531-b132-313863343037/28m.jpg', author: 'Max Mustermann' },
     { statement: 'openHPI offers a variety of interesting courses. Video indexation or collaboration spaces make it easier to follow and learn.', imageUrl: 'assets/reviews/square_oriol.jpg', author: 'Oriol Borras Gene, Ph.D. Student' },
-    { statement: 'Hello. I\'m a random guy. This is a very long text. Bla bli blub di blub. This is a very long text. Bla bli blub di blub.', imageUrl: 'https://static.tildacdn.com/tild6231-3138-4531-b132-313863343037/28m.jpg', author: 'Max Mustermann' },
 ];
 var OPEN_WHO_REVIEWS = [
     { statement: '120 Schüler waren beim openHPI-Programmierkurs auch in ihrer Freizeit mit viel Engagement und großem Interesse bei der Sache.', imageUrl: 'assets/reviews/square_dominik.jpg', author: 'Dominik Hausner, Informatik-Lehrer' },
     { statement: 'Prof. Meinel begeisterte mich für das Thema Web-Technologien.', imageUrl: 'assets/reviews/square_elisabeth.jpg', author: 'Elisabeth Jass (Jahrgang 1934)' },
-    { statement: 'Hello. I\'m a random guy. This is a very long text. Bla bli blub di blub. This is a very long text. Bla bli blub di blub.', imageUrl: 'https://static.tildacdn.com/tild6231-3138-4531-b132-313863343037/28m.jpg', author: 'Max Mustermann' },
     { statement: 'openHPI offers a variety of interesting courses. Video indexation or collaboration spaces make it easier to follow and learn.', imageUrl: 'assets/reviews/square_oriol.jpg', author: 'Oriol Borras Gene, Ph.D. Student' },
-    { statement: 'Hello. I\'m a random guy. This is a very long text. Bla bli blub di blub. This is a very long text. Bla bli blub di blub.', imageUrl: 'https://static.tildacdn.com/tild6231-3138-4531-b132-313863343037/28m.jpg', author: 'Max Mustermann' },
 ];
 //# sourceMappingURL=reviews.js.map
 
