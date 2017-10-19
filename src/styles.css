@@ -55,7 +55,7 @@ qr-code img {
 /*styling the nouislider range in map component*/
 
 .noUi-connect, .noUi-horizontal .noUi-handle {
-	background: rgb(77, 96, 89);
+    background: rgb(77, 96, 89);
 }
 
 .noUi-horizontal {

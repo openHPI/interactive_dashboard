@@ -19,7 +19,24 @@
   
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
-<body oncontextmenu="return false">
+<body>
   <app-root>Loading...</app-root>
+  <script>
+    $(document).ready(function () {
+        $('<div></div>').appendTo('.noUi-handle').css({
+          'height': '50px',
+          'width': '50px',
+          'position': 'absolute',
+          'top': '-20px',
+          'left': '-20px',
+        });
+        $('<div></div>').appendTo('.noUi-connect').css({
+            'height': '50px',
+            'width': '100%',
+            'position': 'absolute',
+            'top': '-20px',
+          });
+      })
+  </script>
 <script type="text/javascript" src="inline.bundle.js"></script><script type="text/javascript" src="polyfills.bundle.js"></script><script type="text/javascript" src="scripts.bundle.js"></script><script type="text/javascript" src="styles.bundle.js"></script><script type="text/javascript" src="vendor.bundle.js"></script><script type="text/javascript" src="main.bundle.js"></script></body>
 </html>
