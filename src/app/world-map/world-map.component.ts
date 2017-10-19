@@ -501,7 +501,7 @@ export class WorldMapComponent {
   public onChange(event): void {
     if (!this.equalArrays(this.lastRangeValues, this.rangeValues)){
       this.lastRangeValues = this.rangeValues;
-      this.handleChangedRange();	
+      this.handleChangedRange();
     }
   }
 
@@ -509,12 +509,12 @@ export class WorldMapComponent {
     let startDate = new Date();
     let endDate = new Date();
     let minutes = this.getMinutes(this.rangeValues[0]);
-    if(this.rangeValues[0]<0){
+    if(this.rangeValues[0]<0) {
         minutes = -minutes;
     }
     startDate.setUTCHours(this.rangeValues[0], minutes, 0, 0);
     minutes = this.getMinutes(this.rangeValues[1]);
-    if(this.rangeValues[1]<0){
+    if(this.rangeValues[1]<0) {
         minutes = -minutes;
     }
     endDate.setUTCHours(this.rangeValues[1], minutes, 0, 0);
@@ -538,7 +538,7 @@ export class WorldMapComponent {
     this.rangeValues = [this.currentHour-2, this.currentHour];
     const map = this.map
     if(map) {
-        const center = new google.maps.LatLng(52.4282784, 12.8869868);
+        const center = new google.maps.LatLng(21.956913, 24.766352);
         map.setCenter(center);
         map.setZoom(this.mapOptions.zoom);
     }

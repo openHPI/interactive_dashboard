@@ -1667,7 +1667,7 @@ var WorldMapComponent = (function () {
         this.rangeValues = [this.currentHour - 2, this.currentHour];
         var map = this.map;
         if (map) {
-            var center = new google.maps.LatLng(52.4282784, 12.8869868);
+            var center = new google.maps.LatLng(21.956913, 24.766352);
             map.setCenter(center);
             map.setZoom(this.mapOptions.zoom);
         }
@@ -2040,7 +2040,7 @@ module.exports = "<a #prev [ngClass]=\"{'disabled': isFirst()}\" [ngStyle]=\"{'b
 /***/ 282:
 /***/ (function(module, exports) {
 
-module.exports = "<ngui-map #map center=\"Potsdam, Germany\"[options]=\"mapOptions\" (mapReady$)=\"onMapReady($event)\">\r\n   <marker *ngFor=\"let pos of userPositions\"\r\n   \t\t\t[position]= \"[pos[0], pos[1]]\"\r\n   \t\t\t[icon]=\"{\r\n\t\t       url: pos[2],\r\n\t\t       scaleSize: [1,1]}\">\r\n\t</marker>\r\n</ngui-map>\r\n\r\n\r\n<div class=\"noUI\">\r\n\t<nouislider [config]=\"rangeConfig\" [(ngModel)]=\"rangeValues\" (ngModelChange)=\"onChange($event)\"  #sliderRef></nouislider>\r\n</div>\r\n"
+module.exports = "<ngui-map #map center=\"21.956913, 24.766352\"[options]=\"mapOptions\" (mapReady$)=\"onMapReady($event)\">\r\n   <marker *ngFor=\"let pos of userPositions\"\r\n   \t\t\t[position]= \"[pos[0], pos[1]]\"\r\n   \t\t\t[icon]=\"{\r\n\t\t       url: pos[2],\r\n\t\t       scaleSize: [1,1]}\">\r\n\t</marker>\r\n</ngui-map>\r\n\r\n\r\n<div class=\"noUI\">\r\n\t<nouislider [config]=\"rangeConfig\" [(ngModel)]=\"rangeValues\" (ngModelChange)=\"onChange($event)\"  #sliderRef></nouislider>\r\n</div>\r\n"
 
 /***/ }),
 

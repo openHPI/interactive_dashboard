@@ -1,4 +1,4 @@
-<ngui-map #map center="Potsdam, Germany"[options]="mapOptions" (mapReady$)="onMapReady($event)">
+<ngui-map #map center="21.956913, 24.766352"[options]="mapOptions" (mapReady$)="onMapReady($event)">
    <marker *ngFor="let pos of userPositions"
    			[position]= "[pos[0], pos[1]]"
    			[icon]="{
