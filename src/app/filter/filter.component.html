@@ -1,4 +1,4 @@
-<div class="section center-align" style="display: flex; justify-content: center;">
+<div class="center-align" style="display: flex; justify-content: center; padding-top: 1rem;">
   <div *ngFor="let platform of filterService.getPlatforms(); let iFilter = index">
     <div [style.padding-top]="iFilter == 1 ? '4px' : '0px'">
 	    <app-filter-logo [platform]="platform"></app-filter-logo>

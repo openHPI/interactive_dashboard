@@ -1998,7 +1998,7 @@ module.exports = "<img [ngClass]=\"{'selected': platform.isFilterSelected}\" (cl
 /***/ 276:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"section center-align\" style=\"display: flex; justify-content: center;\">\r\n  <div *ngFor=\"let platform of filterService.getPlatforms(); let iFilter = index\">\r\n    <div [style.padding-top]=\"iFilter == 1 ? '4px' : '0px'\">\r\n\t    <app-filter-logo [platform]=\"platform\"></app-filter-logo>\r\n\t</div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"center-align\" style=\"display: flex; justify-content: center; padding-top: 1rem;\">\r\n  <div *ngFor=\"let platform of filterService.getPlatforms(); let iFilter = index\">\r\n    <div [style.padding-top]=\"iFilter == 1 ? '4px' : '0px'\">\r\n\t    <app-filter-logo [platform]=\"platform\"></app-filter-logo>\r\n\t</div>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
