@@ -1,6 +1,6 @@
 webpackJsonp([1,5],{
 
-/***/ 164:
+/***/ 163:
 /***/ (function(module, exports) {
 
 function webpackEmptyContext(req) {
@@ -9,20 +9,20 @@ function webpackEmptyContext(req) {
 webpackEmptyContext.keys = function() { return []; };
 webpackEmptyContext.resolve = webpackEmptyContext;
 module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 164;
+webpackEmptyContext.id = 163;
 
 
 /***/ }),
 
-/***/ 165:
+/***/ 164:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(173);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__(177);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(190);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(172);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__(176);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(189);
 
 
 
@@ -35,7 +35,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dyna
 
 /***/ }),
 
-/***/ 175:
+/***/ 174:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -106,12 +106,12 @@ var CourseStatistics = (function () {
 
 /***/ }),
 
-/***/ 176:
+/***/ 175:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__ = __webpack_require__(18);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -196,8 +196,8 @@ __decorate([
 AppComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-root',
-        template: __webpack_require__(273),
-        styles: [__webpack_require__(254)]
+        template: __webpack_require__(271),
+        styles: [__webpack_require__(253)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */]) === "function" && _a || Object])
 ], AppComponent);
@@ -207,34 +207,35 @@ var _a;
 
 /***/ }),
 
-/***/ 177:
+/***/ 176:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(95);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(96);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_materialize__ = __webpack_require__(195);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ngui_map__ = __webpack_require__(191);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ng2_nouislider__ = __webpack_require__(267);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(94);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(95);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_materialize__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ngui_map__ = __webpack_require__(190);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ngui_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__ngui_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ng2_nouislider__ = __webpack_require__(265);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ng2_nouislider___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_ng2_nouislider__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angular2_counto__ = __webpack_require__(193);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angular2_counto__ = __webpack_require__(192);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angular2_counto___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_angular2_counto__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_angular2_qrcode__ = __webpack_require__(197);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_component__ = __webpack_require__(176);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__key_features_key_features_component__ = __webpack_require__(183);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__promo_numbers_promo_numbers_component__ = __webpack_require__(185);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__reviews_reviews_component__ = __webpack_require__(187);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__world_map_world_map_component__ = __webpack_require__(188);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__courses_courses_component__ = __webpack_require__(180);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__services_data_service_service__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__review_card_review_card_component__ = __webpack_require__(186);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__course_card_course_card_component__ = __webpack_require__(179);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__filter_filter_component__ = __webpack_require__(182);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__filter_logo_filter_logo_component__ = __webpack_require__(181);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__promo_numbers_component_promo_numbers_component_component__ = __webpack_require__(184);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__citation_citation_component__ = __webpack_require__(178);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_angular2_qrcode__ = __webpack_require__(196);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_component__ = __webpack_require__(175);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__key_features_key_features_component__ = __webpack_require__(182);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__promo_numbers_promo_numbers_component__ = __webpack_require__(184);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__reviews_reviews_component__ = __webpack_require__(186);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__world_map_world_map_component__ = __webpack_require__(187);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__courses_courses_component__ = __webpack_require__(179);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__services_data_service_service__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__review_card_review_card_component__ = __webpack_require__(185);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__course_card_course_card_component__ = __webpack_require__(178);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__filter_filter_component__ = __webpack_require__(181);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__filter_logo_filter_logo_component__ = __webpack_require__(180);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__promo_numbers_component_promo_numbers_component_component__ = __webpack_require__(183);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__citation_citation_component__ = __webpack_require__(177);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -292,7 +293,7 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */],
             __WEBPACK_IMPORTED_MODULE_4_angular2_materialize__["a" /* MaterializeModule */],
             __WEBPACK_IMPORTED_MODULE_6_ng2_nouislider__["NouisliderModule"],
-            __WEBPACK_IMPORTED_MODULE_5__ngui_map__["a" /* NguiMapModule */].forRoot({ apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyCQLhnDxhB2Gb7CRWLlZvWcYdEqK0GqseI' }),
+            __WEBPACK_IMPORTED_MODULE_5__ngui_map__["NguiMapModule"].forRoot({ apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyCQLhnDxhB2Gb7CRWLlZvWcYdEqK0GqseI' }),
             __WEBPACK_IMPORTED_MODULE_8_angular2_qrcode__["a" /* QRCodeModule */]
         ],
         providers: [
@@ -306,12 +307,12 @@ AppModule = __decorate([
 
 /***/ }),
 
-/***/ 178:
+/***/ 177:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__ = __webpack_require__(18);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CitationComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -339,8 +340,8 @@ var CitationComponent = (function () {
 CitationComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-citation',
-        template: __webpack_require__(274),
-        styles: [__webpack_require__(255)]
+        template: __webpack_require__(272),
+        styles: [__webpack_require__(254)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */]) === "function" && _a || Object])
 ], CitationComponent);
@@ -350,13 +351,13 @@ var _a;
 
 /***/ }),
 
-/***/ 179:
+/***/ 178:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__api__ = __webpack_require__(175);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_assets_config_config__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__api__ = __webpack_require__(174);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_assets_config_config__ = __webpack_require__(68);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CourseCardComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -410,8 +411,8 @@ __decorate([
 CourseCardComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-course-card',
-        template: __webpack_require__(275),
-        styles: [__webpack_require__(256)]
+        template: __webpack_require__(273),
+        styles: [__webpack_require__(255)]
     })
 ], CourseCardComponent);
 
@@ -420,13 +421,13 @@ var _a, _b;
 
 /***/ }),
 
-/***/ 180:
+/***/ 179:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoursesComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -493,8 +494,8 @@ __decorate([
 CoursesComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-courses',
-        template: __webpack_require__(276),
-        styles: [__webpack_require__(257)]
+        template: __webpack_require__(274),
+        styles: [__webpack_require__(256)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */]) === "function" && _a || Object])
 ], CoursesComponent);
@@ -504,13 +505,219 @@ var _a;
 
 /***/ }),
 
-/***/ 181:
+/***/ 18:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_dashboard__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(95);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(129);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_assets_config_config__ = __webpack_require__(68);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DataService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+//import constants
+
+
+var DataService = (function () {
+    function DataService(http) {
+        this.http = http;
+        this.config = __WEBPACK_IMPORTED_MODULE_4_assets_config_config__["a" /* CONFIG */];
+        this.updateListener = [];
+        this.animationListener = [];
+        this.resetListener = [];
+        this.updatingUnits = 0;
+        this.timer = __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].timer(60000, 10000);
+    }
+    //"Listener" - Functions
+    DataService.prototype.addUpdateListener = function (listener) {
+        this.updateListener.push(listener);
+        this.updatingUnits++;
+        listener.update();
+    };
+    DataService.prototype.addAnimationListener = function (listener) {
+        this.animationListener.push(listener);
+    };
+    DataService.prototype.addResetListener = function (listener) {
+        this.resetListener.push(listener);
+    };
+    //General
+    DataService.prototype.getPlatforms = function () {
+        return this.config.platforms;
+    };
+    DataService.prototype.update = function () {
+        this.updatingUnits += this.updateListener.length;
+        this.updateListener.forEach(function (listener) { return listener.update(); });
+    };
+    DataService.prototype.reset = function () {
+        this.resetListener.forEach(function (listener) { return listener.reset(); });
+    };
+    DataService.prototype.updateCompleted = function () {
+        this.updatingUnits = Math.max(this.updatingUnits - 1, 0);
+    };
+    DataService.prototype.recognizedUserInteraction = function () {
+        var _this = this;
+        if (this.subscription) {
+            this.subscription.unsubscribe();
+        }
+        this.subscription = this.timer.subscribe(function () { return _this.doNextAnimationStep(); });
+    };
+    DataService.prototype.isUpdating = function () {
+        return this.updatingUnits > 0;
+    };
+    DataService.prototype.areAllPlatformsSelected = function () {
+        return this.getUnselectedPlatforms().length === 0;
+    };
+    DataService.prototype.doNextAnimationStep = function () {
+        this.animationListener.forEach(function (listener) { return listener.nextAnimationStep(); });
+    };
+    //Private functions
+    DataService.prototype.getSelectedPlatforms = function () {
+        return this.config.platforms.filter(function (platform) { return platform.isFilterSelected; });
+    };
+    DataService.prototype.getUnselectedPlatforms = function () {
+        return this.config.platforms.filter(function (platform) { return !platform.isFilterSelected; });
+    };
+    DataService.prototype.getJsonObservable = function (url) {
+        return this.http.get(url).map(this.extractJsonData);
+    };
+    DataService.prototype.getJson = function (url) {
+        return this.http.get(url).map(this.extractJson);
+    };
+    DataService.prototype.extractJsonData = function (response) {
+        var json = response.json();
+        return (json) ? json.data : {};
+    };
+    DataService.prototype.extractJson = function (response) {
+        var json = response.json();
+        return (json) ? json : {};
+    };
+    // ===== FILTER COMPONENT =====
+    DataService.prototype.togglePlatformState = function (platform) {
+        if (platform.isFilterSelected) {
+            if (this.getSelectedPlatforms().length == 1) {
+                this.getUnselectedPlatforms().forEach(function (p) { return p.isFilterSelected = true; });
+            }
+            else {
+                this.getSelectedPlatforms().forEach(function (p) {
+                    if (p != platform) {
+                        p.isFilterSelected = false;
+                    }
+                });
+            }
+        }
+        else {
+            this.getSelectedPlatforms().forEach(function (p) { return p.isFilterSelected = false; });
+            platform.isFilterSelected = true;
+        }
+        this.update();
+    };
+    // ===== REVIEW COMPONENT =====
+    DataService.prototype.getReviews = function () {
+        var reviews = [];
+        this.getSelectedPlatforms().forEach(function concatAndAddPlatform(platform) {
+            var reviewsWithPlatform = [];
+            var platformName = platform.displayName;
+            for (var _i = 0, _a = platform.reviews; _i < _a.length; _i++) {
+                var review = _a[_i];
+                review['platform'] = platformName;
+                reviewsWithPlatform.push(review);
+            }
+            reviews = reviews.concat(reviewsWithPlatform);
+        });
+        return reviews;
+    };
+    // ===== COURSE COMPONENT =====
+    DataService.prototype.getCourses = function () {
+        var _this = this;
+        var observables = [];
+        observables.push(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].of(this.getSelectedPlatforms()));
+        this.getSelectedPlatforms().
+            forEach(function (platform) { return observables.push(_this.getJsonObservable(platform.rootUrl + _this.config.courseSubUrl)); });
+        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].forkJoin(observables);
+    };
+    // ===== WORLD MAP COMPONENT =====
+    DataService.prototype.getWorldPositions = function (startDate, endDate) {
+        var _this = this;
+        var observables = [];
+        var subUrl = this.config.geoSubUrl + '?' + this.config.geoStartParam + '=' + startDate.toISOString() + '&' + this.config.geoEndParam + '=' + endDate.toISOString();
+        observables.push(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].of(this.getSelectedPlatforms()));
+        this.getSelectedPlatforms().
+            forEach(function (platform) { return observables.push(_this.getJson(platform.rootUrl + subUrl)); });
+        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].forkJoin(observables);
+    };
+    // ===== PROMO NUMBER COMPONENT =====
+    DataService.prototype.getGlobalNumbers = function () {
+        var _this = this;
+        var observables = [];
+        this.getSelectedPlatforms()
+            .forEach(function (platform) { return observables.push(_this.getJson(platform.rootUrl + _this.config.globalsSubUrl)); });
+        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].forkJoin(observables);
+    };
+    DataService.prototype.getActiveUsers = function () {
+        var _this = this;
+        var observables = [];
+        var startTime = new Date();
+        startTime.setMinutes(startTime.getMinutes() - 30);
+        var endTime = new Date();
+        var subUrl = '?' + this.config.activeStartParam + '=' + startTime.toISOString() + '&' + this.config.activeEndParam + '=' + endTime.toISOString();
+        this.getSelectedPlatforms()
+            .forEach(function (platform) { return observables.push(_this.getJson(platform.rootUrl + _this.config.activeUserSubUrl + subUrl)); });
+        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].forkJoin(observables);
+    };
+    // ===== FEATURE CARD COMPONENT =====
+    DataService.prototype.getFeatureCards = function () {
+        return __WEBPACK_IMPORTED_MODULE_4_assets_config_config__["b" /* FEATURE_CARDS */];
+    };
+    // ===== CITATION COMPONENT =====
+    DataService.prototype.getCitation = function () {
+        if (this.areAllPlatformsSelected()) {
+            return this.config.citationAll;
+        }
+        return this.getSelectedPlatforms()[0].citation;
+    };
+    // ===== PRIMARY COLOR =====
+    DataService.prototype.getPrimaryColor = function () {
+        if (this.getSelectedPlatforms().length === 1) {
+            return this.getSelectedPlatforms()[0].primaryColor;
+        }
+        else {
+            return this.getPlatforms().filter(function (platform) { return platform.rootUrl === 'https://open.hpi.de'; })[0].primaryColor;
+        }
+    };
+    return DataService;
+}());
+DataService = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
+], DataService);
+
+var _a;
+//# sourceMappingURL=data-service.service.js.map
+
+/***/ }),
+
+/***/ 180:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_dashboard__ = __webpack_require__(67);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FilterLogoComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -537,8 +744,8 @@ __decorate([
 FilterLogoComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-filter-logo',
-        template: __webpack_require__(277),
-        styles: [__webpack_require__(258)]
+        template: __webpack_require__(275),
+        styles: [__webpack_require__(257)]
     }),
     __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */]) === "function" && _b || Object])
 ], FilterLogoComponent);
@@ -548,12 +755,12 @@ var _a, _b;
 
 /***/ }),
 
-/***/ 182:
+/***/ 181:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__ = __webpack_require__(18);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FilterComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -575,8 +782,8 @@ var FilterComponent = (function () {
 FilterComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-filter',
-        template: __webpack_require__(278),
-        styles: [__webpack_require__(259)]
+        template: __webpack_require__(276),
+        styles: [__webpack_require__(258)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */]) === "function" && _a || Object])
 ], FilterComponent);
@@ -586,12 +793,12 @@ var _a;
 
 /***/ }),
 
-/***/ 183:
+/***/ 182:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__ = __webpack_require__(18);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return KeyFeaturesComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -614,8 +821,8 @@ var KeyFeaturesComponent = (function () {
 KeyFeaturesComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-key-features',
-        template: __webpack_require__(279),
-        styles: [__webpack_require__(260)]
+        template: __webpack_require__(277),
+        styles: [__webpack_require__(259)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */]) === "function" && _a || Object])
 ], KeyFeaturesComponent);
@@ -625,12 +832,12 @@ var _a;
 
 /***/ }),
 
-/***/ 184:
+/***/ 183:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dashboard__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dashboard__ = __webpack_require__(67);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PromoNumbersComponentComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -667,8 +874,8 @@ __decorate([
 PromoNumbersComponentComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-promo-numbers-component',
-        template: __webpack_require__(280),
-        styles: [__webpack_require__(261)]
+        template: __webpack_require__(278),
+        styles: [__webpack_require__(260)]
     }),
     __metadata("design:paramtypes", [])
 ], PromoNumbersComponentComponent);
@@ -678,13 +885,13 @@ var _a;
 
 /***/ }),
 
-/***/ 185:
+/***/ 184:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PromoNumbersComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -772,8 +979,8 @@ var PromoNumbersComponent = (function () {
 PromoNumbersComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-promo-numbers',
-        template: __webpack_require__(281),
-        styles: [__webpack_require__(262)]
+        template: __webpack_require__(279),
+        styles: [__webpack_require__(261)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */]) === "function" && _a || Object])
 ], PromoNumbersComponent);
@@ -783,12 +990,12 @@ var _a;
 
 /***/ }),
 
-/***/ 186:
+/***/ 185:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dashboard__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dashboard__ = __webpack_require__(67);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReviewCardComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -813,8 +1020,8 @@ __decorate([
 ReviewCardComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-review-card',
-        template: __webpack_require__(282),
-        styles: [__webpack_require__(263)]
+        template: __webpack_require__(280),
+        styles: [__webpack_require__(262)]
     }),
     __metadata("design:paramtypes", [])
 ], ReviewCardComponent);
@@ -824,13 +1031,13 @@ var _a;
 
 /***/ }),
 
-/***/ 187:
+/***/ 186:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReviewsComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -918,8 +1125,8 @@ __decorate([
 ReviewsComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-reviews',
-        template: __webpack_require__(283),
-        styles: [__webpack_require__(264)],
+        template: __webpack_require__(281),
+        styles: [__webpack_require__(263)],
     }),
     __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */]) === "function" && _b || Object])
 ], ReviewsComponent);
@@ -929,16 +1136,14 @@ var _a, _b;
 
 /***/ }),
 
-/***/ 188:
+/***/ 187:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_google_map_bounds_limit__ = __webpack_require__(266);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_google_map_bounds_limit___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_google_map_bounds_limit__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WorldMapComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -949,7 +1154,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
 
 
 
@@ -1386,11 +1590,12 @@ var WorldMapComponent = (function () {
     };
     WorldMapComponent.prototype.onMapReady = function (googleMap) {
         var maxBounds = new google.maps.LatLngBounds(new google.maps.LatLng(-81, -175), new google.maps.LatLng(81, 175));
-        __WEBPACK_IMPORTED_MODULE_3_google_map_bounds_limit___default()(googleMap, maxBounds);
+        this.map = googleMap;
+        // limitMap(googleMap, maxBounds);
     };
     WorldMapComponent.prototype.formatHours = function (value, type) {
         if (value == new Date().getHours() + 1) {
-            return 'Now';
+            return ' Now';
         }
         if (value < 0) {
             value = 24 + value;
@@ -1460,6 +1665,12 @@ var WorldMapComponent = (function () {
     };
     WorldMapComponent.prototype.reset = function () {
         this.rangeValues = [this.currentHour - 2, this.currentHour];
+        var map = this.map;
+        if (map) {
+            var center = new google.maps.LatLng(52.4282784, 12.8869868);
+            map.setCenter(center);
+            map.setZoom(this.mapOptions.zoom);
+        }
     };
     return WorldMapComponent;
 }());
@@ -1470,8 +1681,8 @@ __decorate([
 WorldMapComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'world-map',
-        template: __webpack_require__(284),
-        styles: [__webpack_require__(265)]
+        template: __webpack_require__(282),
+        styles: [__webpack_require__(264)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_data_service_service__["a" /* DataService */]) === "function" && _a || Object])
 ], WorldMapComponent);
@@ -1481,7 +1692,7 @@ var _a;
 
 /***/ }),
 
-/***/ 189:
+/***/ 188:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1521,213 +1732,7 @@ var OPEN_WHO_REVIEWS = [
 
 /***/ }),
 
-/***/ 19:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(96);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(130);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_assets_config_config__ = __webpack_require__(69);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DataService; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-//import constants
-
-
-var DataService = (function () {
-    function DataService(http) {
-        this.http = http;
-        this.config = __WEBPACK_IMPORTED_MODULE_4_assets_config_config__["a" /* CONFIG */];
-        this.updateListener = [];
-        this.animationListener = [];
-        this.resetListener = [];
-        this.updatingUnits = 0;
-        this.timer = __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].timer(60000, 10000);
-    }
-    //"Listener" - Functions
-    DataService.prototype.addUpdateListener = function (listener) {
-        this.updateListener.push(listener);
-        this.updatingUnits++;
-        listener.update();
-    };
-    DataService.prototype.addAnimationListener = function (listener) {
-        this.animationListener.push(listener);
-    };
-    DataService.prototype.addResetListener = function (listener) {
-        this.resetListener.push(listener);
-    };
-    //General
-    DataService.prototype.getPlatforms = function () {
-        return this.config.platforms;
-    };
-    DataService.prototype.update = function () {
-        this.updatingUnits += this.updateListener.length;
-        this.updateListener.forEach(function (listener) { return listener.update(); });
-    };
-    DataService.prototype.reset = function () {
-        this.resetListener.forEach(function (listener) { return listener.reset(); });
-    };
-    DataService.prototype.updateCompleted = function () {
-        this.updatingUnits = Math.max(this.updatingUnits - 1, 0);
-    };
-    DataService.prototype.recognizedUserInteraction = function () {
-        var _this = this;
-        if (this.subscription) {
-            this.subscription.unsubscribe();
-        }
-        this.subscription = this.timer.subscribe(function () { return _this.doNextAnimationStep(); });
-    };
-    DataService.prototype.isUpdating = function () {
-        return this.updatingUnits > 0;
-    };
-    DataService.prototype.areAllPlatformsSelected = function () {
-        return this.getUnselectedPlatforms().length === 0;
-    };
-    DataService.prototype.doNextAnimationStep = function () {
-        this.animationListener.forEach(function (listener) { return listener.nextAnimationStep(); });
-    };
-    //Private functions
-    DataService.prototype.getSelectedPlatforms = function () {
-        return this.config.platforms.filter(function (platform) { return platform.isFilterSelected; });
-    };
-    DataService.prototype.getUnselectedPlatforms = function () {
-        return this.config.platforms.filter(function (platform) { return !platform.isFilterSelected; });
-    };
-    DataService.prototype.getJsonObservable = function (url) {
-        return this.http.get(url).map(this.extractJsonData);
-    };
-    DataService.prototype.getJson = function (url) {
-        return this.http.get(url).map(this.extractJson);
-    };
-    DataService.prototype.extractJsonData = function (response) {
-        var json = response.json();
-        return (json) ? json.data : {};
-    };
-    DataService.prototype.extractJson = function (response) {
-        var json = response.json();
-        return (json) ? json : {};
-    };
-    // ===== FILTER COMPONENT =====
-    DataService.prototype.togglePlatformState = function (platform) {
-        if (platform.isFilterSelected) {
-            if (this.getSelectedPlatforms().length == 1) {
-                this.getUnselectedPlatforms().forEach(function (p) { return p.isFilterSelected = true; });
-            }
-            else {
-                this.getSelectedPlatforms().forEach(function (p) {
-                    if (p != platform) {
-                        p.isFilterSelected = false;
-                    }
-                });
-            }
-        }
-        else {
-            this.getSelectedPlatforms().forEach(function (p) { return p.isFilterSelected = false; });
-            platform.isFilterSelected = true;
-        }
-        this.update();
-    };
-    // ===== REVIEW COMPONENT =====
-    DataService.prototype.getReviews = function () {
-        var reviews = [];
-        this.getSelectedPlatforms().forEach(function concatAndAddPlatform(platform) {
-            var reviewsWithPlatform = [];
-            var platformName = platform.displayName;
-            for (var _i = 0, _a = platform.reviews; _i < _a.length; _i++) {
-                var review = _a[_i];
-                review['platform'] = platformName;
-                reviewsWithPlatform.push(review);
-            }
-            reviews = reviews.concat(reviewsWithPlatform);
-        });
-        return reviews;
-    };
-    // ===== COURSE COMPONENT =====
-    DataService.prototype.getCourses = function () {
-        var _this = this;
-        var observables = [];
-        observables.push(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].of(this.getSelectedPlatforms()));
-        this.getSelectedPlatforms().
-            forEach(function (platform) { return observables.push(_this.getJsonObservable(platform.rootUrl + _this.config.courseSubUrl)); });
-        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].forkJoin(observables);
-    };
-    // ===== WORLD MAP COMPONENT =====
-    DataService.prototype.getWorldPositions = function (startDate, endDate) {
-        var _this = this;
-        var observables = [];
-        var subUrl = this.config.geoSubUrl + '?' + this.config.geoStartParam + '=' + startDate.toISOString() + '&' + this.config.geoEndParam + '=' + endDate.toISOString();
-        observables.push(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].of(this.getSelectedPlatforms()));
-        this.getSelectedPlatforms().
-            forEach(function (platform) { return observables.push(_this.getJson(platform.rootUrl + subUrl)); });
-        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].forkJoin(observables);
-    };
-    // ===== PROMO NUMBER COMPONENT =====
-    DataService.prototype.getGlobalNumbers = function () {
-        var _this = this;
-        var observables = [];
-        this.getSelectedPlatforms()
-            .forEach(function (platform) { return observables.push(_this.getJson(platform.rootUrl + _this.config.globalsSubUrl)); });
-        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].forkJoin(observables);
-    };
-    DataService.prototype.getActiveUsers = function () {
-        var _this = this;
-        var observables = [];
-        var startTime = new Date();
-        startTime.setMinutes(startTime.getMinutes() - 30);
-        var endTime = new Date();
-        var subUrl = '?' + this.config.activeStartParam + '=' + startTime.toISOString() + '&' + this.config.activeEndParam + '=' + endTime.toISOString();
-        this.getSelectedPlatforms()
-            .forEach(function (platform) { return observables.push(_this.getJson(platform.rootUrl + _this.config.activeUserSubUrl + subUrl)); });
-        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].forkJoin(observables);
-    };
-    // ===== FEATURE CARD COMPONENT =====
-    DataService.prototype.getFeatureCards = function () {
-        return __WEBPACK_IMPORTED_MODULE_4_assets_config_config__["b" /* FEATURE_CARDS */];
-    };
-    // ===== CITATION COMPONENT =====
-    DataService.prototype.getCitation = function () {
-        if (this.areAllPlatformsSelected()) {
-            return this.config.citationAll;
-        }
-        return this.getSelectedPlatforms()[0].citation;
-    };
-    // ===== PRIMARY COLOR =====
-    DataService.prototype.getPrimaryColor = function () {
-        if (this.getSelectedPlatforms().length === 1) {
-            return this.getSelectedPlatforms()[0].primaryColor;
-        }
-        else {
-            return this.getPlatforms().filter(function (platform) { return platform.rootUrl === 'https://open.hpi.de'; })[0].primaryColor;
-        }
-    };
-    return DataService;
-}());
-DataService = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
-], DataService);
-
-var _a;
-//# sourceMappingURL=data-service.service.js.map
-
-/***/ }),
-
-/***/ 190:
+/***/ 189:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1739,10 +1744,10 @@ var environment = {
 
 /***/ }),
 
-/***/ 254:
+/***/ 253:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(11)(false);
+exports = module.exports = __webpack_require__(10)(false);
 // imports
 
 
@@ -1757,10 +1762,10 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 255:
+/***/ 254:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(11)(false);
+exports = module.exports = __webpack_require__(10)(false);
 // imports
 
 
@@ -1775,10 +1780,10 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 256:
+/***/ 255:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(11)(false);
+exports = module.exports = __webpack_require__(10)(false);
 // imports
 
 
@@ -1793,10 +1798,10 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 257:
+/***/ 256:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(11)(false);
+exports = module.exports = __webpack_require__(10)(false);
 // imports
 
 
@@ -1811,10 +1816,10 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 258:
+/***/ 257:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(11)(false);
+exports = module.exports = __webpack_require__(10)(false);
 // imports
 
 
@@ -1829,10 +1834,10 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 259:
+/***/ 258:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(11)(false);
+exports = module.exports = __webpack_require__(10)(false);
 // imports
 
 
@@ -1847,10 +1852,10 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 260:
+/***/ 259:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(11)(false);
+exports = module.exports = __webpack_require__(10)(false);
 // imports
 
 
@@ -1865,10 +1870,10 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 261:
+/***/ 260:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(11)(false);
+exports = module.exports = __webpack_require__(10)(false);
 // imports
 
 
@@ -1883,10 +1888,10 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 262:
+/***/ 261:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(11)(false);
+exports = module.exports = __webpack_require__(10)(false);
 // imports
 
 
@@ -1901,10 +1906,10 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 263:
+/***/ 262:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(11)(false);
+exports = module.exports = __webpack_require__(10)(false);
 // imports
 
 
@@ -1919,10 +1924,10 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 264:
+/***/ 263:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(11)(false);
+exports = module.exports = __webpack_require__(10)(false);
 // imports
 
 
@@ -1937,12 +1942,12 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 265:
+/***/ 264:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(11)(false);
+exports = module.exports = __webpack_require__(10)(false);
 // imports
-exports.i(__webpack_require__(252), "");
+exports.i(__webpack_require__(251), "");
 
 // module
 exports.push([module.i, "ngui-map {\r\n  display: block;\r\n  height: 400px;\r\n}\r\n\r\ninput{\r\n\tborder: none;\r\n}\r\n\r\n.range-field {\r\n    width: 1400px;\r\n    margin: 0 auto;\r\n    padding-top: 2rem;\r\n    padding-bottom: 2rem;}\r\n\r\n.noUI {\r\n    width: 90%;\r\n    margin: 0 auto;\r\n    padding-top: 17px;\r\n    padding-bottom: 50px;\r\n}", ""]);
@@ -1955,99 +1960,99 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 273:
+/***/ 271:
 /***/ (function(module, exports) {
 
 module.exports = "<!--<div *ngIf=\"dataService.isUpdating()\" class=\"overlay\">\r\n\t<div class=\"preloader-wrapper big active\">\r\n\t\t<div class=\"spinner-layer\" style=\"border-color: #67DE91\">\r\n\t\t\t<div class=\"circle-clipper left\">\r\n\t\t\t\t<div class=\"circle\"></div>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"gap-patch\">\r\n\t\t\t\t<div class=\"circle\"></div>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"circle-clipper right\">\r\n\t\t\t\t<div class=\"circle\"></div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>-->\r\n<app-filter></app-filter>\r\n\r\n<world-map></world-map>\r\n\r\n  <div class=\"section\">\r\n    <app-promo-numbers></app-promo-numbers>\r\n  </div>\r\n<div class=\"container\">\r\n  <div class=\"section\">\r\n    <!--<app-key-features></app-key-features>-->\r\n\t<app-citation></app-citation>\r\n  </div>\r\n  <div class=\"section\">\r\n    <app-courses></app-courses>\r\n  </div>\r\n  <div class=\"section\">\r\n    <app-reviews></app-reviews>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
-/***/ 274:
+/***/ 272:
 /***/ (function(module, exports) {
 
 module.exports = "<h2 [ngStyle]= \"{'color': primaryColor}\"> {{citation}} </h2>"
 
 /***/ }),
 
-/***/ 275:
+/***/ 273:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"card white\">\r\n\t<div class=\"card-image waves-effect waves-block waves-light\">\r\n\t\t<span>\r\n\t\t\t<span id=\"pl-indicator\"\r\n\t\t\t\t  class=\"new badge\"\r\n\t\t\t\t  data-badge-caption=\"\"\r\n\t\t\t\t [ngStyle]= \"{'background-color': _course.primaryColor}\">{{_course.platform}}</span>\r\n\t\t\t<img class=\"activator\" src=\"{{_course.attributes.image_url}}\">\r\n\t\t</span>\r\n\t</div>\r\n\t<div class=\"card-content\">\r\n\t\t<span class=\"card-title activator truncate\">{{_course.attributes.title}}</span>\r\n\t\t<span class=\"authors activator truncate\" [ngStyle]= \"{'color': _primaryColor}\">{{_course.attributes.teachers}}</span>\r\n\t\t<p class=\"truncate activator\">{{_course.attributes.abstract}}</p>\r\n\t</div>\r\n\t<div class=\"card-reveal\">\r\n\t\t<span class=\"card-title grey-text text-darken-4\" style=\"font-size: 22px\">\r\n\t\t\t<i class=\"material-icons right activator\">close</i>\r\n\t\t\t{{_course.attributes.title}}\r\n\t\t</span>\r\n\t\t\r\n\t\t<span class=\"authors activator\" [ngStyle]= \"{'color': _primaryColor}\">{{_course.attributes.teachers}}</span>\r\n\t\t<br />\r\n\t\t<qr-code [value]=\"qrCodeUrl\" [size]=\"250\" [padding]=\"20\"></qr-code>\r\n\t</div>\r\n</div>\r\n"
 
 /***/ }),
 
-/***/ 276:
+/***/ 274:
 /***/ (function(module, exports) {
 
 module.exports = "<div #carousel *ngIf=\"courses\" materialize=\"carousel\" class=\"carousel\" [materializeActions]=\"navigatorActions\">\r\n\t<div *ngFor=\"let course of courses\" class=\"carousel-item\">\r\n\t\t<app-course-card [course]=\"course\" [primaryColor]=\"primaryColor\"></app-course-card>\r\n\t</div>\r\n</div>"
 
 /***/ }),
 
-/***/ 277:
+/***/ 275:
 /***/ (function(module, exports) {
 
 module.exports = "<img [ngClass]=\"{'selected': platform.isFilterSelected}\" (click)=\"filterService.togglePlatformState(platform)\" [src]=\"platform.logoUrl\" />"
 
 /***/ }),
 
-/***/ 278:
+/***/ 276:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"section center-align\" style=\"display: flex; justify-content: center;\">\r\n  <div *ngFor=\"let platform of filterService.getPlatforms(); let iFilter = index\">\r\n    <div [style.padding-top]=\"iFilter == 1 ? '4px' : '0px'\">\r\n\t    <app-filter-logo [platform]=\"platform\"></app-filter-logo>\r\n\t</div>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
-/***/ 279:
+/***/ 277:
 /***/ (function(module, exports) {
 
 module.exports = "<div *ngIf=\"dataService.areAllPlatformsSelected()\">\r\n\t<h2>What our MOOCs offer</h2>\r\n\t<div class=\"row\">\r\n\t\t<div *ngFor=\"let featureCard of featureCards\" class=\"col s3\">\r\n\t\t\t<div class=\"center promo promo-example\">\r\n              <img src={{featureCard.imageUrl}} class=\"responsive-img\">\r\n              <p class=\"promo-caption\">{{featureCard.title}}</p>\r\n              <p class=\"light center\">{{featureCard.text}}</p>\r\n            </div>\r\n\t\t</div>\r\n\t</div>\r\n</div>"
 
 /***/ }),
 
-/***/ 280:
+/***/ 278:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"center promo\">\r\n\t<h1 [ngStyle]=\"{'color': _primaryColor}\"><div counto [step]=\"30\" \r\n\t\t\t [countTo]=\"promo.count\" \r\n\t\t\t [countFrom]=\"promo.countOld\" \r\n\t\t\t [duration]=\"1.5\" \r\n\t\t\t (countoChange)=\"intermediate = $event\">{{intermediate | number:'1.0-0'}}</div></h1>\r\n\t<hr />\r\n\t<h4>{{promo.title}}</h4>\r\n\t<!--<span>{{promo.description}}</span>-->\r\n</div>"
 
 /***/ }),
 
-/***/ 281:
+/***/ 279:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"row\">\r\n\t<div *ngFor=\"let promo of promoNumbers\" (click)=\"handlePromoNumberClick(promo)\" class=\"col s2\">\r\n\t\t<app-promo-numbers-component [primaryColor]=\"primaryColor\" [promo]=promo></app-promo-numbers-component>\r\n\t</div>\r\n</div>\t"
 
 /***/ }),
 
-/***/ 282:
+/***/ 280:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"card-panel transparent z-depth-0\">\r\n\t<div class=\"bubble\">\r\n\t\t{{review.statement}}\r\n\t</div>\r\n\t<div class=\"bubble-arrow\">\r\n\t</div>\r\n\t<div class=\"row valign-wrapper\">\r\n\t\t<div class=\"col s2\">\r\n\t\t\t<img [src]=\"review.imageUrl\" class=\"circle responsive-img\">\r\n\t\t</div>\r\n\t\t<div class=\"col s12\">\r\n\t\t\t<span class=\"black-text\">\r\n\t\t\t\t{{review.author}}\r\n\t\t\t\t<br>\r\n\t\t\t\t{{review.platform}}\r\n\t\t\t</span>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n"
 
 /***/ }),
 
-/***/ 283:
+/***/ 281:
 /***/ (function(module, exports) {
 
 module.exports = "<a #prev [ngClass]=\"{'disabled': isFirst()}\" [ngStyle]=\"{'background': 'url(' + leftArrowUrl + ') top left no-repeat'}\" class=\"arrow_prev\" (click)=\"previousReview()\"></a>\r\n<a #next [ngClass]=\"{'disabled': isLast()}\" [ngStyle]=\"{'background': 'url(' + rightArrowUrl + ') top left no-repeat'}\" class=\"arrow_next\" (click)=\"nextReview()\"></a>\r\n\r\n<div #slider class=\"carousel carousel-slider\" *ngIf=\"reviews\" materialize=\"carousel\" [materializeParams]=\"[{fullWidth: true, noWrap: false}]\" data-indicators=\"true\" [materializeActions]=\"navigatorActions\">\r\n\t<div *ngFor=\"let review of reviews; let iReview = index\">\r\n\t\t<div #item class=\"carousel-item grey lighten-3\" *ngIf=\"iReview % 2 === 0\">\r\n\t\t\t<div class=\"row\">\r\n\t\t\t\t<div class=\"col s6\">\r\n\t\t\t\t\t<app-review-card [review]=\"reviews[iReview]\"></app-review-card>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"col s6\" *ngIf=\"iReview + 1 < reviews.length\">\r\n\t\t\t\t\t<app-review-card [review]=\"reviews[iReview + 1]\"></app-review-card>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\r\n</div>\r\n\r\n"
 
 /***/ }),
 
-/***/ 284:
+/***/ 282:
 /***/ (function(module, exports) {
 
 module.exports = "<ngui-map #map center=\"Potsdam, Germany\"[options]=\"mapOptions\" (mapReady$)=\"onMapReady($event)\">\r\n   <marker *ngFor=\"let pos of userPositions\"\r\n   \t\t\t[position]= \"[pos[0], pos[1]]\"\r\n   \t\t\t[icon]=\"{\r\n\t\t       url: pos[2],\r\n\t\t       scaleSize: [1,1]}\">\r\n\t</marker>\r\n</ngui-map>\r\n\r\n\r\n<div class=\"noUI\">\r\n\t<nouislider [config]=\"rangeConfig\" [(ngModel)]=\"rangeValues\" (ngModelChange)=\"onChange($event)\"  #sliderRef></nouislider>\r\n</div>\r\n"
 
 /***/ }),
 
-/***/ 567:
+/***/ 565:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(165);
+module.exports = __webpack_require__(164);
 
 
 /***/ }),
 
-/***/ 68:
+/***/ 67:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2090,11 +2095,11 @@ var FeatureCard = (function () {
 
 /***/ }),
 
-/***/ 69:
+/***/ 68:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_assets_reviews_reviews__ = __webpack_require__(189);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_assets_reviews_reviews__ = __webpack_require__(188);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CONFIG; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return FEATURE_CARDS; });
 
@@ -2161,5 +2166,5 @@ var FEATURE_CARDS = [
 
 /***/ })
 
-},[567]);
+},[565]);
 //# sourceMappingURL=main.bundle.js.map

@@ -38,8 +38,8 @@ export class WorldMapComponent {
     stepped: true,
     format: {to: this.formatHours}
     }
-  };
-
+  }
+  map: any;
   mapOptions = {
     "center": "Potsdam, Germany",
     "zoom": 2,
@@ -436,37 +436,38 @@ export class WorldMapComponent {
                   geoArrays[i][j].lat + ((Math.random() > 0.5 ? 1 : -1) * Math.floor(Math.random())),
                   geoArrays[i][j].lon + ((Math.random() > 0.5 ? 1 : -1) * Math.floor(Math.random())),
                   platforms[i].mapMarkerUrl]);
-			}
+            }
         }
         this.userPositions = markers;
         this.dataService.updateCompleted();
     });
   }
-  
+
   public update(): void {
     this.handleChangedRange();
     this.primaryColor = this.dataService.getPrimaryColor();
   }
-  
+
   public onMapReady(googleMap): void {
-    let maxBounds = new google.maps.LatLngBounds(
+    const maxBounds = new google.maps.LatLngBounds(
       new google.maps.LatLng(-81, -175),
       new google.maps.LatLng(81, 175)
     );
-    limitMap(googleMap, maxBounds);
+    this.map = googleMap;
+    // limitMap(googleMap, maxBounds);
   }
 
-  public formatHours(value, type){
-	  if (value == new Date().getHours() + 1) {
-		return 'Now';
-	  }
-      if(value < 0){
+  public formatHours(value, type) {
+      if (value == new Date().getHours() + 1) {
+        return ' Now';
+      }
+      if(value < 0) {
           value = 24 + value;
       }
       return Math.round(value);
   }
 
-  public updateTimeRange(){
+  public updateTimeRange() {
       this.sliderRef.slider.updateOptions({
           range: {
               min: this.currentHour - 24,
@@ -523,19 +524,24 @@ export class WorldMapComponent {
   private equalArrays(arrayA, arrayB): boolean {
     return (arrayA.length == arrayB.length) && arrayA.every(function(element, index) { return element === arrayB[index]; });
   }
-  
+
   private getMinutes(decimalNumber){
       let afterDecimalPoint = decimalNumber.toString().split(".")[1];
     if(afterDecimalPoint){
         return afterDecimalPoint * 0.1 * 60;
-    }
-    else{
+    } else {
         return 0;
     }
   }
-  
+
   public reset(): void {
     this.rangeValues = [this.currentHour-2, this.currentHour];
+    const map = this.map
+    if(map) {
+        const center = new google.maps.LatLng(52.4282784, 12.8869868);
+        map.setCenter(center);
+        map.setZoom(this.mapOptions.zoom);
+    }
   }
 
 }
